@@ -1,0 +1,29 @@
+- name: "Starter"
+  price: "83"
+  featured: false
+  features:
+    - "Basic SEO Optimization"
+    - "Social Media Management (2 Platforms)"
+    - "Monthly Performance Reports"
+    - "Email Support"
+- name: "Growth"
+  price: "208"
+  featured: true
+  badge: "Best Value"
+  features:
+    - "Comprehensive SEO Strategy"
+    - "Social Media Management (3 Platforms)"
+    - "Content Creation (2 Blog Posts/Month)"
+    - "Monthly Analytics Review"
+    - "Priority Email and Phone Support"
+- name: "Pro"
+  price: "420"
+  featured: false
+  features:
+    - "Advanced SEO Optimization and Strategy"
+    - "Social Media Management (4 Platforms)"
+    - "Content Creation (4 Blog Posts per Month)"
+    - "Customized Marketing Campaigns"
+    - "Quarterly Strategy Sessions"
+    - "Dedicated Account Manager"
+    - "24/7 Priority Support"

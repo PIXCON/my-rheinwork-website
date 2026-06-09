@@ -1,0 +1,15 @@
+# Hugo build output & generated assets
+/public/
+/resources/_gen/
+.hugo_build.lock
+
+# Local dev artifacts
+hugo-server.log
+page.html
+*.tmp
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

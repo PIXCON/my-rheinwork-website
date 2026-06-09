@@ -1,0 +1,41 @@
+baseURL = "https://example.org/"
+languageCode = "de-de"
+title = "Nexa — Digital Marketing Agency"
+
+disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+
+# Enable raw HTML in markdown (not strictly needed, templates do the work)
+[markup.goldmark.renderer]
+  unsafe = true
+
+[params]
+  description = "We build the solutions that move your business forward, faster than you thought possible."
+  email = "agencee@email.com"
+  phone = "+54 2541 22 55 66"
+  address = "123 Main Street Anytown, USA, 2141"
+
+# Main navigation
+[[menu.main]]
+  name = "About"
+  url = "#about"
+  weight = 10
+[[menu.main]]
+  name = "Services"
+  url = "#services"
+  weight = 20
+[[menu.main]]
+  name = "Projects"
+  url = "#projects"
+  weight = 30
+[[menu.main]]
+  name = "Reviews"
+  url = "#reviews"
+  weight = 40
+[[menu.main]]
+  name = "Blog"
+  url = "#blog"
+  weight = 50
+[[menu.main]]
+  name = "Contact"
+  url = "#contact"
+  weight = 60

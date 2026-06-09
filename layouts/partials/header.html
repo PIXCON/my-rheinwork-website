@@ -1,0 +1,21 @@
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="brand" aria-label="Rheinwork">
+      <img src="/img/rheinwork-logo.svg" alt="Rheinwork" class="brand-logo">
+    </a>
+    <nav class="nav-menu" id="navMenu">
+      {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+    <div class="nav-actions">
+      <a href="#contact" class="btn btn--primary">
+        Get in touch
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
