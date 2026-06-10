@@ -507,6 +507,24 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text-dim);
 }
 
+/* Service detail: capabilities list + process steps */
+.feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 32px; max-width: 760px; margin-inline: auto; }
+.feature-list li { display: flex; align-items: center; gap: 10px; color: var(--text-dim); font-size: 15px; }
+.feature-list li svg { width: 18px; height: 18px; color: var(--accent); flex: none; }
+.process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.process-card {
+  background: rgba(16,16,20,.3); border: 1px solid rgba(255,255,255,.1);
+  -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  border-radius: var(--radius); padding: 26px;
+}
+.process-num { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: .12em; }
+.process-card h4 { font-size: 18px; margin: 10px 0 8px; }
+.process-card p { color: var(--text-dim); font-size: 14.5px; }
+@media (max-width: 760px) {
+  .process-grid { grid-template-columns: 1fr 1fr; }
+  .feature-list { grid-template-columns: 1fr; }
+}
+
 /* =========================================================
    Responsive
    ========================================================= */

@@ -10,15 +10,15 @@
     </div>
     {{ end }}
     <div class="services-grid">
-      {{ range site.Data.services }}
+      {{ range (where site.RegularPages "Section" "services").ByWeight }}
       <article class="service-card reveal">
-        <div class="service-icon">{{ partial "icon.html" .icon }}</div>
-        <h3>{{ .title }}</h3>
-        <p>{{ .text }}</p>
-        {{ with .topics }}
+        <div class="service-icon">{{ partial "icon.html" .Params.icon }}</div>
+        <h3>{{ .Title }}</h3>
+        <p>{{ .Params.summary }}</p>
+        {{ with .Params.topics }}
         <ul class="service-tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
         {{ end }}
-        <a href="/contact/" class="service-link">
+        <a href="{{ .RelPermalink }}" class="service-link">
           Learn More
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
