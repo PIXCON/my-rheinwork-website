@@ -1,0 +1,7 @@
+{{ define "main" }}
+{{ partial "page-header.html" (dict "eyebrow" "Our Services" "title" "Engineering, end to end" "subtitle" "From browser-based products to backend systems, SaaS, infrastructure and performance — here is what we build.") }}
+{{ partial "sections/services.html" (dict "noHead" true) }}
+{{ partial "sections/stats.html" . }}
+{{ partial "sections/faq.html" . }}
+{{ partial "sections/cta.html" . }}
+{{ end }}

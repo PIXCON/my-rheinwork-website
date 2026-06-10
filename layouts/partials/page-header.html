@@ -1,0 +1,10 @@
+<!-- Reusable subpage header. Call with: (dict "eyebrow" "..." "title" "..." "subtitle" "...") -->
+<section class="page-header">
+  <div class="container">
+    <div class="page-header-inner reveal">
+      {{ with .eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h1>{{ .title }}</h1>
+      {{ with .subtitle }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>

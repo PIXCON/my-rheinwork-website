@@ -1,0 +1,13 @@
+{{ define "main" }}
+{{ partial "page-header.html" (dict "eyebrow" "About" "title" "We are Rheinwork" "subtitle" "A software engineering studio from Germany, building software, apps, platforms and websites that move businesses forward.") }}
+<section class="section" style="padding-top: 8px;">
+  <div class="container">
+    <div class="prose reveal">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ partial "sections/specialities.html" . }}
+{{ partial "sections/stats.html" . }}
+{{ partial "sections/cta.html" . }}
+{{ end }}

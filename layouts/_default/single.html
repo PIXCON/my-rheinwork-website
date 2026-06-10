@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "page-header.html" (dict "eyebrow" .Params.eyebrow "title" .Title "subtitle" .Params.subtitle) }}
+<section class="section" style="padding-top: 8px;">
+  <div class="container">
+    <div class="prose reveal">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,14 @@
+<!-- Industries marquee -->
+<section class="section--tight">
+  <div class="container section-head reveal" style="margin-bottom:32px;">
+    <span class="eyebrow">Industries</span>
+    <h2 style="font-size:clamp(24px,3vw,32px)">Who we build for</h2>
+  </div>
+  <div class="marquee-wrap">
+    <div class="marquee">
+      {{ $industries := slice "SaaS" "Fintech" "E-Commerce" "Healthcare" "Logistics" "Industry" "Startups" "Agencies" }}
+      {{ range $industries }}<span>✶ {{ . }}</span>{{ end }}
+      {{ range $industries }}<span>✶ {{ . }}</span>{{ end }}
+    </div>
+  </div>
+</section>
