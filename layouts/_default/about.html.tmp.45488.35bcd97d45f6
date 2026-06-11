@@ -47,13 +47,11 @@
       </div>
       <div class="founder-text">
         <span class="eyebrow">Meet the founder</span>
-        <h2>The person behind the code.</h2>
+        <h2>{{ .name }}</h2>
+        <p class="founder-role">{{ .role }}</p>
         {{ with .text }}<p class="founder-bio">{{ . }}</p>{{ end }}
         {{ with .quote }}<blockquote class="founder-quote">{{ . }}</blockquote>{{ end }}
-        <div class="founder-signoff">
-          <div class="founder-sign">{{ .name }}</div>
-          <div class="founder-role">{{ .role }}</div>
-        </div>
+        <div class="founder-sign">{{ .name }}</div>
       </div>
     </div>
   </div>

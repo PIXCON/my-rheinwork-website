@@ -1,0 +1,114 @@
+{{ define "main" }}
+
+<!-- Centered hero -->
+<section class="section svc-center-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" "Services" "url" "/services/") (dict "label" .Title))) }}
+    <div class="svc-center-head reveal">
+      <div class="service-icon svc-center-icon">{{ partial "icon.html" .Params.icon }}</div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+      <div class="svc-center-cta">
+        <a href="/contact/" class="btn btn--primary">
+          Get in touch
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="/services/" class="btn btn--ghost">All services</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Overview -->
+{{ if .Content }}
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="prose svc-center-prose reveal">{{ .Content }}</div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Capabilities -->
+{{ with .Params.topics }}
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What's included</span>
+      <h2>Capabilities</h2>
+    </div>
+    <div class="cap-grid reveal">
+      {{ range . }}
+      <div class="cap-item">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>{{ . }}</span>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Where it helps -->
+{{ $usecases := .Params.usecases }}
+{{ if not $usecases }}
+  {{ $usecases = slice
+    (dict "title" "Use case" "text" "A concrete situation where this service makes a real difference. We'll fill this with real examples.")
+    (dict "title" "Use case" "text" "Another typical scenario and the outcome we deliver.")
+    (dict "title" "Use case" "text" "One more, so it is clear when this service is the right fit.")
+  }}
+{{ end }}
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Use Cases</span>
+      <h2>Where it helps</h2>
+    </div>
+    <div class="uc-grid reveal">
+      {{ range $usecases }}
+      <div class="uc-card">
+        <h4>{{ .title }}</h4>
+        <p>{{ .text }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- How we work -->
+<section class="section">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Process</span>
+      <h2>How we work</h2>
+    </div>
+    <div class="process-grid reveal">
+      {{ $steps := slice
+        (dict "n" "01" "t" "Discovery" "d" "We get to know your goals, constraints and context before anything is built.")
+        (dict "n" "02" "t" "Plan" "d" "We scope the work together and agree on a clear, transparent plan.")
+        (dict "n" "03" "t" "Build" "d" "We engineer in iterations, with clean code and regular feedback.")
+        (dict "n" "04" "t" "Launch & care" "d" "We ship, monitor and keep your software running over the long run.")
+      }}
+      {{ range $steps }}
+      <div class="process-card">
+        <span class="process-num">{{ .n }}</span>
+        <h4>{{ .t }}</h4>
+        <p>{{ .d }}</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Highlight band (embellishment) -->
+<section class="section">
+  <div class="container">
+    <div class="svc-highlight reveal">
+      <span class="eyebrow">Why Rheinwork</span>
+      <h2>Engineered with care, built to last.</h2>
+      <p>We don't ship throwaway projects. Clean architecture, reliable systems and a partnership that holds up over time.</p>
+    </div>
+  </div>
+</section>
+
+{{ partial "sections/cta.html" . }}
+{{ end }}

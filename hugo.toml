@@ -1,6 +1,6 @@
 baseURL = "https://example.org/"
 languageCode = "de-de"
-title = "Nexa — Digital Marketing Agency"
+title = "Rheinwork"
 
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
@@ -9,6 +9,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   unsafe = true
 
 [params]
+  tagline = "Software Engineering Studio"
   description = "We build the solutions that move your business forward, faster than you thought possible."
   email = "agencee@email.com"
   phone = "+54 2541 22 55 66"

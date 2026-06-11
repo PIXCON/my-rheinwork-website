@@ -1,34 +1,74 @@
 {{ define "main" }}
-{{ partial "page-header.html" (dict "eyebrow" "Service" "title" .Title "subtitle" .Params.summary) }}
 
-<!-- Overview -->
-<section class="section" style="padding-top: 8px;">
+<!-- Breadcrumb + left-aligned service hero -->
+<section class="section svc-hero">
   <div class="container">
-    <div class="prose reveal">
-      {{ .Content }}
+    {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" "Services" "url" "/services/") (dict "label" .Title))) }}
+    <div class="svc-hero-head reveal">
+      <div class="service-icon">{{ partial "icon.html" .Params.icon }}</div>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
     </div>
   </div>
 </section>
 
-<!-- Capabilities / what's included -->
-{{ with .Params.topics }}
+<!-- Two-column body: main content + sticky conversion sidebar -->
 <section class="section" style="padding-top: 0;">
   <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">What's included</span>
-      <h2>Capabilities</h2>
+    <div class="svc-layout">
+
+      <!-- Main column -->
+      <div class="svc-main">
+        <div class="reveal">
+          <h2 class="svc-h">{{ .Params.overview | default "Overview" }}</h2>
+          <div class="prose svc-prose">{{ .Content }}</div>
+        </div>
+
+        {{ $usecases := .Params.usecases }}
+        {{ if not $usecases }}
+          {{ $usecases = slice
+            (dict "title" "Use case" "text" "A concrete situation where this service makes a real difference. We'll fill this with real examples.")
+            (dict "title" "Use case" "text" "Another typical scenario and the outcome we deliver.")
+            (dict "title" "Use case" "text" "One more, so it is clear when this service is the right fit.")
+          }}
+        {{ end }}
+        <div class="reveal" style="margin-top: 40px;">
+          <h2 class="svc-h">Where it helps</h2>
+          <ul class="usecase-list">
+            {{ range $usecases }}
+            <li>
+              <span class="uc-dot"></span>
+              <div><strong>{{ .title }}</strong> — {{ .text }}</div>
+            </li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+
+      <!-- Sticky conversion sidebar -->
+      <aside class="svc-aside">
+        <div class="svc-aside-card reveal">
+          <h3>What you get</h3>
+          {{ with .Params.topics }}
+          <ul class="feature-list svc-feature-list">
+            {{ range . }}
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              {{ . }}
+            </li>
+            {{ end }}
+          </ul>
+          {{ end }}
+          <a href="/contact/" class="btn btn--primary btn--block">
+            Get in touch
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </aside>
+
     </div>
-    <ul class="feature-list reveal">
-      {{ range . }}
-      <li>
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        {{ . }}
-      </li>
-      {{ end }}
-    </ul>
   </div>
 </section>
-{{ end }}
 
 <!-- How we work -->
 <section class="section">
@@ -50,28 +90,6 @@
         <h4>{{ .t }}</h4>
         <p>{{ .d }}</p>
       </div>
-      {{ end }}
-    </div>
-  </div>
-</section>
-
-<!-- Selected work / examples (placeholder) -->
-<section class="section">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="eyebrow">Selected Work</span>
-      <h2>Examples</h2>
-    </div>
-    <div class="cases-grid reveal">
-      {{ range (seq 2) }}
-      <article class="case-card">
-        <div class="case-media"><span class="placeholder-label">Example project</span></div>
-        <div class="case-body">
-          <span class="case-tag">Coming soon</span>
-          <h3>Project title</h3>
-          <p>A short description of the project, the challenge and the outcome. We'll fill this with real work.</p>
-        </div>
-      </article>
       {{ end }}
     </div>
   </div>

@@ -1,18 +1,22 @@
 ---
 title: "About"
 layout: "about"
+founder:
+  name: "Dustin Schneider"
+  role: "Founder & Lead Engineer"
+  image: ""   # add /img/founder.jpg later — placeholder shows until then
+  text: "I started Rheinwork because I was tired of watching good ideas fail on bad software. Too many projects look great in a pitch deck and fall apart the moment real users show up. I wanted to build the opposite — software that quietly does its job, year after year, and a team you actually enjoy working with."
+  quote: "Software should feel effortless. That's the hard part — and it's the part we love."
 ---
 
-Rheinwork is a software engineering studio. We design, build and run software,
-apps, platforms and websites for ambitious teams — from a first MVP to systems
-that thousands of people rely on every day.
+We're not here to chase trends or win buzzword bingo. We're here to build software
+that works — the kind you stop thinking about because it simply does what it
+should.
 
-We are engineers first. That means we care about the things you do not see on the
-surface: clean architecture, reliable infrastructure, sensible data models and
-code that the next developer can actually understand. Good software is not just
-what it does today, but how well it holds up tomorrow.
+Rheinwork is a software engineering studio from Germany. We design, build and run
+digital products for teams who care about quality: founders shipping their first
+product, and established companies who need an experienced hand on the systems
+they depend on.
 
-We work closely with our clients, keep communication transparent, and prefer
-long-term partnerships over throwaway projects. Whether you need a new product
-built from scratch or an experienced team to strengthen an existing one — we are
-here to help you move faster, with software that lasts.
+What ties it all together is craft. Clean architecture, honest communication, and
+a long-term mindset. We'd rather build one thing properly than ten things halfway.
