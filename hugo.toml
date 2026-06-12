@@ -1,34 +1,69 @@
 baseURL = "https://example.org/"
-languageCode = "de-de"
 title = "Rheinwork"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
 
 disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
 
-# Enable raw HTML in markdown (not strictly needed, templates do the work)
 [markup.goldmark.renderer]
   unsafe = true
 
+# Shared params (inherited by all languages; tagline/description overridden per language)
 [params]
-  tagline = "Software Engineering Studio"
-  description = "We build the solutions that move your business forward, faster than you thought possible."
-  email = "agencee@email.com"
-  phone = "+54 2541 22 55 66"
-  address = "123 Main Street Anytown, USA, 2141"
+  email = "info@rheinwork.com"
+  phone = "+49 (0) 157 5159 6276"
+  phoneHref = "+4915751596276"
+  address = ""
 
-# Main navigation
-[[menu.main]]
-  name = "Services"
-  url = "/services/"
-  weight = 10
-[[menu.main]]
-  name = "About"
-  url = "/about/"
-  weight = 20
-[[menu.main]]
-  name = "Blog"
-  url = "/blog/"
-  weight = 30
-[[menu.main]]
-  name = "Contact"
-  url = "/contact/"
-  weight = 40
+[languages]
+
+  [languages.en]
+    weight = 1
+    languageName = "English"
+    languageCode = "en-US"
+    title = "Rheinwork"
+    [languages.en.params]
+      tagline = "Software Engineering Studio"
+      description = "We build the solutions that move your business forward, faster than you thought possible."
+    [[languages.en.menu.main]]
+      name = "Services"
+      pageRef = "/services"
+      weight = 10
+    [[languages.en.menu.main]]
+      name = "About"
+      pageRef = "/about"
+      weight = 20
+    [[languages.en.menu.main]]
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 30
+    [[languages.en.menu.main]]
+      name = "Contact"
+      pageRef = "/contact"
+      weight = 40
+
+  [languages.de]
+    weight = 2
+    languageName = "Deutsch"
+    languageCode = "de-DE"
+    title = "Rheinwork"
+    [languages.de.params]
+      tagline = "Software Engineering Studio"
+      description = "Wir bauen die Lösungen, die Ihr Unternehmen voranbringen — schneller als gedacht."
+    [[languages.de.menu.main]]
+      name = "Leistungen"
+      pageRef = "/services"
+      weight = 10
+    [[languages.de.menu.main]]
+      name = "Über uns"
+      pageRef = "/about"
+      weight = 20
+    [[languages.de.menu.main]]
+      name = "Blog"
+      pageRef = "/blog"
+      weight = 30
+    [[languages.de.menu.main]]
+      name = "Kontakt"
+      pageRef = "/contact"
+      weight = 40

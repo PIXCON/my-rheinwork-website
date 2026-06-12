@@ -7,17 +7,17 @@
     <div class="reveal">
       <div class="hero-badge">
         <span class="stars">★★★★★</span>
-        <span class="pill">Engineering Systems &amp; Software</span>
-        <span>Built in Germany</span>
+        <span class="pill">{{ i18n "badgePill" }}</span>
+        <span>{{ i18n "badgeBuilt" }}</span>
       </div>
-      <h1>We build <span class="hl typed" id="typed" data-words='["software","apps","platforms","websites","the future"]'></span><span class="caret" aria-hidden="true"></span></h1>
+      <h1>{{ i18n "heroBuild" }} <span class="hl typed" id="typed" data-words='[{{ range $i, $w := split (i18n "heroWords") "," }}{{ if $i }}, {{ end }}"{{ $w }}"{{ end }}]'></span><span class="caret" aria-hidden="true"></span></h1>
       <p>{{ .Site.Params.description }}</p>
       <div class="hero-cta">
-        <a href="/contact/" class="btn btn--primary">
-          Get in touch
+        <a href="{{ "contact/" | relLangURL }}" class="btn btn--primary">
+          {{ i18n "getInTouch" }}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
-        <a href="/services/" class="btn btn--ghost">View Services</a>
+        <a href="{{ "services/" | relLangURL }}" class="btn btn--ghost">{{ i18n "viewServices" }}</a>
       </div>
     </div>
   </div>

@@ -1,0 +1,127 @@
+# Hero
+heroBuild = "Wir bauen"
+heroWords = "Software,Apps,Plattformen,Websites,die Zukunft"
+badgePill = "Systeme & Software Engineering"
+badgeBuilt = "Aus Deutschland"
+
+# Buttons / nav
+getInTouch = "Kontakt aufnehmen"
+viewServices = "Leistungen ansehen"
+allServices = "Alle Leistungen"
+learnMore = "Mehr erfahren"
+
+# Services section
+servicesEyebrow = "Unsere Leistungen"
+servicesTitle = "Was wir bauen"
+
+# Industries marquee
+industriesEyebrow = "Branchen"
+industriesTitle = "Für wen wir bauen"
+industriesList = "Handwerk,Gastronomie,E-Commerce,Industrie,Dienstleister,Startups,SaaS,Fintech"
+
+# Specialities
+specEyebrow = "Warum Rheinwork"
+specTitle = "Engineering, auf das Verlass ist"
+specIntro = "Wir verantworten den ganzen Stack, bauen auf ein sauberes Fundament und belegen Ergebnisse mit Daten."
+specFullstackTitle = "Full-Stack"
+specFullstackText = "Von der Oberfläche bis zur Infrastruktur aus einer Hand. Nichts fällt zwischen die Zuständigkeiten."
+specCloudTitle = "Performance-besessen"
+specCloudText = "Geschwindigkeit ist kein Extra, sondern Grundprinzip — bis zu 100/100 bei den technischen Core Web Vitals."
+specGermanyTitle = "Daten & Messbarkeit"
+specGermanyText = "Server-Side-Tracking und ein sauberes Setup, damit Sie wirklich sehen, was funktioniert."
+specLastingTitle = "Made in Germany & EU-Hosting"
+specLastingText = "Entwickelt und betrieben aus Deutschland — Ihre Daten auf EU-Servern."
+specReliableTitle = "Gebaut, um zu bleiben"
+specReliableText = "Dokumentierter Code und ein langfristiger Ansatz statt Wegwerf-Projekt."
+
+# FAQ
+faqEyebrow = "FAQ"
+faqTitle = "Fragen? Wir haben Antworten!"
+
+# CTA / contact
+ctaEyebrow = "Kontakt"
+ctaLets = "Sprechen"
+ctaTalk = "wir."
+formName = "Name"
+formNamePh = "Ihr Name"
+formEmail = "E-Mail"
+formEmailPh = "name@firma.de"
+formMessage = "Nachricht"
+formMessagePh = "Erzählen Sie uns von Ihrem Projekt …"
+formSubmit = "Nachricht senden"
+formThanks = "Vielen Dank! Wir melden uns."
+
+# Process steps
+processEyebrow = "Ablauf"
+processTitle = "So arbeiten wir"
+proc1Title = "Anfrage & Fragebogen"
+proc1Text = "Sie schreiben uns; Sie erhalten einen kurzen Fragebogen, der Ziele und Rahmen klärt."
+proc2Title = "Angebot & Konzept"
+proc2Text = "Auf dieser Basis erstellen wir ein Angebot mit knapper, klarer Konzeption."
+proc3Title = "Umsetzung"
+proc3Text = "Nach Annahme entwickeln wir in Iterationen — mit sauberem Code und regelmäßigem Feedback."
+proc4Title = "Launch & Betrieb"
+proc4Text = "Wir bringen live, überwachen und halten Ihre Software auf Wunsch langfristig am Laufen."
+
+# Service detail
+svcEyebrow = "Leistung"
+svcOverview = "Überblick"
+svcCapabilitiesEyebrow = "Im Leistungsumfang"
+svcCapabilitiesTitle = "Leistungen"
+svcWhereItHelps = "Wo es hilft"
+svcWhatYouGet = "Das bekommen Sie"
+svcExamplesEyebrow = "Ausgewählte Projekte"
+svcExamplesTitle = "Beispiele"
+svcExampleTag = "Bald verfügbar"
+svcExampleTitle = "Projekttitel"
+svcExampleText = "Eine kurze Beschreibung des Projekts, der Herausforderung und des Ergebnisses. Hier kommen echte Projekte rein."
+ucPhTitle = "Anwendungsfall"
+ucPh1 = "Eine konkrete Situation, in der diese Leistung einen echten Unterschied macht."
+ucPh2 = "Ein weiteres typisches Szenario und das Ergebnis, das wir liefern."
+ucPh3 = "Und noch eins, damit klar ist, wann diese Leistung die richtige Wahl ist."
+
+# Service list page
+svcListTitle = "Engineering für den gesamten Stack"
+svcListSubtitle = "Von der hochperformanten Website über Software und SaaS bis zu Tracking und Betrieb: ein Partner für das technische Fundament Ihres Erfolgs im Web — von der Idee bis zum laufenden Betrieb."
+
+# Blog list page
+blogListTitle = "Engineering-Notizen & Einblicke"
+blogListSubtitle = "Gedanken über Technik, die Ergebnisse bringt — von Performance und Tracking bis zu sauberer Architektur."
+
+# About page
+aboutEyebrow = "Über Rheinwork"
+aboutHeroLead = "Wir bauen Software,"
+aboutHeroHl = "als würde es zählen."
+aboutHeroText = "Denn das tut es. Wir sind ein Team von Engineers aus Deutschland, das den Erfolg im Web dort baut, wo er entsteht: im technischen Fundament. Nicht in schönen Versprechen, sondern in sauberem Code, schnellen Seiten und belastbaren Daten."
+aboutStoryEyebrow = "Unsere Geschichte"
+aboutStoryTitle = "Aus eigenem Schmerz entstanden."
+founderEyebrow = "Der Gründer"
+founderTitle = "Der Mensch hinter dem Code."
+founderPhotoPh = "Foto folgt"
+
+# Blog
+blogMinRead = "Min. Lesezeit"
+blogReadArticle = "Artikel lesen"
+blogBack = "Zurück zu allen Beiträgen"
+blogArticleLabel = "Artikel"
+blogCoverPh = "Titelbild"
+blogNoPosts = "Noch keine Beiträge — schauen Sie bald wieder vorbei."
+
+# Breadcrumb
+breadcrumbHome = "Start"
+
+# Footer
+footerPages = "Seiten"
+footerServices = "Leistungen"
+footerContact = "Kontakt"
+footerRights = "Alle Rechte vorbehalten."
+legalImprint = "Impressum"
+legalPrivacy = "Datenschutz"
+navServices = "Leistungen"
+navAbout = "Über uns"
+navBlog = "Blog"
+navContact = "Kontakt"
+fsWeb = "Web Engineering"
+fsSoftware = "Software Engineering"
+fsSaas = "SaaS Engineering"
+fsInfra = "Infrastruktur"

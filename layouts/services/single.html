@@ -3,7 +3,7 @@
 <!-- Breadcrumb + left-aligned service hero -->
 <section class="section svc-hero">
   <div class="container">
-    {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" "Services" "url" "/services/") (dict "label" .Title))) }}
+    {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" (i18n "navServices") "url" ("services/" | relLangURL)) (dict "label" .Title))) }}
     <div class="svc-hero-head reveal">
       <div class="service-icon">{{ partial "icon.html" .Params.icon }}</div>
       <h1>{{ .Title }}</h1>
@@ -20,20 +20,20 @@
       <!-- Main column -->
       <div class="svc-main">
         <div class="reveal">
-          <h2 class="svc-h">{{ .Params.overview | default "Overview" }}</h2>
+          <h2 class="svc-h">{{ .Params.overview | default (i18n "svcOverview") }}</h2>
           <div class="prose svc-prose">{{ .Content }}</div>
         </div>
 
         {{ $usecases := .Params.usecases }}
         {{ if not $usecases }}
           {{ $usecases = slice
-            (dict "title" "Use case" "text" "A concrete situation where this service makes a real difference. We'll fill this with real examples.")
-            (dict "title" "Use case" "text" "Another typical scenario and the outcome we deliver.")
-            (dict "title" "Use case" "text" "One more, so it is clear when this service is the right fit.")
+            (dict "title" (i18n "ucPhTitle") "text" (i18n "ucPh1"))
+            (dict "title" (i18n "ucPhTitle") "text" (i18n "ucPh2"))
+            (dict "title" (i18n "ucPhTitle") "text" (i18n "ucPh3"))
           }}
         {{ end }}
         <div class="reveal" style="margin-top: 40px;">
-          <h2 class="svc-h">Where it helps</h2>
+          <h2 class="svc-h">{{ i18n "svcWhereItHelps" }}</h2>
           <ul class="usecase-list">
             {{ range $usecases }}
             <li>
@@ -48,7 +48,7 @@
       <!-- Sticky conversion sidebar -->
       <aside class="svc-aside">
         <div class="svc-aside-card reveal">
-          <h3>What you get</h3>
+          <h3>{{ i18n "svcWhatYouGet" }}</h3>
           {{ with .Params.topics }}
           <ul class="feature-list svc-feature-list">
             {{ range . }}
@@ -59,8 +59,8 @@
             {{ end }}
           </ul>
           {{ end }}
-          <a href="/contact/" class="btn btn--primary btn--block">
-            Get in touch
+          <a href="{{ "contact/" | relLangURL }}" class="btn btn--primary btn--block">
+            {{ i18n "getInTouch" }}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
         </div>
@@ -70,19 +70,44 @@
   </div>
 </section>
 
+{{ with .Params.faq }}
+<!-- Service FAQ -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{ i18n "faqEyebrow" }}</span>
+      <h2>{{ i18n "faqTitle" }}</h2>
+    </div>
+    <div class="faq-list">
+      {{ range . }}
+      <div class="faq-item reveal">
+        <button class="faq-q">
+          {{ .q }}
+          <span class="icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M12 5v14M5 12h14" stroke-linecap="round"/></svg>
+          </span>
+        </button>
+        <div class="faq-a"><p>{{ .a }}</p></div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 <!-- How we work -->
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">Process</span>
-      <h2>How we work</h2>
+      <span class="eyebrow">{{ i18n "processEyebrow" }}</span>
+      <h2>{{ i18n "processTitle" }}</h2>
     </div>
     <div class="process-grid reveal">
       {{ $steps := slice
-        (dict "n" "01" "t" "Discovery" "d" "We get to know your goals, constraints and context before anything is built.")
-        (dict "n" "02" "t" "Plan" "d" "We scope the work together and agree on a clear, transparent plan.")
-        (dict "n" "03" "t" "Build" "d" "We engineer in iterations, with clean code and regular feedback.")
-        (dict "n" "04" "t" "Launch & care" "d" "We ship, monitor and keep your software running over the long run.")
+        (dict "n" "01" "t" (i18n "proc1Title") "d" (i18n "proc1Text"))
+        (dict "n" "02" "t" (i18n "proc2Title") "d" (i18n "proc2Text"))
+        (dict "n" "03" "t" (i18n "proc3Title") "d" (i18n "proc3Text"))
+        (dict "n" "04" "t" (i18n "proc4Title") "d" (i18n "proc4Text"))
       }}
       {{ range $steps }}
       <div class="process-card">

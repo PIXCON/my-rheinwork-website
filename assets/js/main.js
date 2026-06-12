@@ -130,8 +130,15 @@ if (heroCode) {
   }
 }
 
+// Remember the language a visitor picks via the switcher
+document.querySelectorAll('.lang-switch .lang-opt').forEach(opt => {
+  opt.addEventListener('click', () => {
+    try { localStorage.setItem('lang', opt.dataset.lang); } catch (e) {}
+  });
+});
+
 // Scroll reveal
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
-}, { threshold: 0.12 });
+}, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));

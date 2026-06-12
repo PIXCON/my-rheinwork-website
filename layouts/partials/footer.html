@@ -2,43 +2,43 @@
   <div class="container">
     <div class="footer-top">
       <div class="footer-brand">
-        <a href="/" class="brand" aria-label="Rheinwork">
+        <a href="{{ "" | relLangURL }}" class="brand" aria-label="Rheinwork">
           <img src="/img/rheinwork-logo.svg" alt="Rheinwork" class="brand-logo">
         </a>
         <p>{{ .Site.Params.description }}</p>
       </div>
       <div class="footer-col">
-        <h5>Pages</h5>
+        <h5>{{ i18n "footerPages" }}</h5>
         <ul>
-          <li><a href="/services/">Services</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/blog/">Blog</a></li>
-          <li><a href="/contact/">Contact</a></li>
+          <li><a href="{{ "services/" | relLangURL }}">{{ i18n "navServices" }}</a></li>
+          <li><a href="{{ "about/" | relLangURL }}">{{ i18n "navAbout" }}</a></li>
+          <li><a href="{{ "blog/" | relLangURL }}">{{ i18n "navBlog" }}</a></li>
+          <li><a href="{{ "contact/" | relLangURL }}">{{ i18n "navContact" }}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Services</h5>
+        <h5>{{ i18n "footerServices" }}</h5>
         <ul>
-          <li><a href="/services/">Web Engineering</a></li>
-          <li><a href="/services/">Software Engineering</a></li>
-          <li><a href="/services/">SaaS Engineering</a></li>
-          <li><a href="/services/">Infrastructure</a></li>
+          <li><a href="{{ "services/web-engineering/" | relLangURL }}">{{ i18n "fsWeb" }}</a></li>
+          <li><a href="{{ "services/software-engineering/" | relLangURL }}">{{ i18n "fsSoftware" }}</a></li>
+          <li><a href="{{ "services/saas-engineering/" | relLangURL }}">{{ i18n "fsSaas" }}</a></li>
+          <li><a href="{{ "services/infrastructure/" | relLangURL }}">{{ i18n "fsInfra" }}</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5>Contact</h5>
+        <h5>{{ i18n "footerContact" }}</h5>
         <ul>
           <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
-          <li><a href="tel:{{ .Site.Params.phone }}">{{ .Site.Params.phone }}</a></li>
-          <li><span style="color:var(--text-dim)">{{ .Site.Params.address }}</span></li>
+          <li><a href="tel:{{ .Site.Params.phoneHref | default .Site.Params.phone }}">{{ .Site.Params.phone }}</a></li>
+          {{ with .Site.Params.address }}<li><span style="color:var(--text-dim)">{{ . }}</span></li>{{ end }}
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© {{ now.Year }} Rheinwork. All rights reserved.</span>
+      <span>© {{ now.Year }} Rheinwork. {{ i18n "footerRights" }}</span>
       <nav class="footer-legal">
-        <a href="/impressum/">Impressum</a>
-        <a href="/datenschutz/">Datenschutz</a>
+        <a href="{{ "impressum/" | relLangURL }}">{{ i18n "legalImprint" }}</a>
+        <a href="{{ "datenschutz/" | relLangURL }}">{{ i18n "legalPrivacy" }}</a>
       </nav>
       <div class="footer-social">
         <a href="#" aria-label="X"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.66l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>

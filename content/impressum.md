@@ -1,44 +1,42 @@
 ---
-title: "Impressum"
-subtitle: "Angaben gemäß § 5 TMG"
+title: "Imprint"
+subtitle: "Legal disclosure (§ 5 DDG)"
 ---
 
-> **Hinweis:** Dies ist ein Platzhalter-Gerüst. Bitte mit euren echten Firmendaten
-> füllen und im Zweifel rechtlich prüfen lassen.
+## Company details (§ 5 DDG)
 
-## Angaben gemäß § 5 TMG
+Rheinwork GmbH<br>
+Haus-Endt-Straße 90<br>
+40593 Düsseldorf, Germany
 
-Rheinwork GmbH
-[Straße und Hausnummer]
-[PLZ Ort]
-Deutschland
+## Commercial register
 
-## Vertreten durch
+Register number: HRB 113206<br>
+Registering court: Local Court of Düsseldorf (Amtsgericht Düsseldorf)
 
-[Name der Geschäftsführung]
+## Represented by
 
-## Kontakt
+Dustin Schneider
 
-Telefon: [Telefonnummer]
-E-Mail: [E-Mail-Adresse]
+## Contact
 
-## Registereintrag
+Phone: +49 (0) 157 5159 6276<br>
+Email: info@rheinwork.com
 
-Eintragung im Handelsregister
-Registergericht: [Amtsgericht]
-Registernummer: [HRB …]
+## VAT ID
 
-## Umsatzsteuer-ID
+VAT identification number pursuant to § 27 a German VAT Act:<br>
+DE462675432
 
-Umsatzsteuer-Identifikationsnummer gemäß § 27 a UStG: [DE …]
+## Responsible for editorial content
 
-## Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV
+Dustin Schneider<br>
+Haus-Endt-Straße 90<br>
+40593 Düsseldorf
 
-[Name]
-[Anschrift]
+## Consumer dispute resolution / universal arbitration board
 
-## Streitschlichtung
+We are neither willing nor obliged to participate in dispute resolution proceedings
+before a consumer arbitration board.
 
-Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-bereit. Wir sind nicht verpflichtet und nicht bereit, an einem Streitbeilegungs­verfahren
-vor einer Verbraucherschlichtungsstelle teilzunehmen.
+<p class="legal-source">Source: <a href="https://www.e-recht24.de" rel="nofollow noopener" target="_blank">eRecht24</a></p>

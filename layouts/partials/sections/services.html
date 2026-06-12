@@ -5,8 +5,8 @@
   <div class="container">
     {{ if not $noHead }}
     <div class="section-head reveal">
-      <span class="eyebrow">Our Services</span>
-      <h2>What we build</h2>
+      <span class="eyebrow">{{ i18n "servicesEyebrow" }}</span>
+      <h2>{{ i18n "servicesTitle" }}</h2>
     </div>
     {{ end }}
     <div class="services-grid">
@@ -19,7 +19,7 @@
         <ul class="service-tags">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
         {{ end }}
         <span class="service-link">
-          Learn More
+          {{ i18n "learnMore" }}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </span>
       </a>

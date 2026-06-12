@@ -1,6 +1,6 @@
 <header class="site-header">
   <div class="container nav">
-    <a href="/" class="brand" aria-label="Rheinwork">
+    <a href="{{ "" | relLangURL }}" class="brand" aria-label="Rheinwork">
       <img src="/img/rheinwork-logo.svg" alt="Rheinwork" class="brand-logo">
     </a>
     <nav class="nav-menu" id="navMenu">
@@ -9,8 +9,9 @@
       {{ end }}
     </nav>
     <div class="nav-actions">
-      <a href="/contact/" class="btn btn--primary">
-        Get in touch
+      {{ partial "lang-switch.html" . }}
+      <a href="{{ "contact/" | relLangURL }}" class="btn btn--primary">
+        {{ i18n "getInTouch" }}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
       <button class="nav-toggle" id="navToggle" aria-label="Menu">

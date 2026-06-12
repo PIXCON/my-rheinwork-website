@@ -1,43 +1,42 @@
 ---
-title: "Datenschutz"
-subtitle: "Datenschutzerklärung"
+title: "Privacy"
+subtitle: "Privacy policy"
 ---
 
-> **Hinweis:** Dies ist ein Platzhalter-Gerüst. Bitte mit euren echten Angaben füllen
-> bzw. einen geprüften Datenschutztext (z. B. von Datenschutzbeauftragtem oder
-> Generator) einsetzen.
+> **Note:** This is a placeholder skeleton. Please fill in your real details or
+> use a reviewed privacy text. The German version is the legally binding one.
 
-## Verantwortlicher
+## Controller
 
-Verantwortlich für die Datenverarbeitung auf dieser Website:
+Responsible for data processing on this website:
 
 Rheinwork GmbH
-[Anschrift]
-E-Mail: [E-Mail-Adresse]
+[Address]
+Email: [Email address]
 
-## Allgemeines
+## General
 
-Wir nehmen den Schutz eurer persönlichen Daten ernst und behandeln eure
-personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
-Datenschutz­vorschriften (DSGVO, BDSG) sowie dieser Datenschutzerklärung.
+We take the protection of your personal data seriously and treat your personal data
+confidentially and in accordance with the statutory data protection regulations
+(GDPR, BDSG) and this privacy policy.
 
 ## Hosting
 
-Diese Website wird bei [Hosting-Anbieter] gehostet. Beim Aufruf der Seite werden
-technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt des Zugriffs) verarbeitet.
-[Details zum Hoster und Auftragsverarbeitungsvertrag ergänzen.]
+This website is hosted by [hosting provider]. When the site is accessed,
+technically necessary data (e.g. IP address, time of access) is processed.
+[Add details about the host and the data processing agreement.]
 
-## Kontaktformular
+## Contact form
 
-Wenn ihr uns über das Kontaktformular oder per E-Mail kontaktiert, verarbeiten wir
-die übermittelten Daten ausschließlich zur Bearbeitung eurer Anfrage.
+If you contact us via the contact form or by email, we process the submitted data
+solely to handle your request.
 
-## Eure Rechte
+## Your rights
 
-Ihr habt das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
-Verarbeitung, Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei
-einer Aufsichtsbehörde.
+You have the right to information, correction, deletion, restriction of processing,
+data portability and objection, as well as the right to lodge a complaint with a
+supervisory authority.
 
-## Kontakt zum Datenschutz
+## Privacy contact
 
-Bei Fragen zum Datenschutz erreicht ihr uns unter: [E-Mail-Adresse]
+If you have any questions about data protection, you can reach us at: [Email address]

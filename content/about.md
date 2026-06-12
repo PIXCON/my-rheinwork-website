@@ -4,19 +4,24 @@ layout: "about"
 founder:
   name: "Dustin Schneider"
   role: "Founder & Lead Engineer"
-  image: ""   # add /img/founder.jpg later — placeholder shows until then
-  text: "I started Rheinwork because I was tired of watching good ideas fail on bad software. Too many projects look great in a pitch deck and fall apart the moment real users show up. I wanted to build the opposite — software that quietly does its job, year after year, and a team you actually enjoy working with."
-  quote: "Software should feel effortless. That's the hard part — and it's the part we love."
+  image: ""   # add the real photo later
+  text: "For years I've been building technical solutions — from B2B software and data processing to tracking and high-performance websites. My focus is where technology and online marketing meet: clean data, fast pages, measurable results. As a Google-certified expert, I work solution-oriented and find a way that demonstrably works, even for unconventional requirements."
+  quote: "A successful online presence isn't a design question — it's a technical foundation. That's exactly what I build: clean, fast and measurable."
 ---
 
-We're not here to chase trends or win buzzword bingo. We're here to build software
-that works — the kind you stop thinking about because it simply does what it
-should.
+Rheinwork wasn't conceived at a drawing board — it grew out of real frustration. From our own
+projects in online retail, we know the pain caused by poor rankings, unreliable tracking and a
+technically weak online presence. We worked with countless agencies, sat through hours of meetings
+with Google and Facebook — and in the end got information that never really helped.
 
-Rheinwork is a software engineering studio from Germany. We design, build and run
-digital products for teams who care about quality: founders shipping their first
-product, and established companies who need an experienced hand on the systems
-they depend on.
+So we taught ourselves the technology. We realised that almost every problem online has the same
+origin: a shaky technical foundation. From that we developed solutions that demonstrably solve
+problems — fast pages, clean server-side tracking, software that lasts.
 
-What ties it all together is craft. Clean architecture, honest communication, and
-a long-term mindset. We'd rather build one thing properly than ten things halfway.
+That conviction underpins everything we do today: the cornerstone of success online is technical. It
+has to be clean and performant, and results have to be provable with data — not with gut feeling,
+and not with expensive tools you supposedly need for everything.
+
+How seriously we mean it shows in our own product: with **PIXCON** we're building a tool for
+server-side tracking and GTM hosting. We solve the problems others only talk about — and bring
+exactly that experience into every client project.

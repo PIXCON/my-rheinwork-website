@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="MVP launch">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15110b"/><stop offset="1" stop-color="#0b0b0d"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%"><stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/><stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/></radialGradient>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#201a14"/><stop offset="1" stop-color="#15120d"/></linearGradient>
+    <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+    <style>
+      .flame{transform-origin:600px 372px;animation:flame .5s ease-in-out infinite alternate}
+      @keyframes flame{from{transform:scaleY(.8)}to{transform:scaleY(1.15)}}
+      .star{animation:tw 2.4s ease-in-out infinite}
+      @keyframes tw{0%,100%{opacity:.3}50%{opacity:1}}
+    </style>
+  </defs>
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70" y="-20" width="120" height="540" rx="60"/><rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/><rect x="860" y="-20" width="150" height="540" rx="75"/><rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- trajectory -->
+  <path d="M470 360 C 560 360 640 300 760 180" fill="none" stroke="#ff7a18" stroke-opacity=".35" stroke-width="3" stroke-dasharray="2 14" stroke-linecap="round"/>
+  <!-- stars -->
+  <g fill="#ff9a3c"><circle class="star" cx="800" cy="150" r="4"/><circle class="star" cx="430" cy="200" r="3" style="animation-delay:.8s"/><circle class="star" cx="860" cy="250" r="3" style="animation-delay:1.4s"/></g>
+
+  <!-- rocket -->
+  <g>
+    <!-- flame -->
+    <path class="flame" d="M582 372 Q600 440 618 372 Q600 392 582 372 Z" fill="#ff7a18"/>
+    <path class="flame" d="M590 372 Q600 416 610 372 Q600 386 590 372 Z" fill="#ff9a3c"/>
+    <!-- body -->
+    <path d="M600 196 C 640 232 642 320 600 372 C 558 320 560 232 600 196 Z" fill="url(#body)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+    <path d="M600 196 C 640 232 642 320 600 372 C 558 320 560 232 600 196 Z" fill="none" stroke="#ff7a18" stroke-opacity=".2" stroke-width="9" filter="url(#soft)"/>
+    <!-- window -->
+    <circle cx="600" cy="262" r="20" fill="#0c0c0e" stroke="#ff9a3c" stroke-width="3"/>
+    <circle cx="600" cy="262" r="9" fill="#ff9a3c" opacity=".7"/>
+    <!-- fins -->
+    <path d="M566 326 L542 372 L568 360 Z" fill="#ff7a18"/>
+    <path d="M634 326 L658 372 L632 360 Z" fill="#ff7a18"/>
+    <!-- body line -->
+    <path d="M576 310 h48" stroke="#ffffff" stroke-opacity=".12" stroke-width="2"/>
+  </g>
+</svg>

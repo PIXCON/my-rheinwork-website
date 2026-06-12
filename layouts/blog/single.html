@@ -4,34 +4,36 @@
   <!-- Post header -->
   <header class="section post-header">
     <div class="container post-container">
-      {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" "Blog" "url" "/blog/") (dict "label" .Title))) }}
+      {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" (i18n "navBlog") "url" ("blog/" | relLangURL)) (dict "label" .Title))) }}
       {{ with .Params.tag }}<span class="post-tag">{{ . }}</span>{{ end }}
       <h1 class="post-title reveal">{{ .Title }}</h1>
       <div class="post-meta reveal">
         {{ with .Params.author }}<span>{{ . }}</span><span class="dot">·</span>{{ end }}
-        <span>{{ .Date.Format "January 2, 2006" }}</span>
+        <span>{{ .Date | time.Format ":date_long" }}</span>
         <span class="dot">·</span>
-        <span>{{ .ReadingTime }} min read</span>
+        <span>{{ .ReadingTime }} {{ i18n "blogMinRead" }}</span>
       </div>
     </div>
   </header>
 
   <!-- Cover image placeholder -->
   <div class="container post-container">
-    <div class="post-cover reveal"><span class="placeholder-label">Cover image</span></div>
+    <div class="post-cover reveal">
+      {{ with .Params.cover }}<img src="{{ . }}" alt="{{ $.Title }}">{{ else }}<span class="placeholder-label">{{ i18n "blogCoverPh" }}</span>{{ end }}
+    </div>
   </div>
 
   <!-- Article body -->
   <section class="section" style="padding-top: 36px;">
     <div class="container post-container">
-      <div class="prose post-prose reveal">
+      <div class="prose post-prose">
         {{ .Content }}
       </div>
 
       <div class="post-footer reveal">
-        <a href="/blog/" class="btn btn--ghost">
+        <a href="{{ "blog/" | relLangURL }}" class="btn btn--ghost">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M19 12H5M11 18l-6-6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Back to all posts
+          {{ i18n "blogBack" }}
         </a>
       </div>
     </div>

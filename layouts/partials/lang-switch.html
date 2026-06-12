@@ -1,0 +1,14 @@
+<!-- Discreet EN / DE language switcher. Links to the translated page when it exists, else the language home. -->
+{{ $page := . }}
+<div class="lang-switch" role="group" aria-label="Language">
+  {{ range site.Languages }}
+    {{ $code := .Lang }}
+    {{ $target := printf "/%s/" $code }}
+    {{ range $page.AllTranslations }}
+      {{ if eq .Language.Lang $code }}{{ $target = .RelPermalink }}{{ end }}
+    {{ end }}
+    {{ $active := eq $code $page.Site.Language.Lang }}
+    <a href="{{ $target }}" hreflang="{{ $code }}" data-lang="{{ $code }}"
+       class="lang-opt{{ if $active }} is-active{{ end }}"{{ if $active }} aria-current="true"{{ end }}>{{ upper $code }}</a>
+  {{ end }}
+</div>

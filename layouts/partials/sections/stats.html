@@ -1,9 +1,10 @@
 <!-- Stats: warm panel orbs + cards + pills -->
+{{ $stats := index site.Data.stats site.Language.Lang }}
 <section class="section">
   <div class="container">
     <div class="stats-hero reveal">
       <div class="stats-orbs">
-        {{ range site.Data.stats.counters }}
+        {{ range $stats.counters }}
         <div class="stat-orb">
           <div class="num">{{ .value }}</div>
           <div class="lbl">{{ .label }}</div>
@@ -12,7 +13,7 @@
       </div>
     </div>
     <div class="stats-cards reveal">
-      {{ range site.Data.stats.points }}
+      {{ range $stats.points }}
       <div class="stat-card">
         <div class="stat-card-icon">{{ partial "icon.html" .icon }}</div>
         <h4>{{ .title }}</h4>
@@ -21,7 +22,7 @@
       {{ end }}
     </div>
     <div class="stats-pills reveal">
-      {{ range site.Data.stats.pills }}
+      {{ range $stats.pills }}
       <span class="stat-pill">{{ partial "icon.html" "spark" }} {{ . }}</span>
       {{ end }}
     </div>

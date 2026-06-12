@@ -1,0 +1,127 @@
+# Hero
+heroBuild = "We build"
+heroWords = "software,apps,platforms,websites,the future"
+badgePill = "Engineering Systems & Software"
+badgeBuilt = "Built in Germany"
+
+# Buttons / nav
+getInTouch = "Get in touch"
+viewServices = "View Services"
+allServices = "All services"
+learnMore = "Learn More"
+
+# Services section
+servicesEyebrow = "Our Services"
+servicesTitle = "What we build"
+
+# Industries marquee
+industriesEyebrow = "Industries"
+industriesTitle = "Who we build for"
+industriesList = "Crafts,Hospitality,E-Commerce,Industry,Service Providers,Startups,SaaS,Fintech"
+
+# Specialities
+specEyebrow = "Why Rheinwork"
+specTitle = "Engineering you can rely on"
+specIntro = "We own the whole stack, build on a clean foundation, and back results with data."
+specFullstackTitle = "Full-stack"
+specFullstackText = "From interface to infrastructure, all from one team. Nothing falls through the cracks."
+specCloudTitle = "Performance-obsessed"
+specCloudText = "Speed isn't an extra, it's a principle — up to 100/100 on the technical Core Web Vitals."
+specGermanyTitle = "Data & measurability"
+specGermanyText = "Server-side tracking and a clean setup, so you really see what works."
+specLastingTitle = "Made in Germany & EU hosting"
+specLastingText = "Engineered and operated from Germany — your data on EU servers."
+specReliableTitle = "Built to last"
+specReliableText = "Documented code and a long-term approach, not a throwaway project."
+
+# FAQ
+faqEyebrow = "FAQ"
+faqTitle = "Got Questions? We've Got Answers!"
+
+# CTA / contact
+ctaEyebrow = "Contact Us"
+ctaLets = "Let's"
+ctaTalk = "Talk!"
+formName = "Name"
+formNamePh = "Your name"
+formEmail = "Email"
+formEmailPh = "you@company.com"
+formMessage = "Message"
+formMessagePh = "Tell us about your project..."
+formSubmit = "Send Message"
+formThanks = "Thanks! We will be in touch."
+
+# Process steps
+processEyebrow = "Process"
+processTitle = "How we work"
+proc1Title = "Inquiry & brief"
+proc1Text = "You reach out and receive a short questionnaire that clarifies goals and scope."
+proc2Title = "Offer & concept"
+proc2Text = "Based on that, we put together a quote with a concise, clear concept."
+proc3Title = "Build"
+proc3Text = "Once approved, we engineer in iterations, with clean code and regular feedback."
+proc4Title = "Launch & care"
+proc4Text = "We ship, monitor and keep your software running long-term if you wish."
+
+# Service detail
+svcEyebrow = "Service"
+svcOverview = "Overview"
+svcCapabilitiesEyebrow = "What's included"
+svcCapabilitiesTitle = "Capabilities"
+svcWhereItHelps = "Where it helps"
+svcWhatYouGet = "What you get"
+svcExamplesEyebrow = "Selected Work"
+svcExamplesTitle = "Examples"
+svcExampleTag = "Coming soon"
+svcExampleTitle = "Project title"
+svcExampleText = "A short description of the project, the challenge and the outcome. We'll fill this with real work."
+ucPhTitle = "Use case"
+ucPh1 = "A concrete situation where this service makes a real difference."
+ucPh2 = "Another typical scenario and the outcome we deliver."
+ucPh3 = "One more, so it is clear when this service is the right fit."
+
+# Service list page
+svcListTitle = "Engineering for the entire stack"
+svcListSubtitle = "From high-performance websites to software, SaaS, tracking and operations: one partner for the technical foundation of your success online — from idea to live operation."
+
+# Blog list page
+blogListTitle = "Engineering notes & insights"
+blogListSubtitle = "Thoughts on technology that delivers results — from performance and tracking to clean architecture."
+
+# About page
+aboutEyebrow = "About Rheinwork"
+aboutHeroLead = "We build software"
+aboutHeroHl = "like it matters."
+aboutHeroText = "Because it does. We're a team of engineers from Germany who build success online where it actually happens: in the technical foundation. Not in nice promises, but in clean code, fast pages and reliable data."
+aboutStoryEyebrow = "Our story"
+aboutStoryTitle = "Born from our own pain."
+founderEyebrow = "Meet the founder"
+founderTitle = "The person behind the code."
+founderPhotoPh = "Photo coming"
+
+# Blog
+blogMinRead = "min read"
+blogReadArticle = "Read article"
+blogBack = "Back to all posts"
+blogArticleLabel = "Article"
+blogCoverPh = "Cover image"
+blogNoPosts = "No posts yet — check back soon."
+
+# Breadcrumb
+breadcrumbHome = "Home"
+
+# Footer
+footerPages = "Pages"
+footerServices = "Services"
+footerContact = "Contact"
+footerRights = "All rights reserved."
+legalImprint = "Imprint"
+legalPrivacy = "Privacy"
+navServices = "Services"
+navAbout = "About"
+navBlog = "Blog"
+navContact = "Contact"
+fsWeb = "Web Engineering"
+fsSoftware = "Software Engineering"
+fsSaas = "SaaS Engineering"
+fsInfra = "Infrastructure"

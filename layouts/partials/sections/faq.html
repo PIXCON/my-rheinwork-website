@@ -2,11 +2,11 @@
 <section class="section">
   <div class="container">
     <div class="section-head reveal">
-      <span class="eyebrow">FAQ</span>
-      <h2>Got Questions? We've Got Answers!</h2>
+      <span class="eyebrow">{{ i18n "faqEyebrow" }}</span>
+      <h2>{{ i18n "faqTitle" }}</h2>
     </div>
     <div class="faq-list">
-      {{ range site.Data.faq }}
+      {{ range index site.Data.faq site.Language.Lang }}
       <div class="faq-item reveal">
         <button class="faq-q">
           {{ .q }}

@@ -5,9 +5,9 @@
   <div class="about-hero-glow" aria-hidden="true"></div>
   <div class="container">
     <div class="about-hero-inner reveal">
-      <span class="eyebrow">About Rheinwork</span>
-      <h1>We build software <span class="hl">like it matters.</span></h1>
-      <p>Because it does. We're a studio of engineers from Germany who care about the craft behind every product — and the people who use it.</p>
+      <span class="eyebrow">{{ i18n "aboutEyebrow" }}</span>
+      <h1>{{ i18n "aboutHeroLead" }} <span class="hl">{{ i18n "aboutHeroHl" }}</span></h1>
+      <p>{{ i18n "aboutHeroText" }}</p>
     </div>
   </div>
 </section>
@@ -17,8 +17,8 @@
   <div class="container">
     <div class="about-story reveal">
       <div class="about-story-head">
-        <span class="eyebrow">Our story</span>
-        <h2>Engineering over hype.</h2>
+        <span class="eyebrow">{{ i18n "aboutStoryEyebrow" }}</span>
+        <h2>{{ i18n "aboutStoryTitle" }}</h2>
       </div>
       <div class="about-story-body prose">
         {{ .Content }}
@@ -41,13 +41,13 @@
         {{ else }}
           <div class="founder-photo-ph">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0" stroke-linecap="round"/></svg>
-            <span>Your photo</span>
+            <span>{{ i18n "founderPhotoPh" }}</span>
           </div>
         {{ end }}
       </div>
       <div class="founder-text">
-        <span class="eyebrow">Meet the founder</span>
-        <h2>The person behind the code.</h2>
+        <span class="eyebrow">{{ i18n "founderEyebrow" }}</span>
+        <h2>{{ i18n "founderTitle" }}</h2>
         {{ with .text }}<p class="founder-bio">{{ . }}</p>{{ end }}
         {{ with .quote }}<blockquote class="founder-quote">{{ . }}</blockquote>{{ end }}
         <div class="founder-signoff">

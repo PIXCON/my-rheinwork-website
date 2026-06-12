@@ -129,12 +129,19 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .nav-toggle { display: none; width: 42px; height: 42px; border-radius: 10px; background: var(--surface-2); border: 1px solid var(--border); align-items: center; justify-content: center; }
 .nav-toggle svg { width: 22px; height: 22px; }
 
+/* Language switcher (discreet) */
+.lang-switch { display: inline-flex; align-items: center; gap: 2px; padding: 3px; border-radius: 100px; background: var(--surface-2); border: 1px solid var(--border); }
+.lang-opt { font-size: 12px; font-weight: 600; letter-spacing: .04em; color: var(--text-dimmer); padding: 5px 10px; border-radius: 100px; transition: color .15s, background .15s; }
+.lang-opt:hover { color: var(--text); }
+.lang-opt.is-active { color: var(--text); background: var(--surface); box-shadow: 0 1px 2px rgba(0,0,0,.3); }
+
 /* =========================================================
    Hero
    ========================================================= */
 .hero { position: relative; padding-top: 70px; padding-bottom: 0; text-align: center; }
 .hero-badge {
-  display: inline-flex; align-items: center; gap: 14px;
+  display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center;
+  max-width: 100%;
   background: var(--surface); border: 1px solid var(--border);
   padding: 6px 6px 6px 16px; border-radius: 100px; font-size: 13px; color: var(--text-dim);
   margin-bottom: 30px;
@@ -145,6 +152,9 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   font-size: clamp(40px, 7vw, 86px); line-height: 1.02; letter-spacing: -0.035em; font-weight: 800;
   max-width: 14ch; margin-inline: auto;
 }
+/* Deutsch: längere Hero-Phrasen ("Wir bauen Plattformen" / "... die Zukunft")
+   in einer Zeile halten, statt an der 14ch-Grenze umzubrechen. */
+.hero h1:lang(de) { max-width: 20ch; }
 .hero h1 .hl { color: var(--accent); }
 .hero h1 .typed { display: inline; }
 .caret {
@@ -536,14 +546,32 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .prose h2 { color: var(--text); font-size: 24px; margin: 34px 0 12px; letter-spacing: -.01em; }
 .prose h3 { color: var(--text); font-size: 19px; margin: 26px 0 10px; }
 .prose p { margin-bottom: 16px; }
-.prose a { color: var(--accent); }
-.prose ul, .prose ol { margin: 0 0 16px 22px; }
-.prose li { margin-bottom: 8px; }
+.prose a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: rgba(255,122,24,.4); }
+.prose a:hover { text-decoration-color: var(--accent); }
+.prose ul { list-style: disc; }
+.prose ol { list-style: decimal; }
+.prose ul, .prose ol { margin: 0 0 18px 24px; padding-left: 4px; }
+.prose li { margin-bottom: 9px; padding-left: 4px; }
+.prose li::marker { color: var(--accent); }
 .prose strong { color: var(--text); }
+.prose h2 + ul, .prose h2 + ol, .prose h3 + ul, .prose h3 + ol { margin-top: 4px; }
+.prose .legal-source { margin-top: 32px; font-size: 13px; color: var(--text-dimmer); }
 .prose blockquote {
   border-left: 3px solid var(--accent); background: var(--surface);
   padding: 14px 18px; border-radius: 0 12px 12px 0; margin: 0 0 22px; color: var(--text-dim);
 }
+/* Markdown tables */
+.prose table {
+  width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 14.5px;
+  border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden;
+}
+.prose thead th { background: var(--surface-2); color: var(--text); font-weight: 700; }
+.prose th, .prose td { padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--border); vertical-align: top; }
+.prose td { color: var(--text-dim); }
+.prose tbody tr:last-child td { border-bottom: none; }
+.prose tbody tr:hover td { background: rgba(255,255,255,.02); }
+/* Blog cover / card images */
+.post-cover img, .blog-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
 /* Service detail: capabilities list + process steps */
 .feature-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px 32px; max-width: 760px; margin-inline: auto; }
@@ -729,6 +757,47 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   .footer-top { grid-template-columns: 1fr; }
   .case-metrics { gap: 20px; }
   .promo-banner { padding: 36px 24px; }
+}
+
+/* =========================================================
+   Responsive — Breakpoint-Konvention
+   ≤1024px Tablet (s. ~980er Block)  ·  ≤768px Mobile / Nav-Drawer (s. ~760er Block)
+   ·  ≤560px Nav-Entlastung  ·  ≤480px Small-Phone-Feinschliff
+   (komponentenspezifische Queries 540/860/920 ergänzen diese)
+   ========================================================= */
+
+/* Hero-Badge: schmaler werden, statt überzulaufen */
+@media (max-width: 600px) {
+  .hero-badge { gap: 10px; font-size: 12px; padding: 5px 6px 5px 14px; }
+}
+@media (max-width: 400px) {
+  /* Geo-Zusatz ("Aus Deutschland" / "Built in Germany") ausblenden */
+  .hero-badge > span:last-child { display: none; }
+}
+
+/* Nav: auf kleinen Phones CTA ausblenden (Kontakt bleibt über das Menü erreichbar) */
+@media (max-width: 560px) {
+  .nav { gap: 12px; }
+  .nav-actions { gap: 8px; }
+  .nav-actions .btn--primary { display: none; }
+  .brand-logo { height: 26px; }
+}
+
+/* Small-Phone-Feinschliff */
+@media (max-width: 480px) {
+  :root { --gut: 16px; }
+  .section { padding-block: 40px; }
+  .section--tight { padding-block: 28px; }
+  .hero { padding-top: 56px; }
+  .hero h1:lang(de) { max-width: none; }   /* darf auf Mobil frei umbrechen */
+  .hero p { font-size: 16px; margin-top: 22px; }
+  .section-head { margin-bottom: 36px; }
+  .service-card, .stat-card, .contact-form, .svc-aside-card, .process-card, .uc-card { padding: 22px; }
+  .faq-q { padding: 18px; font-size: 15.5px; }
+  .faq-a p { padding: 0 18px 20px; }
+  .site-footer { margin-top: 64px; }
+  .footer-top { gap: 28px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; gap: 14px; }
 }
 .reveal { opacity: 0; transform: translateY(24px); transition: opacity .6s ease, transform .6s ease; }
 .reveal.in { opacity: 1; transform: none; }

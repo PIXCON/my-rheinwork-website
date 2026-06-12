@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{ partial "page-header.html" (dict "eyebrow" "Blog" "title" "Engineering notes & insights" "subtitle" "Thoughts on building software that lasts — from architecture and infrastructure to the way we work.") }}
+{{ partial "page-header.html" (dict "eyebrow" (i18n "navBlog") "title" (i18n "blogListTitle") "subtitle" (i18n "blogListSubtitle")) }}
 
 <section class="section" style="padding-top: 8px;">
   <div class="container">
@@ -10,17 +10,17 @@
       <a href="{{ .RelPermalink }}" class="blog-card reveal">
         <div class="blog-media">
           {{ with .Params.tag }}<span class="blog-media-tag">{{ . }}</span>{{ end }}
-          <span class="placeholder-label">Article</span>
+          {{ with .Params.cover }}<img src="{{ . }}" alt="" loading="lazy">{{ else }}<span class="placeholder-label">{{ i18n "blogArticleLabel" }}</span>{{ end }}
         </div>
         <div class="blog-body">
           <div class="blog-meta">
-            <span>{{ .Date.Format "Jan 2, 2006" }}</span>
+            <span>{{ .Date | time.Format ":date_medium" }}</span>
             <span class="dot">·</span>
-            <span>{{ .ReadingTime }} min read</span>
+            <span>{{ .ReadingTime }} {{ i18n "blogMinRead" }}</span>
           </div>
           <h3>{{ .Title }}</h3>
           {{ with .Params.summary }}<p class="blog-excerpt">{{ . }}</p>{{ end }}
-          <span class="blog-readmore">Read article
+          <span class="blog-readmore">{{ i18n "blogReadArticle" }}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </span>
         </div>
@@ -28,7 +28,7 @@
       {{ end }}
     </div>
     {{ else }}
-    <p class="text-dim" style="text-align:center;">No posts yet — check back soon.</p>
+    <p class="text-dim" style="text-align:center;">{{ i18n "blogNoPosts" }}</p>
     {{ end }}
   </div>
 </section>

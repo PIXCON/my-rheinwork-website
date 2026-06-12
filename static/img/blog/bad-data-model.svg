@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Data model">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#15110b"/><stop offset="1" stop-color="#0b0b0d"/></linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%"><stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/><stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/></radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#241a0c"/><stop offset="1" stop-color="#140f0a"/></linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="7"/></filter>
+    <style>.pulse{animation:pulse 3s ease-in-out infinite}@keyframes pulse{0%,100%{opacity:.5}50%{opacity:1}}</style>
+  </defs>
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70" y="-20" width="120" height="540" rx="60"/><rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/><rect x="860" y="-20" width="150" height="540" rx="75"/><rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- relations -->
+  <g fill="none" stroke="#ff7a18" stroke-opacity=".4" stroke-width="2.5">
+    <path d="M372 262 H505"/><path d="M700 250 H835"/>
+  </g>
+  <g fill="#ff9a3c"><circle cx="372" cy="262" r="5"/><circle cx="505" cy="250" r="5"/><circle cx="700" cy="250" r="5"/><circle cx="835" cy="262" r="5"/></g>
+
+  <!-- table A -->
+  <g>
+    <rect x="172" y="196" width="200" height="132" rx="14" fill="#16161a" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="172" y="196" width="200" height="34" rx="14" fill="#ffffff" opacity=".06"/>
+    <rect x="190" y="206" width="90" height="13" rx="6" fill="#ffffff" opacity=".3"/>
+    <g fill="#ffffff" opacity=".12"><rect x="190" y="250" width="160" height="11" rx="5"/><rect x="190" y="276" width="120" height="11" rx="5"/><rect x="190" y="302" width="140" height="11" rx="5"/></g>
+  </g>
+  <!-- table B (highlighted) -->
+  <g>
+    <rect x="505" y="166" width="200" height="172" rx="16" fill="url(#panel)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+    <rect x="505" y="166" width="200" height="172" rx="16" fill="none" stroke="#ff7a18" stroke-opacity=".22" stroke-width="10" filter="url(#soft)"/>
+    <rect x="505" y="166" width="200" height="36" rx="16" fill="#ff7a18" opacity=".18"/>
+    <rect x="524" y="177" width="100" height="13" rx="6" fill="#ff9a3c"/>
+    <g><circle class="pulse" cx="534" cy="232" r="5" fill="#ff9a3c"/><rect x="552" y="226" width="130" height="12" rx="6" fill="#ffffff" opacity=".16"/></g>
+    <g><circle class="pulse" cx="534" cy="266" r="5" fill="#ff9a3c"/><rect x="552" y="260" width="100" height="12" rx="6" fill="#ffffff" opacity=".16"/></g>
+    <g><circle class="pulse" cx="534" cy="300" r="5" fill="#ff9a3c"/><rect x="552" y="294" width="120" height="12" rx="6" fill="#ffffff" opacity=".16"/></g>
+  </g>
+  <!-- table C -->
+  <g>
+    <rect x="835" y="210" width="200" height="118" rx="14" fill="#16161a" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="835" y="210" width="200" height="34" rx="14" fill="#ffffff" opacity=".06"/>
+    <rect x="853" y="220" width="90" height="13" rx="6" fill="#ffffff" opacity=".3"/>
+    <g fill="#ffffff" opacity=".12"><rect x="853" y="264" width="150" height="11" rx="5"/><rect x="853" y="290" width="110" height="11" rx="5"/></g>
+  </g>
+</svg>
