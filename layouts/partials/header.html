@@ -1,7 +1,7 @@
 <header class="site-header">
   <div class="container nav">
     <a href="{{ "" | relLangURL }}" class="brand" aria-label="Rheinwork">
-      <img src="/img/rheinwork-logo.svg" alt="Rheinwork" class="brand-logo">
+      <img src="{{ "img/rheinwork-logo.svg" | relURL }}" alt="Rheinwork" class="brand-logo">
     </a>
     <nav class="nav-menu" id="navMenu">
       {{ range .Site.Menus.main }}
