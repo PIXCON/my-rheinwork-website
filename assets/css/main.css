@@ -156,7 +156,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
    in einer Zeile halten, statt an der 14ch-Grenze umzubrechen. */
 .hero h1:lang(de) { max-width: 20ch; }
 .hero h1 .hl { color: var(--accent); }
-.hero h1 .typed { display: inline; }
+.hero h1 .typed { display: inline; white-space: nowrap; }
 .caret {
   display: inline-block; width: .055em; height: .85em;
   background: var(--accent); margin-left: .06em; vertical-align: -0.06em;
@@ -328,6 +328,19 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   .stat-orb:nth-child(odd), .stat-orb:nth-child(even) { transform: none; }
   .stat-orb:not(:first-child) { margin-left: 0; }
   .stats-cards { grid-template-columns: 1fr; margin-top: -60px; }
+}
+
+/* Stats auf dem Handy: 2x2-Kacheln statt großer Kreise */
+@media (max-width: 600px) {
+  .stats-hero { padding: 36px 18px clamp(110px, 30vw, 150px); }
+  .stats-orbs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; }
+  .stat-orb {
+    width: auto; aspect-ratio: auto; border-radius: var(--radius-sm);
+    padding: 22px 16px; gap: 6px;
+    background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.14);
+  }
+  .stat-orb .num { font-size: 32px; }
+  .stat-orb .lbl { font-size: 13px; margin-top: 6px; }
 }
 
 /* =========================================================

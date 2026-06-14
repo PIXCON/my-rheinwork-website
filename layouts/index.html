@@ -10,7 +10,7 @@
         <span class="pill">{{ i18n "badgePill" }}</span>
         <span>{{ i18n "badgeBuilt" }}</span>
       </div>
-      <h1>{{ i18n "heroBuild" }} <span class="hl typed" id="typed" data-words='[{{ range $i, $w := split (i18n "heroWords") "," }}{{ if $i }}, {{ end }}"{{ $w }}"{{ end }}]'></span><span class="caret" aria-hidden="true"></span></h1>
+      <h1>{{ i18n "heroBuild" }}<br><span class="hl typed" id="typed" data-words='[{{ range $i, $w := split (i18n "heroWords") "," }}{{ if $i }}, {{ end }}"{{ $w }}"{{ end }}]'></span><span class="caret" aria-hidden="true"></span></h1>
       <p>{{ .Site.Params.description }}</p>
       <div class="hero-cta">
         <a href="{{ "contact/" | relLangURL }}" class="btn btn--primary">

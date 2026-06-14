@@ -45,7 +45,7 @@ if (typed) {
   let words = [];
   try { words = JSON.parse(typed.dataset.words || '[]'); } catch (e) {}
   if (words.length) {
-    let wi = 0, ci = 0, deleting = false;
+    let wi = 0, ci = 0, deleting = false, visible = true, running = false;
     const tick = () => {
       const word = words[wi];
       ci += deleting ? -1 : 1;
@@ -53,8 +53,17 @@ if (typed) {
       let delay = deleting ? 55 : 110;
       if (!deleting && ci === word.length) { deleting = true; delay = 1500; }
       else if (deleting && ci === 0) { deleting = false; wi = (wi + 1) % words.length; delay = 350; }
+      if (!visible) { running = false; return; }   // pausieren, wenn der Hero aus dem Sichtfeld ist
       setTimeout(tick, delay);
     };
+    const hero = document.getElementById('about');
+    if ('IntersectionObserver' in window && hero) {
+      new IntersectionObserver((entries) => {
+        visible = entries[0].isIntersecting;
+        if (visible && !running) { running = true; tick(); }
+      }).observe(hero);
+    }
+    running = true;
     tick();
   }
 }
