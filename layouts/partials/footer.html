@@ -8,7 +8,7 @@
         <p>{{ .Site.Params.description }}</p>
       </div>
       <div class="footer-col">
-        <h5>{{ i18n "footerPages" }}</h5>
+        <h3>{{ i18n "footerPages" }}</h3>
         <ul>
           <li><a href="{{ "services/" | relLangURL }}">{{ i18n "navServices" }}</a></li>
           <li><a href="{{ "about/" | relLangURL }}">{{ i18n "navAbout" }}</a></li>
@@ -17,7 +17,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>{{ i18n "footerServices" }}</h5>
+        <h3>{{ i18n "footerServices" }}</h3>
         <ul>
           <li><a href="{{ "services/web-engineering/" | relLangURL }}">{{ i18n "fsWeb" }}</a></li>
           <li><a href="{{ "services/software-engineering/" | relLangURL }}">{{ i18n "fsSoftware" }}</a></li>
@@ -26,7 +26,7 @@
         </ul>
       </div>
       <div class="footer-col">
-        <h5>{{ i18n "footerContact" }}</h5>
+        <h3>{{ i18n "footerContact" }}</h3>
         <ul>
           <li><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></li>
           <li><a href="tel:{{ .Site.Params.phoneHref | default .Site.Params.phone }}">{{ .Site.Params.phone }}</a></li>

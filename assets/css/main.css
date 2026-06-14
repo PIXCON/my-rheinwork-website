@@ -320,7 +320,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   display: grid; place-items: center; border: 1px solid rgba(255,122,24,.35);
 }
 .stat-card-icon svg { width: 32px; height: 32px; }
-.stat-card h4 { font-size: 19px; margin-bottom: 10px; }
+.stat-card h3 { font-size: 19px; margin-bottom: 10px; }
 .stat-card p { color: var(--text-dim); font-size: 14.5px; }
 
 .stats-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
@@ -579,7 +579,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 }
 .footer-top { display: grid; grid-template-columns: 1.4fr repeat(3, 1fr); gap: 40px; padding-bottom: 44px; border-bottom: 1px solid var(--border); }
 .footer-brand p { color: var(--text-dim); font-size: 15px; margin-top: 18px; max-width: 34ch; }
-.footer-col h5 { font-size: 14px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dimmer); margin-bottom: 18px; }
+.footer-col h3 { font-size: 14px; text-transform: uppercase; letter-spacing: .1em; color: var(--text-dimmer); margin-bottom: 18px; }
 .footer-col ul { display: flex; flex-direction: column; gap: 12px; }
 .footer-col a { color: var(--text-dim); font-size: 15px; transition: color .15s; }
 .footer-col a:hover { color: var(--accent); }
@@ -642,7 +642,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   border-radius: var(--radius); padding: 26px;
 }
 .process-num { font-size: 13px; font-weight: 700; color: var(--accent); letter-spacing: .12em; }
-.process-card h4 { font-size: 18px; margin: 10px 0 8px; }
+.process-card h3 { font-size: 18px; margin: 10px 0 8px; }
 .process-card p { color: var(--text-dim); font-size: 14.5px; }
 @media (max-width: 760px) {
   .process-grid { grid-template-columns: 1fr 1fr; }
@@ -669,7 +669,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
     background: var(--bg); border: 1.5px solid var(--accent); color: var(--accent);
     position: relative; z-index: 1;
   }
-  .process-card h4 { grid-column: 2; margin: 8px 0 6px; }
+  .process-card h3 { grid-column: 2; margin: 8px 0 6px; }
   .process-card p { grid-column: 2; margin: 0; }
 }
 
