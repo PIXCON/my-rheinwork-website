@@ -3,7 +3,7 @@ title: "Measurement Infrastructure"
 icon: "activity"
 summary: "Server-Side-Tracking mit eigener GTM-Integration auf EU-Servern in Deutschland: vollständige Daten trotz Adblockern und Consent, als verlässliche Basis für bessere Marketingentscheidungen."
 description: "Server-Side-Tracking aus Deutschland: serverseitiges GTM, EU-Hosting und sauberes Datensetup. Vollständige, DSGVO-bewusste Daten statt Lücken durch Adblocker, damit Sie Ihr Marketingbudget auf verlässliche Zahlen stützen."
-weight: 6
+weight: 7
 related:
   - "server-side-tracking"
   - "server-side-gtm-ga4"

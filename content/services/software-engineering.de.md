@@ -3,7 +3,7 @@ title: "Software Engineering"
 icon: "code"
 summary: "Individuelle Softwareentwicklung, die Ihre Prozesse trägt: robuste Backends, APIs und Integrationen, gebaut für niedrige Folgekosten und stabiles Wachstum."
 description: "Individuelle Softwareentwicklung aus Deutschland: robuste Backends, APIs, Integrationen, Automationen und KI-Logik. Sauber architektiert und wartbar gebaut, damit Ihre Software langfristig günstig im Betrieb bleibt."
-weight: 3
+weight: 4
 related:
   - "bad-data-model"
   - "technical-debt-explained"

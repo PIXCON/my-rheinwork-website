@@ -3,7 +3,7 @@ title: "Software Engineering"
 icon: "code"
 summary: "Custom software development that carries your processes: robust backends, APIs and integrations, built for low long-term cost and stable growth."
 description: "Custom software development from Germany: robust backends, APIs, integrations, automations and AI logic. Cleanly architected and built to maintain, so your software stays cheap to run over the long term."
-weight: 3
+weight: 4
 related:
   - "bad-data-model"
   - "technical-debt-explained"

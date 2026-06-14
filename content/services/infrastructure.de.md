@@ -3,7 +3,7 @@ title: "Infrastructure"
 icon: "server"
 summary: "Infrastruktur & DevOps für Software, die rund um die Uhr läuft: Cloud, Container, automatisierte Deployments und Monitoring aus einer Hand. Damit der Betrieb planbar wird statt zur Dauerbaustelle."
 description: "Infrastruktur & DevOps aus Deutschland: Cloud, Docker, Kubernetes, CI/CD, Monitoring und Hosting auf EU-Servern. Wir betreiben Ihre Software zuverlässig, automatisieren Auslieferung und Überwachung und halten die Komplexität so klein wie möglich."
-weight: 5
+weight: 6
 related:
   - "keeping-software-running"
   - "boring-technology"

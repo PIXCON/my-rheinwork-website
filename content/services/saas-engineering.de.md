@@ -3,7 +3,7 @@ title: "SaaS Engineering"
 icon: "layers"
 summary: "SaaS-Entwicklung vom MVP zum skalierbaren Produkt: Multi-Tenant, Billing und User-Management, schnell startklar und wachstumsfähig, ohne späteren Neubau."
 description: "SaaS-Entwicklung aus Deutschland: vom schlanken MVP zur Multi-Tenant-Plattform mit Stripe-Billing, User-Management und Admin-Interfaces. Sauber gebaut, schnell am Markt, bereit zu skalieren."
-weight: 4
+weight: 5
 related:
   - "mvp-without-cutting-corners"
   - "multi-tenant-from-day-one"

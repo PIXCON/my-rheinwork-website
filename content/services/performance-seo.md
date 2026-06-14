@@ -3,7 +3,7 @@ title: "Performance & SEO"
 icon: "gauge"
 summary: "Technical SEO from Germany: fast loading times, green Core Web Vitals and clean rendering as the foundation to rank measurably better and win more enquiries."
 description: "Technical SEO and performance: Core Web Vitals, rendering, load-time and image optimisation, and structured data. We bring the technical basis of your visibility to top scores, proven before and after. Not a content or link-building agency."
-weight: 7
+weight: 8
 related:
   - "hugo-website-performance"
   - "why-is-my-website-slow"

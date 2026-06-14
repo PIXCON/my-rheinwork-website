@@ -3,7 +3,7 @@ title: "Performance & SEO"
 icon: "gauge"
 summary: "Technisches SEO aus Deutschland: schnelle Ladezeiten, grüne Core Web Vitals und sauberes Rendering als Fundament, um messbar besser zu ranken und mehr Anfragen zu gewinnen."
 description: "Technisches SEO und Performance: Core Web Vitals, Rendering, Lade- und Bildoptimierung sowie Structured Data. Wir bringen die technische Basis Ihrer Sichtbarkeit auf Bestwerte, nachweisbar im Vorher-Nachher. Keine Content- oder Linkbuilding-Agentur."
-weight: 7
+weight: 8
 related:
   - "hugo-website-performance"
   - "why-is-my-website-slow"
