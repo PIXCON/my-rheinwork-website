@@ -9,3 +9,15 @@
     {{ end }}
   </ol>
 </nav>
+{{/* BreadcrumbList structured data */}}
+{{ $u := urls.Parse site.BaseURL }}
+{{ $host := printf "%s://%s" $u.Scheme $u.Host }}
+{{ $els := slice (dict "@type" "ListItem" "position" 1 "name" (i18n "breadcrumbHome") "item" ("" | absLangURL)) }}
+{{ $pos := 2 }}
+{{ range .items }}
+  {{ $li := dict "@type" "ListItem" "position" $pos "name" .label }}
+  {{ with .url }}{{ $li = merge $li (dict "item" (printf "%s%s" $host .)) }}{{ end }}
+  {{ $els = $els | append $li }}
+  {{ $pos = add $pos 1 }}
+{{ end }}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $els) | jsonify | safeJS }}</script>

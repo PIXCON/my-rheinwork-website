@@ -146,6 +146,13 @@ navServices = "Services"
 navAbout = "About"
 navBlog = "Blog"
 navContact = "Contact"
+
+# 404
+err404Eyebrow = "Error 404"
+err404Title = "Page not found"
+err404Text = "The page you are looking for does not exist or has moved. Let us get you back on track."
+err404Home = "Back to home"
+
 fsWeb = "Web Engineering"
 fsSoftware = "Software Engineering"
 fsSaas = "SaaS Engineering"

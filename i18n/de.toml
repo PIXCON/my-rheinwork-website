@@ -146,6 +146,13 @@ navServices = "Leistungen"
 navAbout = "Über uns"
 navBlog = "Blog"
 navContact = "Kontakt"
+
+# 404
+err404Eyebrow = "Fehler 404"
+err404Title = "Seite nicht gefunden"
+err404Text = "Die gesuchte Seite existiert nicht oder wurde verschoben. Wir bringen Sie zurück auf den Weg."
+err404Home = "Zur Startseite"
+
 fsWeb = "Web Engineering"
 fsSoftware = "Software Engineering"
 fsSaas = "SaaS Engineering"

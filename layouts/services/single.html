@@ -1,4 +1,7 @@
 {{ define "main" }}
+{{/* Service structured data */}}
+{{ $svcLd := dict "@context" "https://schema.org" "@type" "Service" "name" .Title "serviceType" .Title "description" (.Params.description | default .Params.summary | default site.Params.description) "provider" (dict "@type" "Organization" "name" site.Title "url" site.BaseURL) "areaServed" (dict "@type" "Country" "name" "Germany") }}
+<script type="application/ld+json">{{ $svcLd | jsonify | safeJS }}</script>
 
 <!-- Breadcrumb + left-aligned service hero -->
 <section class="section svc-hero">

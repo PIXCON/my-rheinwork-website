@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="section" style="min-height:62vh;display:flex;align-items:center;">
+  <div class="container" style="max-width:660px;margin-inline:auto;text-align:center;">
+    <span class="eyebrow" style="justify-content:center;">{{ i18n "err404Eyebrow" }}</span>
+    <div style="font-size:clamp(72px,16vw,140px);font-weight:800;letter-spacing:-.04em;line-height:1;background:linear-gradient(135deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;margin:6px 0 4px;">404</div>
+    <h1 style="font-size:clamp(24px,4vw,34px);margin-bottom:12px;">{{ i18n "err404Title" }}</h1>
+    <p style="color:var(--text-dim);max-width:46ch;margin:0 auto 30px;">{{ i18n "err404Text" }}</p>
+    <div class="hero-cta" style="justify-content:center;flex-wrap:wrap;gap:12px;">
+      <a href="{{ "" | relLangURL }}" class="btn btn--primary">{{ i18n "err404Home" }}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="{{ "services/" | relLangURL }}" class="btn btn--ghost">{{ i18n "navServices" }}</a>
+      <a href="{{ "blog/" | relLangURL }}" class="btn btn--ghost">{{ i18n "navBlog" }}</a>
+      <a href="{{ "contact/" | relLangURL }}" class="btn btn--ghost">{{ i18n "navContact" }}</a>
+    </div>
+  </div>
+</section>
+{{ end }}

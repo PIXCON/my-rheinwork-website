@@ -3,17 +3,15 @@ title: "Privacy"
 subtitle: "Privacy policy"
 ---
 
-> **Note:** This is a draft. Please fill in your real details and have it reviewed by
-> your data protection advisor before publishing. The German version is the legally
-> binding one.
-
 ## Controller
 
 Responsible for data processing on this website:
 
 Rheinwork GmbH
-[Address]
-Email: [Email address]
+Haus-Endt-Straße 90
+40593 Düsseldorf, Germany
+Represented by: Dustin Schneider
+Email: info@rheinwork.com
 
 ## General
 
@@ -23,14 +21,22 @@ confidentially and in accordance with the statutory data protection regulations
 
 ## Hosting
 
-This website is provided via **GitHub Pages** (GitHub, Inc., USA). When the site is
-accessed, technically necessary data is processed (e.g. IP address, date and time of
-access, requested file, browser type) in order to deliver the website securely and
-reliably. The legal basis is Art. 6(1)(f) GDPR (legitimate interest in secure, stable
-provision). As the provider may also process data in the USA, a transfer to a third
-country takes place, based on the EU Commission's standard contractual clauses or the
-provider's certification under the EU-US Data Privacy Framework.
-[Add the data processing agreement and further details.]
+This website is provided via **Cloudflare Pages** (Cloudflare, Inc., 101 Townsend Street,
+San Francisco, CA 94107, USA). When the site is accessed, technically necessary data is
+processed (e.g. IP address, date and time of access, requested file, browser type) in
+order to deliver the website securely and reliably. The legal basis is Art. 6(1)(f) GDPR
+(legitimate interest in secure, stable provision). As the provider may also process data
+in the USA, a transfer to a third country takes place, based on the EU Commission's
+standard contractual clauses or the provider's certification under the EU-US Data Privacy
+Framework.
+
+## Web analytics
+
+To analyse website usage statistically, we use **Cloudflare Web Analytics**
+(Cloudflare, Inc., USA). Measurement is performed **without cookies** and without
+cross-device recognition; no personal profiles are created. Aggregated usage data is
+collected (e.g. pages viewed, approximate origin, browser type). The legal basis is
+Art. 6(1)(f) GDPR (legitimate interest in privacy-friendly analytics).
 
 ## Contact form
 
@@ -54,8 +60,10 @@ Data processing agreements are in place with these providers. As both process da
 the USA, a transfer to a third country takes place, based on the EU Commission's
 standard contractual clauses or certification under the EU-US Data Privacy Framework.
 
-Your data is deleted once your request has been fully handled and no statutory retention
-obligations apply. [Add the specific retention period.]
+Requests that lead to a contract or business correspondence are retained in line with
+statutory retention periods (generally 6 to 10 years under the German Commercial Code
+and Fiscal Code). All other request data is deleted no later than twelve months after
+the request has been fully handled, unless statutory retention obligations apply.
 
 ## Your rights
 
@@ -65,4 +73,4 @@ supervisory authority.
 
 ## Privacy contact
 
-If you have any questions about data protection, you can reach us at: [Email address]
+If you have any questions about data protection, you can reach us at: info@rheinwork.com

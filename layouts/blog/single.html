@@ -1,4 +1,9 @@
 {{ define "main" }}
+{{/* BlogPosting structured data */}}
+{{ $bpLd := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "datePublished" (.Date.Format "2006-01-02") "dateModified" (.Lastmod.Format "2006-01-02") "inLanguage" .Language.Lang "mainEntityOfPage" .Permalink "author" (dict "@type" "Person" "name" (.Params.author | default "Rheinwork")) "publisher" (dict "@type" "Organization" "name" site.Title "logo" (dict "@type" "ImageObject" "url" ("img/rheinwork-logo.svg" | absURL))) }}
+{{ with .Params.cover }}{{ $bpLd = merge $bpLd (dict "image" ((strings.TrimPrefix "/" .) | absURL)) }}{{ end }}
+{{ $bpDesc := .Params.description | default .Params.summary }}{{ with $bpDesc }}{{ $bpLd = merge $bpLd (dict "description" .) }}{{ end }}
+<script type="application/ld+json">{{ $bpLd | jsonify | safeJS }}</script>
 
 <article class="post">
   <!-- Post header -->

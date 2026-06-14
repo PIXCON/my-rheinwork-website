@@ -5,7 +5,8 @@ title = "Rheinwork"
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
 
-disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
+disableKinds = ["taxonomy", "term", "RSS"]
+enableRobotsTXT = true
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -15,9 +16,20 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
   email = "info@rheinwork.com"
   phone = "+49 (0) 157 5159 6276"
   phoneHref = "+4915751596276"
-  address = ""
+  address = "Haus-Endt-Straße 90, 40593 Düsseldorf"
   # Kontaktformular-Versand: URL des Cloudflare Workers hier eintragen (leer = nur Frontend-Demo, sendet nichts)
   contactEndpoint = ""
+  # Social-Sharing-Vorschaubild (1200x630), liegt unter static/
+  ogImage = "img/og-image.png"
+  # Social-Profile (fuer JSON-LD sameAs / Entitaets-Verknuepfung)
+  sameAs = ["https://linkedin.com/company/rheinwork-gmbh", "https://www.facebook.com/profile.php?id=61590446206708", "https://www.instagram.com/rheinwork_gmbh", "https://x.com/rheinworkgmbh"]
+
+  # Strukturierte Adresse (fuer LocalBusiness/PostalAddress JSON-LD)
+  [params.postalAddress]
+    streetAddress = "Haus-Endt-Straße 90"
+    postalCode = "40593"
+    addressLocality = "Düsseldorf"
+    addressCountry = "DE"
 
 [languages]
 
