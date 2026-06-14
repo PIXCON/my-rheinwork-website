@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Consent Mode v2 consent banner with shield">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="shield" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- consent banner -->
+  <g>
+    <rect x="150" y="170" width="540" height="160" rx="18" fill="#16161a" stroke="#ffffff" stroke-opacity=".14"/>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="184" y="204" width="380" height="14" rx="7"/>
+      <rect x="184" y="232" width="300" height="14" rx="7"/>
+    </g>
+    <!-- decline button -->
+    <rect x="184" y="272" width="120" height="34" rx="17" fill="none" stroke="#ffffff" stroke-opacity=".25" stroke-width="2"/>
+    <!-- accept button -->
+    <rect x="320" y="272" width="140" height="34" rx="17" fill="#ff7a18" opacity=".7"/>
+    <!-- toggle -->
+    <g transform="translate(520,278)">
+      <rect x="0" y="0" width="60" height="26" rx="13" fill="#ff7a18" opacity=".55"/>
+      <circle cx="46" cy="13" r="11" fill="#ff9a3c"/>
+    </g>
+    <text x="420" y="358" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="17" fill="#ffffff" opacity=".4">Consent Banner</text>
+  </g>
+
+  <!-- connection paths banner -> shield -->
+  <g fill="none" stroke="#ff7a18" stroke-opacity=".35" stroke-width="2.5">
+    <path id="p0" d="M690 250 H812"/>
+  </g>
+  <g fill="#ff9a3c">
+    <circle r="5"><animateMotion dur="1.7s" repeatCount="indefinite"><mpath href="#p0"/></animateMotion></circle>
+  </g>
+
+  <!-- shield with check -->
+  <g transform="translate(950,250)">
+    <path d="M0 -120 L110 -80 L110 30 C110 95 60 130 0 150 C-60 130 -110 95 -110 30 L-110 -80 Z"
+          fill="url(#shield)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+    <path d="M0 -120 L110 -80 L110 30 C110 95 60 130 0 150 C-60 130 -110 95 -110 30 L-110 -80 Z"
+          fill="none" stroke="#ff7a18" stroke-opacity=".25" stroke-width="10" filter="url(#soft)"/>
+    <path class="pulse" d="M-44 6 L-12 42 L52 -36" fill="none" stroke="#ff9a3c" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <text x="950" y="430" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">Consent Mode v2</text>
+</svg>

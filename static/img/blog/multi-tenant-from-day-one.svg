@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Isolated tenant boxes on one shared platform">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="server" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      .pulse3{animation:pulse 3.2s ease-in-out infinite;animation-delay:2.0s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- shared platform base -->
+  <g>
+    <rect x="220" y="338" width="760" height="58" rx="14" fill="url(#server)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+    <rect x="220" y="338" width="760" height="58" rx="14" fill="none" stroke="#ff7a18" stroke-opacity=".22" stroke-width="10" filter="url(#soft)"/>
+    <text x="600" y="374" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">Eine Plattform</text>
+  </g>
+
+  <!-- connection lines from platform up to each tenant -->
+  <g fill="none" stroke="#ff7a18" stroke-opacity=".30" stroke-width="2.5">
+    <path d="M320 338 V 300"/>
+    <path d="M600 338 V 300"/>
+    <path d="M880 338 V 300"/>
+  </g>
+
+  <!-- tenant box A -->
+  <g>
+    <rect x="252" y="150" width="136" height="150" rx="16" fill="#16161a" stroke="#ffffff" stroke-opacity=".16"/>
+    <path d="M252 182 h136" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+    <circle cx="272" cy="166" r="4" fill="#ffffff" opacity=".25"/>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="272" y="204" width="96" height="11" rx="5.5"/>
+      <rect x="272" y="226" width="72" height="11" rx="5.5"/>
+    </g>
+    <rect class="pulse" x="272" y="252" width="60" height="14" rx="7" fill="#ff7a18" opacity=".55"/>
+    <text x="320" y="328" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ffffff" opacity=".4">Tenant A</text>
+  </g>
+
+  <!-- tenant box B (center, emphasized) -->
+  <g>
+    <rect x="532" y="138" width="136" height="162" rx="16" fill="#16161a" stroke="#ff7a18" stroke-opacity=".55" stroke-width="2"/>
+    <path d="M532 170 h136" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+    <circle cx="552" cy="154" r="4" fill="#ffffff" opacity=".25"/>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="552" y="192" width="96" height="11" rx="5.5"/>
+      <rect x="552" y="214" width="72" height="11" rx="5.5"/>
+    </g>
+    <rect class="pulse2" x="552" y="240" width="60" height="14" rx="7" fill="#ff7a18" opacity=".6"/>
+    <text x="600" y="328" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ffffff" opacity=".45">Tenant B</text>
+  </g>
+
+  <!-- tenant box C -->
+  <g>
+    <rect x="812" y="150" width="136" height="150" rx="16" fill="#16161a" stroke="#ffffff" stroke-opacity=".16"/>
+    <path d="M812 182 h136" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+    <circle cx="832" cy="166" r="4" fill="#ffffff" opacity=".25"/>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="832" y="204" width="96" height="11" rx="5.5"/>
+      <rect x="832" y="226" width="72" height="11" rx="5.5"/>
+    </g>
+    <rect class="pulse3" x="832" y="252" width="60" height="14" rx="7" fill="#ff7a18" opacity=".55"/>
+    <text x="880" y="328" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ffffff" opacity=".4">Tenant C</text>
+  </g>
+</svg>

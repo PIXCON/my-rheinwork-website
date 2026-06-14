@@ -6,8 +6,8 @@ description: "Individuelle Softwareentwicklung aus Deutschland: robuste Backends
 weight: 3
 related:
   - "bad-data-model"
-  - "boring-technology"
-  - "keeping-software-running"
+  - "technical-debt-explained"
+  - "apis-and-integrations"
 faq:
   - q: "Lösen Sie auch ein bestehendes oder gewachsenes System ab?"
     a: "Ja. Wir übernehmen gewachsene Systeme, verschaffen uns einen klaren Überblick und ersetzen schrittweise die Teile, die unwartbar geworden sind, ohne den laufenden Betrieb zu unterbrechen. So vermeiden Sie einen riskanten Komplettstillstand und verteilen das Risiko über planbare Etappen."

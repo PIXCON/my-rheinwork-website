@@ -7,9 +7,9 @@ cover: "/img/blog/server-side-tracking.svg"
 summary: "Browser-based tracking loses more and more data to ad blockers, cookie limits and consent. This guide explains server-side tracking from the ground up: how it works, the benefits, GDPR and implementation."
 description: "Server-side tracking explained: how it works, the benefits, GDPR and the setup with server-side GTM and EU hosting. The complete guide to reliable marketing data."
 related:
+  - "server-side-gtm-ga4"
   - "bad-data-model"
   - "hugo-website-performance"
-  - "boring-technology"
 ---
 
 Marketing budgets are allocated based on data. Yet that very data has been getting quieter, patchier

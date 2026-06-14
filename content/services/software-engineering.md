@@ -6,8 +6,8 @@ description: "Custom software development from Germany: robust backends, APIs, i
 weight: 3
 related:
   - "bad-data-model"
-  - "boring-technology"
-  - "keeping-software-running"
+  - "technical-debt-explained"
+  - "apis-and-integrations"
 faq:
   - q: "Can you take over an existing or grown legacy system?"
     a: "Yes. We take over grown systems, build a clear picture of them and gradually replace the parts that have become unmaintainable, without interrupting day-to-day operations. That avoids a risky big-bang switch and spreads the risk across plannable stages."

@@ -6,8 +6,8 @@ description: "SaaS-Entwicklung aus Deutschland: vom schlanken MVP zur Multi-Tena
 weight: 4
 related:
   - "mvp-without-cutting-corners"
-  - "bad-data-model"
-  - "boring-technology"
+  - "multi-tenant-from-day-one"
+  - "build-vs-buy"
 faq:
   - q: "Wie lange dauert ein MVP, und was kostet es?"
     a: "Das hängt vom Umfang ab; jedes Projekt ist individuell, daher Preis auf Anfrage. Über unseren Fragebogen schätzen wir Aufwand und Richtung schnell und transparent ein. So wissen Sie früh, womit Sie rechnen, statt im Projekt überrascht zu werden."

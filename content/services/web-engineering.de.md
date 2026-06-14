@@ -6,8 +6,8 @@ description: "Professionelle Website-Entwicklung aus Deutschland: ultraschnelle 
 weight: 1
 related:
   - "hugo-website-performance"
+  - "why-is-my-website-slow"
   - "boring-technology"
-  - "keeping-software-running"
 faq:
   - q: "Was ist eine Hugo-Website, und warum?"
     a: "Hugo erzeugt statische Seiten, die ohne Datenbank und schweres CMS auskommen. Das macht sie extrem schnell, sicher und im Hosting günstig, bei gleichzeitig hervorragenden technischen SEO-Werten. Für viele Unternehmensseiten ist das die technisch sauberste Lösung."

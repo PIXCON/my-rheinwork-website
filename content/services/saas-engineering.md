@@ -6,8 +6,8 @@ description: "SaaS development from Germany: from a lean MVP to a multi-tenant p
 weight: 4
 related:
   - "mvp-without-cutting-corners"
-  - "bad-data-model"
-  - "boring-technology"
+  - "multi-tenant-from-day-one"
+  - "build-vs-buy"
 faq:
   - q: "How long does an MVP take, and what does it cost?"
     a: "It depends on scope; every project is individual, so pricing is on request. Via our questionnaire we estimate effort and direction quickly and transparently. That way you know early what to expect, instead of being surprised mid-project."

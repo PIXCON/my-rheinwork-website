@@ -6,8 +6,8 @@ description: "Web app development from Germany: customer portals, dashboards and
 weight: 2
 related:
   - "mvp-without-cutting-corners"
-  - "bad-data-model"
-  - "keeping-software-running"
+  - "multi-tenant-from-day-one"
+  - "apis-and-integrations"
 faq:
   - q: "What's the difference from a normal website?"
     a: "A website informs and converts. A web app lets people work, with logins, individual data and real-time interaction. If you mainly need a fast, findable presence, our Web Engineering service is the right fit. As soon as users log in and need to do something, you're in the right place here."

@@ -7,9 +7,9 @@ cover: "/img/blog/server-side-tracking.svg"
 summary: "Browserbasiertes Tracking verliert immer mehr Daten an Adblocker, Cookie-Limits und Consent. Dieser Leitfaden erklärt Server-Side-Tracking von Grund auf: Funktionsweise, Vorteile, DSGVO und Umsetzung."
 description: "Server-Side-Tracking erklärt: Funktionsweise, Vorteile, DSGVO und Setup mit serverseitigem GTM und EU-Hosting. Der vollständige Leitfaden für verlässliche Marketingdaten."
 related:
+  - "server-side-gtm-ga4"
   - "bad-data-model"
   - "hugo-website-performance"
-  - "boring-technology"
 ---
 
 Marketingbudgets werden auf Basis von Daten verteilt. Doch genau diese Daten werden seit Jahren leiser,

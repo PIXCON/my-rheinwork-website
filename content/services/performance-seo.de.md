@@ -6,8 +6,8 @@ description: "Technisches SEO und Performance: Core Web Vitals, Rendering, Lade-
 weight: 7
 related:
   - "hugo-website-performance"
-  - "server-side-tracking"
-  - "keeping-software-running"
+  - "why-is-my-website-slow"
+  - "improve-core-web-vitals"
 faq:
   - q: "Machen Sie auch Content-SEO und Backlinks?"
     a: "Nein. Wir konzentrieren uns bewusst auf die technische Seite: Performance, Rendering, Crawlbarkeit und Structured Data. Inhaltliche Redaktion und Linkbuilding gehören nicht zu unserem Angebot. So bleiben wir in dem, was wir wirklich beherrschen, und sagen Ihnen klar, wo eine andere Disziplin gefragt ist."

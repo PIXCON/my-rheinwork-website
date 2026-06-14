@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Three Core Web Vitals gauges LCP INP CLS in the green">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1410"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#2ec26a" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#2ec26a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .n0{transform-origin:300px 270px;animation:n0 3.4s ease-in-out infinite alternate}
+      .n1{transform-origin:600px 270px;animation:n1 3.4s ease-in-out infinite alternate;animation-delay:.4s}
+      .n2{transform-origin:900px 270px;animation:n2 3.4s ease-in-out infinite alternate;animation-delay:.8s}
+      @keyframes n0{0%{transform:rotate(8deg)}100%{transform:rotate(22deg)}}
+      @keyframes n1{0%{transform:rotate(14deg)}100%{transform:rotate(30deg)}}
+      @keyframes n2{0%{transform:rotate(6deg)}100%{transform:rotate(18deg)}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- gauge group: cx, label, needle class -->
+  <!-- LCP -->
+  <g>
+    <path d="M180 270 A120 120 0 0 1 420 270" fill="none" stroke="#16201a" stroke-width="22" stroke-linecap="round"/>
+    <path d="M180 270 A120 120 0 0 1 420 270" fill="none" stroke="#2ec26a" stroke-width="22" stroke-linecap="round" stroke-dasharray="300 400"/>
+    <g class="n0"><path d="M300 270 L300 168" stroke="#7ef0a8" stroke-width="6" stroke-linecap="round"/></g>
+    <circle cx="300" cy="270" r="12" fill="#2ec26a"/>
+    <circle cx="300" cy="270" r="12" fill="none" stroke="#2ec26a" stroke-opacity=".3" stroke-width="9" filter="url(#soft)"/>
+    <text x="300" y="330" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="22" fill="#7ef0a8" opacity=".9">LCP</text>
+  </g>
+
+  <!-- INP -->
+  <g>
+    <path d="M480 270 A120 120 0 0 1 720 270" fill="none" stroke="#16201a" stroke-width="22" stroke-linecap="round"/>
+    <path d="M480 270 A120 120 0 0 1 720 270" fill="none" stroke="#2ec26a" stroke-width="22" stroke-linecap="round" stroke-dasharray="320 400"/>
+    <g class="n1"><path d="M600 270 L600 168" stroke="#7ef0a8" stroke-width="6" stroke-linecap="round"/></g>
+    <circle cx="600" cy="270" r="12" fill="#2ec26a"/>
+    <circle cx="600" cy="270" r="12" fill="none" stroke="#2ec26a" stroke-opacity=".3" stroke-width="9" filter="url(#soft)"/>
+    <text x="600" y="330" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="22" fill="#7ef0a8" opacity=".9">INP</text>
+  </g>
+
+  <!-- CLS -->
+  <g>
+    <path d="M780 270 A120 120 0 0 1 1020 270" fill="none" stroke="#16201a" stroke-width="22" stroke-linecap="round"/>
+    <path d="M780 270 A120 120 0 0 1 1020 270" fill="none" stroke="#2ec26a" stroke-width="22" stroke-linecap="round" stroke-dasharray="290 400"/>
+    <g class="n2"><path d="M900 270 L900 168" stroke="#7ef0a8" stroke-width="6" stroke-linecap="round"/></g>
+    <circle cx="900" cy="270" r="12" fill="#2ec26a"/>
+    <circle cx="900" cy="270" r="12" fill="none" stroke="#2ec26a" stroke-opacity=".3" stroke-width="9" filter="url(#soft)"/>
+    <text x="900" y="330" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="22" fill="#7ef0a8" opacity=".9">CLS</text>
+  </g>
+
+  <text x="600" y="400" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="18" fill="#ffffff" opacity=".4">Core Web Vitals</text>
+</svg>

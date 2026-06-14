@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Broken tracking chart with a gap and warning triangle">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="warn" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- chart panel -->
+  <g>
+    <rect x="120" y="120" width="640" height="280" rx="16" fill="#16161a" stroke="#ffffff" stroke-opacity=".14"/>
+    <!-- axes -->
+    <g stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5">
+      <path d="M170 360 H720"/>
+      <path d="M170 360 V160"/>
+    </g>
+    <!-- trend line with a gap (drop) -->
+    <g fill="none" stroke="#ff9a3c" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M180 320 L250 290 L320 300 L390 250 L430 230"/>
+      <!-- gap between 430 and 540 -->
+      <path class="pulse" d="M540 330 L610 320 L680 270 L710 250" stroke-opacity=".8"/>
+    </g>
+    <!-- gap markers (dashed) -->
+    <path d="M430 230 L540 330" fill="none" stroke="#ff7a18" stroke-opacity=".4" stroke-width="2.5" stroke-dasharray="6 8"/>
+    <!-- gap highlight band -->
+    <rect x="430" y="160" width="110" height="200" fill="#ff7a18" opacity=".06"/>
+    <text x="440" y="392" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="17" fill="#ffffff" opacity=".4">Datenlücke</text>
+  </g>
+
+  <!-- connection path chart -> warning -->
+  <g fill="none" stroke="#ff7a18" stroke-opacity=".35" stroke-width="2.5">
+    <path id="p0" d="M760 250 H872"/>
+  </g>
+  <g fill="#ff9a3c">
+    <circle r="5"><animateMotion dur="1.7s" repeatCount="indefinite"><mpath href="#p0"/></animateMotion></circle>
+  </g>
+
+  <!-- warning triangle -->
+  <g transform="translate(990,250)">
+    <path d="M0 -110 L120 100 L-120 100 Z"
+          fill="url(#warn)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M0 -110 L120 100 L-120 100 Z"
+          fill="none" stroke="#ff7a18" stroke-opacity=".25" stroke-width="10" stroke-linejoin="round" filter="url(#soft)"/>
+    <!-- exclamation -->
+    <rect x="-9" y="-50" width="18" height="80" rx="9" fill="#ff9a3c"/>
+    <circle cx="0" cy="60" r="11" fill="#ff9a3c"/>
+  </g>
+  <text x="990" y="400" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">Broken Tracking</text>
+</svg>

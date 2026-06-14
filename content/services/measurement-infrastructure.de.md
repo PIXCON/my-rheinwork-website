@@ -6,7 +6,9 @@ description: "Server-Side-Tracking aus Deutschland: serverseitiges GTM, EU-Hosti
 weight: 6
 related:
   - "server-side-tracking"
-  - "bad-data-model"
+  - "server-side-gtm-ga4"
+  - "consent-mode-v2"
+  - "broken-tracking-signs"
 faq:
   - q: "Warum serverseitig statt im Browser?"
     a: "Weil browserbasiertes Tracking durch Adblocker, ITP und Consent zunehmend Lücken hat. Serverseitig sind Ihre Daten vollständiger, konsistenter und leichter sauber zu halten. Sie treffen Entscheidungen damit auf einer belastbaren Grundlage statt auf Schätzungen."

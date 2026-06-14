@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Technical debt: a cracked foundation and a rising cost curve">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="block" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- cracked foundation (left motif) -->
+  <g>
+    <rect x="120" y="300" width="430" height="120" rx="10" fill="url(#block)" stroke="#ffffff" stroke-opacity=".12"/>
+    <!-- mortar lines -->
+    <g stroke="#ffffff" stroke-opacity=".10" stroke-width="2">
+      <path d="M120 360 H550"/>
+      <path d="M250 300 V360"/><path d="M400 360 V420"/>
+    </g>
+    <!-- crack -->
+    <g stroke="#ff7a18" stroke-opacity=".75" stroke-width="3" fill="none" stroke-linecap="round">
+      <path d="M335 300 L320 332 L348 352 L326 384 L344 420"/>
+      <path d="M320 332 L292 344"/><path d="M348 352 L380 346"/><path d="M326 384 L300 396"/>
+    </g>
+    <rect x="120" y="300" width="430" height="120" rx="10" fill="none" stroke="#ff7a18" stroke-opacity=".18" stroke-width="10" filter="url(#soft)"/>
+    <text x="335" y="452" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="17" fill="#ffffff" opacity=".4">Fundament</text>
+  </g>
+
+  <!-- rising cost curve (right motif) -->
+  <g>
+    <!-- axes -->
+    <g stroke="#ffffff" stroke-opacity=".18" stroke-width="2">
+      <path d="M660 110 V410 H1080"/>
+    </g>
+    <!-- rising curve -->
+    <path d="M660 380 C 760 372, 840 340, 900 290 S 1010 150, 1070 120"
+          fill="none" stroke="#ff9a3c" stroke-width="4" stroke-linecap="round"/>
+    <!-- area glow under curve -->
+    <path d="M660 380 C 760 372, 840 340, 900 290 S 1010 150, 1070 120 L 1070 410 L 660 410 Z"
+          fill="#ff7a18" opacity=".10"/>
+    <!-- rising markers -->
+    <g fill="#ff9a3c">
+      <circle class="pulse"  cx="780" cy="362" r="6"/>
+      <circle class="pulse2" cx="900" cy="290" r="6"/>
+      <circle class="pulse"  cx="1010" cy="178" r="6"/>
+    </g>
+    <text x="870" y="452" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">Steigende Kosten</text>
+  </g>
+</svg>
