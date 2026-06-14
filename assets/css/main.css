@@ -12,7 +12,7 @@
   --border-light:  #303036;
   --text:          #f4f4f5;
   --text-dim:      #a1a1aa;
-  --text-dimmer:   #71717a;
+  --text-dimmer:   #9296a1;
   --accent:        #ff7a18;
   --accent-2:      #ff9a3c;
   --accent-soft:   rgba(255, 122, 24, 0.12);
@@ -225,7 +225,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
    ========================================================= */
 .marquee-wrap { overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
 .marquee { display: flex; gap: 64px; width: max-content; animation: scroll-x 28s linear infinite; }
-.marquee span { color: var(--text-dimmer); font-weight: 700; font-size: 24px; letter-spacing: -.02em; white-space: nowrap; display: flex; align-items: center; gap: 10px; opacity: .7; }
+.marquee span { color: var(--text-dimmer); font-weight: 700; font-size: 24px; letter-spacing: -.02em; white-space: nowrap; display: flex; align-items: center; gap: 10px; opacity: .85; }
 @keyframes scroll-x { to { transform: translateX(-50%); } }
 @media (prefers-reduced-motion: reduce) { .marquee { animation: none; } }
 
