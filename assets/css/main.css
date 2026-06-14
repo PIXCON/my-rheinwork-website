@@ -27,6 +27,14 @@
 /* ----------  Reset  ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
+/* Selbst gehostete Schriften (Latin). URLs relativ zur CSS-Datei (/css/ -> ../fonts/), subpfad-sicher. */
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/inter-400.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/inter-500.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/inter-600.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/inter-700.woff2") format("woff2"); }
+@font-face { font-family: "Inter"; font-style: normal; font-weight: 800; font-display: swap; src: url("../fonts/inter-800.woff2") format("woff2"); }
+@font-face { font-family: "Tangerine"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/tangerine-400.woff2") format("woff2"); }
+
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); color-scheme: dark; }
 body {
   font-family: var(--font);
@@ -120,7 +128,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .brand-mark {
   width: 30px; height: 30px; border-radius: 8px;
   background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  display: grid; place-items: center; color: #1a0e00; font-weight: 900; font-size: 17px;
+  display: grid; place-items: center; color: #1a0e00; font-weight: 800; font-size: 17px;
 }
 .nav-menu { display: flex; align-items: center; gap: 4px; }
 .nav-menu a { color: var(--text-dim); font-size: 15px; font-weight: 500; padding: 8px 14px; border-radius: 100px; transition: color .15s, background .15s; }
