@@ -2,7 +2,7 @@
 <a href="{{ .RelPermalink }}" class="blog-card reveal">
   <div class="blog-media">
     {{ with .Params.tag }}<span class="blog-media-tag">{{ . }}</span>{{ end }}
-    {{ with .Params.cover }}<img src="{{ . }}" alt="" loading="lazy">{{ else }}<span class="placeholder-label">{{ i18n "blogArticleLabel" }}</span>{{ end }}
+    {{ with .Params.cover }}<img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="" loading="lazy">{{ else }}<span class="placeholder-label">{{ i18n "blogArticleLabel" }}</span>{{ end }}
   </div>
   <div class="blog-body">
     <div class="blog-meta">

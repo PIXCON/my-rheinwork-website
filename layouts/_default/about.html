@@ -37,7 +37,7 @@
     <div class="founder-grid reveal">
       <div class="founder-photo">
         {{ if .image }}
-          <img src="{{ .image }}" alt="{{ .name }}">
+          <img src="{{ strings.TrimPrefix "/" .image | relURL }}" alt="{{ .name }}">
         {{ else }}
           <div class="founder-photo-ph">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0" stroke-linecap="round"/></svg>

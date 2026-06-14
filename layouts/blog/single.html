@@ -19,7 +19,7 @@
   <!-- Cover image placeholder -->
   <div class="container post-container">
     <div class="post-cover reveal">
-      {{ with .Params.cover }}<img src="{{ . }}" alt="{{ $.Title }}">{{ else }}<span class="placeholder-label">{{ i18n "blogCoverPh" }}</span>{{ end }}
+      {{ with .Params.cover }}<img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }}">{{ else }}<span class="placeholder-label">{{ i18n "blogCoverPh" }}</span>{{ end }}
     </div>
   </div>
 
