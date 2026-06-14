@@ -11,7 +11,7 @@ en:
   points:
     - icon: "rocket"
       title: "Technical foundation"
-      text: "Clean, performant code is the bedrock. Everything else — ranking, conversion, scale — builds on it."
+      text: "Clean, performant code is the bedrock. Everything else builds on it: ranking, conversion, scale."
     - icon: "share"
       title: "Data over gut feeling"
       text: "We measure instead of guessing. Decisions are based on solid numbers, not assumptions."
@@ -38,7 +38,7 @@ de:
   points:
     - icon: "rocket"
       title: "Technisches Fundament"
-      text: "Sauberer, performanter Code ist der Grundstein. Alles andere — Ranking, Conversion, Skalierung — baut darauf auf."
+      text: "Sauberer, performanter Code ist der Grundstein. Alles andere baut darauf auf: Ranking, Conversion, Skalierung."
     - icon: "share"
       title: "Daten statt Bauchgefühl"
       text: "Wir messen, statt zu raten. Entscheidungen entstehen auf Basis belastbarer Zahlen, nicht auf Annahmen."

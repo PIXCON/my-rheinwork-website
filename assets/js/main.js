@@ -59,7 +59,7 @@ if (typed) {
   }
 }
 
-// Hero code window — typewriter with syntax colors + mouse tilt
+// Hero code window: typewriter with syntax colors + mouse tilt
 const heroCode = document.getElementById('heroCode');
 if (heroCode) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;

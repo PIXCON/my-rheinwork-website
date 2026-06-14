@@ -1,4 +1,5 @@
-baseURL = "https://pixcon.github.io/my-rheinwork-website/"
+# Local/dev baseURL. Production overrides this in config/production/hugo.toml.
+baseURL = "/"
 title = "Rheinwork"
 
 defaultContentLanguage = "en"
@@ -50,7 +51,7 @@ disableKinds = ["taxonomy", "term", "RSS", "sitemap"]
     title = "Rheinwork"
     [languages.de.params]
       tagline = "Software Engineering Studio"
-      description = "Wir bauen die Lösungen, die Ihr Unternehmen voranbringen — schneller als gedacht."
+      description = "Wir bauen die Lösungen, die Ihr Unternehmen voranbringen, schneller als gedacht."
     [[languages.de.menu.main]]
       name = "Leistungen"
       pageRef = "/services"

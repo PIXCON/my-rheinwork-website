@@ -1,3 +1,3 @@
 ---
-title: "Rheinwork — Software Engineering Studio"
+title: "Rheinwork | Software Engineering Studio"
 ---

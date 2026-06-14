@@ -38,7 +38,7 @@
             {{ range $usecases }}
             <li>
               <span class="uc-dot"></span>
-              <div><strong>{{ .title }}</strong> — {{ .text }}</div>
+              <div><strong>{{ .title }}:</strong> {{ .text }}</div>
             </li>
             {{ end }}
           </ul>
@@ -119,6 +119,25 @@
     </div>
   </div>
 </section>
+
+{{ with .Params.related }}
+<!-- Related articles: internal links to relevant blog posts -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{ i18n "relatedEyebrow" }}</span>
+      <h2>{{ i18n "relatedTitle" }}</h2>
+    </div>
+    <div class="blog-grid">
+      {{ range . }}
+        {{ with site.GetPage (printf "/blog/%s" .) }}
+        {{ partial "blog-card.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 
 {{ partial "sections/cta.html" . }}
 {{ end }}

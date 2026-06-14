@@ -1,5 +1,5 @@
 /* =========================================================
-   Rheinwork — Software Engineering Studio
+   Rheinwork | Software Engineering Studio
    Design tokens
    ========================================================= */
 :root {
@@ -48,17 +48,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   pointer-events: none; overflow: hidden;
   background: var(--bg);
 }
-/* Arch columns — crisp edges */
+/* Arch columns: crisp edges */
 .bg-decor .bg-pattern {
   position: absolute; inset: 0; width: 100%; height: 100%;
 }
-/* Oval spotlight — keeps the middle of the columns brightest, darkens up / down / left / right */
+/* Oval spotlight: keeps the middle of the columns brightest, darkens up / down / left / right */
 .bg-decor .bg-fade {
   position: absolute; inset: 0;
   background:
-    /* strong left/right darkening — side columns fade fully into the dark */
+    /* strong left/right darkening: side columns fade fully into the dark */
     linear-gradient(90deg, var(--bg) 9%, transparent 37%, transparent 63%, var(--bg) 91%),
-    /* oval spotlight — brightest in the centre, easing off toward top and bottom */
+    /* oval spotlight: brightest in the centre, easing off toward top and bottom */
     radial-gradient(ellipse 54% 52% at 50% 30%, transparent 32%, rgba(10,10,11,.62) 76%, var(--bg) 100%);
 }
 /* Content layers sit above the fixed background */
@@ -143,7 +143,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   display: inline-flex; align-items: center; gap: 14px; flex-wrap: wrap; justify-content: center;
   max-width: 100%;
   background: var(--surface); border: 1px solid var(--border);
-  padding: 6px 6px 6px 16px; border-radius: 100px; font-size: 13px; color: var(--text-dim);
+  padding: 6px 16px; border-radius: 100px; font-size: 13px; color: var(--text-dim);
   margin-bottom: 30px;
 }
 .hero-badge .stars { color: var(--accent); letter-spacing: 2px; }
@@ -760,7 +760,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 }
 
 /* =========================================================
-   Responsive — Breakpoint-Konvention
+   Responsive: Breakpoint-Konvention
    ≤1024px Tablet (s. ~980er Block)  ·  ≤768px Mobile / Nav-Drawer (s. ~760er Block)
    ·  ≤560px Nav-Entlastung  ·  ≤480px Small-Phone-Feinschliff
    (komponentenspezifische Queries 540/860/920 ergänzen diese)
@@ -768,7 +768,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 
 /* Hero-Badge: schmaler werden, statt überzulaufen */
 @media (max-width: 600px) {
-  .hero-badge { gap: 10px; font-size: 12px; padding: 5px 6px 5px 14px; }
+  .hero-badge { gap: 10px; font-size: 12px; padding: 5px 14px; }
 }
 @media (max-width: 400px) {
   /* Geo-Zusatz ("Aus Deutschland" / "Built in Germany") ausblenden */

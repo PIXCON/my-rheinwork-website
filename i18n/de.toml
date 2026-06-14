@@ -26,11 +26,11 @@ specIntro = "Wir verantworten den ganzen Stack, bauen auf ein sauberes Fundament
 specFullstackTitle = "Full-Stack"
 specFullstackText = "Von der Oberfläche bis zur Infrastruktur aus einer Hand. Nichts fällt zwischen die Zuständigkeiten."
 specCloudTitle = "Performance-besessen"
-specCloudText = "Geschwindigkeit ist kein Extra, sondern Grundprinzip — bis zu 100/100 bei den technischen Core Web Vitals."
+specCloudText = "Geschwindigkeit ist kein Extra, sondern Grundprinzip. Bis zu 100/100 bei den technischen Core Web Vitals."
 specGermanyTitle = "Daten & Messbarkeit"
 specGermanyText = "Server-Side-Tracking und ein sauberes Setup, damit Sie wirklich sehen, was funktioniert."
 specLastingTitle = "Made in Germany & EU-Hosting"
-specLastingText = "Entwickelt und betrieben aus Deutschland — Ihre Daten auf EU-Servern."
+specLastingText = "Entwickelt und betrieben aus Deutschland, Ihre Daten liegen auf EU-Servern."
 specReliableTitle = "Gebaut, um zu bleiben"
 specReliableText = "Dokumentierter Code und ein langfristiger Ansatz statt Wegwerf-Projekt."
 
@@ -59,7 +59,7 @@ proc1Text = "Sie schreiben uns; Sie erhalten einen kurzen Fragebogen, der Ziele 
 proc2Title = "Angebot & Konzept"
 proc2Text = "Auf dieser Basis erstellen wir ein Angebot mit knapper, klarer Konzeption."
 proc3Title = "Umsetzung"
-proc3Text = "Nach Annahme entwickeln wir in Iterationen — mit sauberem Code und regelmäßigem Feedback."
+proc3Text = "Nach Annahme entwickeln wir in Iterationen, mit sauberem Code und regelmäßigem Feedback."
 proc4Title = "Launch & Betrieb"
 proc4Text = "Wir bringen live, überwachen und halten Ihre Software auf Wunsch langfristig am Laufen."
 
@@ -82,11 +82,15 @@ ucPh3 = "Und noch eins, damit klar ist, wann diese Leistung die richtige Wahl is
 
 # Service list page
 svcListTitle = "Engineering für den gesamten Stack"
-svcListSubtitle = "Von der hochperformanten Website über Software und SaaS bis zu Tracking und Betrieb: ein Partner für das technische Fundament Ihres Erfolgs im Web — von der Idee bis zum laufenden Betrieb."
+svcListSubtitle = "Von der hochperformanten Website über Software und SaaS bis zu Tracking und Betrieb. Ein Partner für das technische Fundament Ihres Erfolgs im Web, von der Idee bis zum laufenden Betrieb."
+
+# Weiterführende Artikel (Service-Seiten)
+relatedEyebrow = "Wissen"
+relatedTitle = "Weiterführende Artikel"
 
 # Blog list page
 blogListTitle = "Engineering-Notizen & Einblicke"
-blogListSubtitle = "Gedanken über Technik, die Ergebnisse bringt — von Performance und Tracking bis zu sauberer Architektur."
+blogListSubtitle = "Gedanken über Technik, die Ergebnisse bringt, von Performance und Tracking bis zu sauberer Architektur."
 
 # About page
 aboutEyebrow = "Über Rheinwork"
@@ -105,7 +109,7 @@ blogReadArticle = "Artikel lesen"
 blogBack = "Zurück zu allen Beiträgen"
 blogArticleLabel = "Artikel"
 blogCoverPh = "Titelbild"
-blogNoPosts = "Noch keine Beiträge — schauen Sie bald wieder vorbei."
+blogNoPosts = "Noch keine Beiträge. Schauen Sie bald wieder vorbei."
 
 # Breadcrumb
 breadcrumbHome = "Start"

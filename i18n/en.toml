@@ -26,11 +26,11 @@ specIntro = "We own the whole stack, build on a clean foundation, and back resul
 specFullstackTitle = "Full-stack"
 specFullstackText = "From interface to infrastructure, all from one team. Nothing falls through the cracks."
 specCloudTitle = "Performance-obsessed"
-specCloudText = "Speed isn't an extra, it's a principle — up to 100/100 on the technical Core Web Vitals."
+specCloudText = "Speed isn't an extra, it's a principle. Up to 100/100 on the technical Core Web Vitals."
 specGermanyTitle = "Data & measurability"
 specGermanyText = "Server-side tracking and a clean setup, so you really see what works."
 specLastingTitle = "Made in Germany & EU hosting"
-specLastingText = "Engineered and operated from Germany — your data on EU servers."
+specLastingText = "Engineered and operated from Germany, with your data on EU servers."
 specReliableTitle = "Built to last"
 specReliableText = "Documented code and a long-term approach, not a throwaway project."
 
@@ -82,11 +82,15 @@ ucPh3 = "One more, so it is clear when this service is the right fit."
 
 # Service list page
 svcListTitle = "Engineering for the entire stack"
-svcListSubtitle = "From high-performance websites to software, SaaS, tracking and operations: one partner for the technical foundation of your success online — from idea to live operation."
+svcListSubtitle = "From high-performance websites to software, SaaS, tracking and operations. One partner for the technical foundation of your success online, from idea to live operation."
+
+# Related articles (service pages)
+relatedEyebrow = "Insights"
+relatedTitle = "Keep reading on the topic"
 
 # Blog list page
 blogListTitle = "Engineering notes & insights"
-blogListSubtitle = "Thoughts on technology that delivers results — from performance and tracking to clean architecture."
+blogListSubtitle = "Thoughts on technology that delivers results, from performance and tracking to clean architecture."
 
 # About page
 aboutEyebrow = "About Rheinwork"
@@ -105,7 +109,7 @@ blogReadArticle = "Read article"
 blogBack = "Back to all posts"
 blogArticleLabel = "Article"
 blogCoverPh = "Cover image"
-blogNoPosts = "No posts yet — check back soon."
+blogNoPosts = "No posts yet. Check back soon."
 
 # Breadcrumb
 breadcrumbHome = "Home"

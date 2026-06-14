@@ -40,5 +40,24 @@
   </section>
 </article>
 
+{{ with .Params.related }}
+<!-- Related articles: cluster cross-links -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{ i18n "relatedEyebrow" }}</span>
+      <h2>{{ i18n "relatedTitle" }}</h2>
+    </div>
+    <div class="blog-grid">
+      {{ range . }}
+        {{ with site.GetPage (printf "/blog/%s" .) }}
+        {{ partial "blog-card.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
 {{ partial "sections/cta.html" . }}
 {{ end }}

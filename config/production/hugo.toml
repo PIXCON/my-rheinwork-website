@@ -1,0 +1,3 @@
+# Production-only overrides (used by `hugo` / `hugo --minify`, e.g. the GitHub Pages deploy).
+# `hugo server` runs in the development environment and ignores this file.
+baseURL = "https://pixcon.github.io/my-rheinwork-website/"
