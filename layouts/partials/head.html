@@ -15,6 +15,6 @@
   <meta name="color-scheme" content="dark">
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/inter-800.woff2" | relURL }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/inter-400.woff2" | relURL }}" crossorigin>
-  {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+  {{ $css := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.css" . | minify }}
+  <style>{{ $css.Content | safeCSS }}</style>
 </head>
