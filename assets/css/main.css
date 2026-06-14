@@ -640,6 +640,30 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
   .process-grid { grid-template-columns: 1fr 1fr; }
   .feature-list { grid-template-columns: 1fr; }
 }
+/* Process auf dem Handy: vertikale Timeline statt enger 2-Spalten */
+@media (max-width: 600px) {
+  .process-grid { grid-template-columns: 1fr; gap: 0; }
+  .process-card {
+    background: none; border: none; border-radius: 0;
+    -webkit-backdrop-filter: none; backdrop-filter: none;
+    padding: 0 0 30px 0; position: relative;
+    display: grid; grid-template-columns: 40px 1fr; column-gap: 16px; align-items: start;
+  }
+  .process-card:last-child { padding-bottom: 0; }
+  .process-card:not(:last-child)::after {
+    content: ""; position: absolute; left: 19px; top: 48px; bottom: -6px;
+    width: 2px; background: var(--border-light);
+  }
+  .process-num {
+    grid-column: 1; grid-row: 1 / span 2;
+    width: 40px; height: 40px; border-radius: 50%;
+    display: grid; place-items: center; font-size: 14px; letter-spacing: 0;
+    background: var(--bg); border: 1.5px solid var(--accent); color: var(--accent);
+    position: relative; z-index: 1;
+  }
+  .process-card h4 { grid-column: 2; margin: 8px 0 6px; }
+  .process-card p { grid-column: 2; margin: 0; }
+}
 
 /* =========================================================
    Service detail page layout (structure only)
