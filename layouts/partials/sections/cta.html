@@ -2,7 +2,7 @@
 <section class="section cta" id="contact">
   <div class="container">
     <div class="cta-grid">
-      <div class="reveal">
+      <div class="cta-intro reveal">
         <span class="eyebrow">{{ i18n "ctaEyebrow" }}</span>
         <h2 style="margin-top:20px;">{{ i18n "ctaLets" }} <span class="hl">{{ i18n "ctaTalk" }}</span></h2>
         <div class="cta-info">
@@ -22,20 +22,63 @@
           {{ end }}
         </div>
       </div>
-      <form class="contact-form reveal" onsubmit="event.preventDefault(); this.reset(); alert('{{ i18n "formThanks" }}');">
-        <div class="field">
-          <label for="name">{{ i18n "formName" }}</label>
-          <input type="text" id="name" name="name" placeholder="{{ i18n "formNamePh" }}" required>
+      <form class="contact-form reveal" data-endpoint="{{ site.Params.contactEndpoint }}" data-sending="{{ i18n "formSending" }}">
+        <input type="text" name="website" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="lang" value="{{ site.Language.Lang }}">
+        <div class="form-row">
+          <div class="field">
+            <label for="firstname">{{ i18n "formFirstName" }} <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="firstname" name="firstname" placeholder="{{ i18n "formFirstNamePh" }}" required>
+            <span class="field-error">{{ i18n "formRequired" }}</span>
+          </div>
+          <div class="field">
+            <label for="lastname">{{ i18n "formLastName" }} <span class="req" aria-hidden="true">*</span></label>
+            <input type="text" id="lastname" name="lastname" placeholder="{{ i18n "formLastNamePh" }}" required>
+            <span class="field-error">{{ i18n "formRequired" }}</span>
+          </div>
         </div>
         <div class="field">
-          <label for="email">{{ i18n "formEmail" }}</label>
-          <input type="email" id="email" name="email" placeholder="{{ i18n "formEmailPh" }}" required>
+          <label for="company">{{ i18n "formCompany" }}</label>
+          <input type="text" id="company" name="company" placeholder="{{ i18n "formCompanyPh" }}">
+        </div>
+        <div class="field">
+          <label for="email">{{ i18n "formEmail" }} <span class="req" aria-hidden="true">*</span></label>
+          <input type="email" id="email" name="email" placeholder="{{ i18n "formEmailPh" }}" required data-msg-required="{{ i18n "formRequired" }}" data-msg-email="{{ i18n "formInvalidEmail" }}">
+          <span class="field-error"></span>
+        </div>
+        <div class="field">
+          <label for="topic">{{ i18n "formTopic" }}</label>
+          <select id="topic" name="topic">
+            <option value="" disabled selected>{{ i18n "formTopicSelect" }}</option>
+            {{ range (where site.RegularPages "Section" "services").ByWeight }}
+            <option value="{{ .Title }}">{{ .Title }}</option>
+            {{ end }}
+            <option value="{{ i18n "formTopicOther" }}">{{ i18n "formTopicOther" }}</option>
+          </select>
         </div>
         <div class="field">
           <label for="message">{{ i18n "formMessage" }}</label>
-          <textarea id="message" name="message" placeholder="{{ i18n "formMessagePh" }}" required></textarea>
+          <textarea id="message" name="message" placeholder="{{ i18n "formMessagePh" }}"></textarea>
+        </div>
+        <div class="field field-consent">
+          <label class="checkbox">
+            <input type="checkbox" id="consent" name="consent" required>
+            <span>{{ i18n "formConsentPre" }} <a href="{{ "datenschutz/" | relLangURL }}" target="_blank" rel="noopener">{{ i18n "formConsentLink" }}</a>{{ i18n "formConsentPost" }} <span class="req" aria-hidden="true">*</span></span>
+          </label>
+          <span class="field-error">{{ i18n "formConsentError" }}</span>
         </div>
         <button type="submit" class="btn btn--primary btn--block">{{ i18n "formSubmit" }}</button>
+        <p class="form-submit-error" role="alert">{{ i18n "formError" }}</p>
+        <div class="form-success" aria-hidden="true">
+          <span class="form-success-icon">
+            <svg viewBox="0 0 52 52" aria-hidden="true"><circle cx="26" cy="26" r="24"/><path d="M16 27l7 7 13-14"/></svg>
+          </span>
+          <div class="form-success-text">
+            <h3>{{ i18n "formThanksTitle" }}</h3>
+            <p>{{ i18n "formThanksText" }}</p>
+          </div>
+          <button type="button" class="form-success-again">{{ i18n "formSendAnother" }}</button>
+        </div>
       </form>
     </div>
   </div>

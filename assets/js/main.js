@@ -158,3 +158,57 @@ if (blogMore) {
     if (grid.querySelectorAll('.blog-cell.is-hidden').length === 0) blogMore.style.display = 'none';
   });
 }
+
+// Contact form: custom required-field validation (red field + inline hint)
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  contactForm.querySelectorAll('input, textarea, select').forEach(el => {
+    el.addEventListener('invalid', (e) => {
+      e.preventDefault();
+      const field = el.closest('.field');
+      if (!field) return;
+      field.classList.add('invalid');
+      const err = field.querySelector('.field-error');
+      if (err && el.dataset.msgEmail) {
+        err.textContent = el.validity.typeMismatch ? el.dataset.msgEmail : (el.dataset.msgRequired || err.textContent);
+      }
+    });
+    const clear = () => el.closest('.field') && el.closest('.field').classList.remove('invalid');
+    el.addEventListener('input', clear);
+    el.addEventListener('change', clear);
+  });
+  // Submit only fires when native validation passes
+  const errEl = contactForm.querySelector('.form-submit-error');
+  const showSuccess = () => {
+    contactForm.reset();
+    contactForm.querySelectorAll('.field.invalid').forEach(f => f.classList.remove('invalid'));
+    contactForm.classList.add('is-sent');
+  };
+  // Submit only fires when native validation passes (required fields + consent + valid email)
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    if (errEl) errEl.style.display = 'none';
+    const endpoint = contactForm.dataset.endpoint;
+    const data = Object.fromEntries(new FormData(contactForm).entries());
+    if (data.website) { showSuccess(); return; }   // honeypot filled -> bot, drop silently
+    if (!endpoint) { showSuccess(); return; }       // no backend configured yet (local/preview)
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const label = btn ? btn.textContent : '';
+    if (btn) { btn.disabled = true; btn.textContent = contactForm.dataset.sending || label; }
+    try {
+      const res = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      });
+      if (!res.ok) throw new Error('Request failed');
+      showSuccess();
+    } catch (err) {
+      if (errEl) errEl.style.display = 'block';
+    } finally {
+      if (btn) { btn.disabled = false; btn.textContent = label; }
+    }
+  });
+  const sendAgain = contactForm.querySelector('.form-success-again');
+  if (sendAgain) sendAgain.addEventListener('click', () => contactForm.classList.remove('is-sent'));
+}
