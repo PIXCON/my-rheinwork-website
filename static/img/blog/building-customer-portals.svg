@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Customer portal dashboard with secure login and user roles">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="window" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- portal / dashboard window (central motif, highlighted) -->
+  <g>
+    <rect x="360" y="120" width="480" height="290" rx="20" fill="url(#window)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+    <rect x="360" y="120" width="480" height="290" rx="20" fill="none" stroke="#ff7a18" stroke-opacity=".25" stroke-width="10" filter="url(#soft)"/>
+    <!-- title bar -->
+    <path d="M360 158 h480" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+    <circle cx="384" cy="139" r="4" fill="#ffffff" opacity=".25"/>
+    <circle cx="400" cy="139" r="4" fill="#ffffff" opacity=".25"/>
+    <circle cx="416" cy="139" r="4" fill="#ffffff" opacity=".25"/>
+
+    <!-- sidebar (navigation) -->
+    <rect x="380" y="178" width="120" height="212" rx="12" fill="#16161a" stroke="#ffffff" stroke-opacity=".10"/>
+    <g fill="#ffffff" opacity=".12">
+      <rect x="398" y="200" width="84" height="10" rx="5"/>
+      <rect x="398" y="224" width="70" height="10" rx="5"/>
+      <rect x="398" y="248" width="80" height="10" rx="5"/>
+    </g>
+    <rect x="398" y="272" width="84" height="14" rx="7" fill="#ff7a18" opacity=".55"/>
+
+    <!-- main content: chart + rows -->
+    <g stroke="#ff9a3c" stroke-width="12" stroke-linecap="round">
+      <path class="pulse"  d="M540 360 V 318"/>
+      <path class="pulse2" d="M576 360 V 296"/>
+      <path class="pulse"  d="M612 360 V 270"/>
+      <path class="pulse2" d="M648 360 V 308"/>
+    </g>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="690" y="196" width="130" height="11" rx="5.5"/>
+      <rect x="690" y="222" width="110" height="11" rx="5.5"/>
+      <rect x="690" y="248" width="124" height="11" rx="5.5"/>
+    </g>
+  </g>
+
+  <!-- secure login: lock badge -->
+  <g transform="translate(258,250)">
+    <circle r="64" fill="#16161a" stroke="#ff7a18" stroke-opacity=".5" stroke-width="2"/>
+    <g stroke="#ff9a3c" stroke-width="4" fill="none">
+      <path d="M-16 -4 v -12 a16 16 0 0 1 32 0 v 12" stroke-linecap="round"/>
+    </g>
+    <rect x="-22" y="-4" width="44" height="36" rx="8" fill="#ff7a18" opacity=".6"/>
+    <circle cx="0" cy="12" r="5" fill="#140f0a"/>
+    <rect x="-2.5" y="12" width="5" height="11" rx="2.5" fill="#140f0a"/>
+    <text x="0" y="92" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ff9a3c" opacity=".85">Secure Login</text>
+  </g>
+
+  <!-- user roles cluster -->
+  <g transform="translate(942,250)">
+    <g stroke="#ff9a3c" stroke-width="3.5" fill="none">
+      <!-- admin -->
+      <circle cx="0" cy="-30" r="16"/>
+      <path d="M-26 18 a26 22 0 0 1 52 0" stroke-linecap="round"/>
+    </g>
+    <g stroke="#ffffff" stroke-opacity=".35" stroke-width="3" fill="none">
+      <circle cx="-46" cy="6" r="12"/>
+      <path d="M-66 38 a20 17 0 0 1 40 0" stroke-linecap="round"/>
+      <circle cx="46" cy="6" r="12"/>
+      <path d="M26 38 a20 17 0 0 1 40 0" stroke-linecap="round"/>
+    </g>
+    <text x="0" y="92" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ffffff" opacity=".4">User Roles</text>
+  </g>
+
+  <!-- connection markers -->
+  <g fill="#ff9a3c">
+    <circle class="pulse" cx="322" cy="250" r="4"/>
+    <circle class="pulse2" cx="878" cy="250" r="4"/>
+  </g>
+</svg>

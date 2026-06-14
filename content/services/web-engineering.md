@@ -8,6 +8,8 @@ related:
   - "hugo-website-performance"
   - "why-is-my-website-slow"
   - "boring-technology"
+  - "website-build-or-hire"
+  - "hugo-vs-wordpress"
 faq:
   - q: "What is a Hugo website, and why?"
     a: "Hugo generates static pages that need no database and no heavy CMS. That makes them extremely fast, secure and cheap to host, with excellent technical SEO scores. For many company sites it's the cleanest technical solution."

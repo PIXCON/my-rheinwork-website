@@ -8,6 +8,7 @@ related:
   - "bad-data-model"
   - "technical-debt-explained"
   - "apis-and-integrations"
+  - "replace-legacy-software"
 faq:
   - q: "Can you take over an existing or grown legacy system?"
     a: "Yes. We take over grown systems, build a clear picture of them and gradually replace the parts that have become unmaintainable, without interrupting day-to-day operations. That avoids a risky big-bang switch and spreads the risk across plannable stages."

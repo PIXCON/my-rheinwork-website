@@ -9,6 +9,8 @@ related:
   - "server-side-gtm-ga4"
   - "consent-mode-v2"
   - "broken-tracking-signs"
+  - "first-party-data-attribution"
+  - "tracking-gdpr-consent"
 faq:
   - q: "Why server-side instead of in the browser?"
     a: "Because browser-based tracking increasingly has gaps from ad blockers, ITP and consent. Server-side, your data is more complete, more consistent and easier to keep clean. That gives you a solid basis for decisions instead of guesswork."

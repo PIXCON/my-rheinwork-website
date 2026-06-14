@@ -8,6 +8,7 @@ related:
   - "mvp-without-cutting-corners"
   - "multi-tenant-from-day-one"
   - "build-vs-buy"
+  - "saas-pricing-billing"
 faq:
   - q: "How long does an MVP take, and what does it cost?"
     a: "It depends on scope; every project is individual, so pricing is on request. Via our questionnaire we estimate effort and direction quickly and transparently. That way you know early what to expect, instead of being surprised mid-project."

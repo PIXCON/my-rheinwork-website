@@ -142,3 +142,19 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
 }, { threshold: 0, rootMargin: "0px 0px -40px 0px" });
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Blog list: "show more" reveals the next batch of cards
+const blogMore = document.getElementById('blogMore');
+if (blogMore) {
+  const grid = document.getElementById('blogGrid');
+  const step = parseInt(grid.dataset.pageSize || '9', 10);
+  blogMore.addEventListener('click', () => {
+    const hidden = grid.querySelectorAll('.blog-cell.is-hidden');
+    for (let i = 0; i < step && i < hidden.length; i++) {
+      hidden[i].classList.remove('is-hidden');
+      const card = hidden[i].querySelector('.reveal');
+      if (card) card.classList.add('in');
+    }
+    if (grid.querySelectorAll('.blog-cell.is-hidden').length === 0) blogMore.style.display = 'none';
+  });
+}

@@ -8,6 +8,7 @@ related:
   - "mvp-without-cutting-corners"
   - "multi-tenant-from-day-one"
   - "apis-and-integrations"
+  - "building-customer-portals"
 faq:
   - q: "Was ist der Unterschied zu einer normalen Website?"
     a: "Eine Website informiert und konvertiert. Eine Web-App lässt Menschen arbeiten, mit Logins, individuellen Daten und Interaktion in Echtzeit. Brauchen Sie vor allem einen schnellen, gut auffindbaren Auftritt, ist unser Web-Engineering-Service richtig. Sobald Nutzer sich anmelden und etwas tun sollen, sind Sie hier richtig."

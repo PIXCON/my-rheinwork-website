@@ -8,6 +8,7 @@ related:
   - "keeping-software-running"
   - "boring-technology"
   - "hugo-website-performance"
+  - "effective-monitoring"
 faq:
   - q: "Do you handle hosting and operations long-term?"
     a: "Yes, on request, including updates, monitoring and operations on EU servers in Germany. You get one clear point of contact instead of scattered responsibilities."

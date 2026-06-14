@@ -110,6 +110,7 @@ blogBack = "Zurück zu allen Beiträgen"
 blogArticleLabel = "Artikel"
 blogCoverPh = "Titelbild"
 blogNoPosts = "Noch keine Beiträge. Schauen Sie bald wieder vorbei."
+blogLoadMore = "Mehr anzeigen"
 
 # Breadcrumb
 breadcrumbHome = "Start"

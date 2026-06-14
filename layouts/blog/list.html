@@ -5,11 +5,16 @@
   <div class="container">
     {{ $posts := .Pages.ByDate.Reverse }}
     {{ if $posts }}
-    <div class="blog-grid">
-      {{ range $posts }}
-      {{ partial "blog-card.html" . }}
+    <div class="blog-grid" id="blogGrid" data-page-size="9">
+      {{ range $i, $p := $posts }}
+      <div class="blog-cell{{ if ge $i 9 }} is-hidden{{ end }}">{{ partial "blog-card.html" $p }}</div>
       {{ end }}
     </div>
+    {{ if gt (len $posts) 9 }}
+    <div class="blog-more reveal">
+      <button id="blogMore" class="btn btn--ghost">{{ i18n "blogLoadMore" }}</button>
+    </div>
+    {{ end }}
     {{ else }}
     <p class="text-dim" style="text-align:center;">{{ i18n "blogNoPosts" }}</p>
     {{ end }}

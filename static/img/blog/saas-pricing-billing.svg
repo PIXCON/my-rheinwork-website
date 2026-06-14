@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="SaaS pricing tiers and recurring billing cycle">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tier" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- pricing tiers (three rising cards) -->
+  <g>
+    <!-- tier 1 -->
+    <rect x="150" y="276" width="150" height="120" rx="16" fill="#16161a" stroke="#ffffff" stroke-opacity=".14"/>
+    <rect x="172" y="300" width="60" height="12" rx="6" fill="#ffffff" opacity=".18"/>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="172" y="330" width="100" height="9" rx="4.5"/>
+      <rect x="172" y="350" width="80" height="9" rx="4.5"/>
+    </g>
+    <text x="225" y="416" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ffffff" opacity=".4">Flat</text>
+
+    <!-- tier 2 -->
+    <rect x="330" y="216" width="150" height="180" rx="16" fill="#16161a" stroke="#ffffff" stroke-opacity=".16"/>
+    <rect x="352" y="240" width="60" height="12" rx="6" fill="#ff7a18" opacity=".55"/>
+    <g fill="#ffffff" opacity=".10">
+      <rect x="352" y="270" width="100" height="9" rx="4.5"/>
+      <rect x="352" y="290" width="86" height="9" rx="4.5"/>
+      <rect x="352" y="310" width="70" height="9" rx="4.5"/>
+    </g>
+    <text x="405" y="416" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="15" fill="#ffffff" opacity=".4">Per-Seat</text>
+
+    <!-- tier 3 (highlighted) -->
+    <rect x="510" y="150" width="160" height="246" rx="20" fill="url(#tier)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+    <rect x="510" y="150" width="160" height="246" rx="20" fill="none" stroke="#ff7a18" stroke-opacity=".25" stroke-width="10" filter="url(#soft)"/>
+    <rect x="534" y="176" width="64" height="12" rx="6" fill="#ff9a3c" opacity=".85"/>
+    <g fill="#ffffff" opacity=".12">
+      <rect x="534" y="208" width="108" height="9" rx="4.5"/>
+      <rect x="534" y="228" width="92" height="9" rx="4.5"/>
+      <rect x="534" y="248" width="100" height="9" rx="4.5"/>
+      <rect x="534" y="268" width="78" height="9" rx="4.5"/>
+    </g>
+    <rect x="534" y="296" width="112" height="16" rx="8" fill="#ff7a18" opacity=".55"/>
+    <text x="590" y="416" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">Usage</text>
+  </g>
+
+  <!-- recurring billing cycle (circular arrow) -->
+  <g transform="translate(940,250)">
+    <circle r="98" fill="none" stroke="#ff7a18" stroke-opacity=".18" stroke-width="14"/>
+    <path d="M 0 -98 A 98 98 0 1 1 -69.3 69.3" fill="none" stroke="#ff7a18" stroke-opacity=".7" stroke-width="6" stroke-linecap="round"/>
+    <path d="M -69.3 69.3 l -22 -2 l 14 -18 z" fill="#ff9a3c"/>
+    <g stroke="#ff9a3c" stroke-width="3.5" fill="none" stroke-linecap="round">
+      <circle r="34" stroke-opacity=".55"/>
+      <path d="M0 -34 V -22"/><path d="M0 34 V 22"/><path d="M-34 0 H -22"/><path d="M34 0 H 22"/>
+    </g>
+    <text x="0" y="6" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="20" fill="#ff9a3c" opacity=".9" font-weight="600">€</text>
+    <circle r="5" cy="-98" fill="#ff9a3c"><animateMotion dur="3.4s" repeatCount="indefinite" path="M 0 0 A 98 98 0 1 1 -0.1 0"/></circle>
+  </g>
+  <text x="940" y="392" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">Recurring Billing</text>
+
+  <!-- subtle pulse markers near tiers -->
+  <g fill="#ff9a3c">
+    <circle class="pulse" cx="225" cy="262" r="4"/>
+    <circle class="pulse2" cx="405" cy="202" r="4"/>
+    <circle class="pulse" cx="590" cy="136" r="4"/>
+  </g>
+</svg>

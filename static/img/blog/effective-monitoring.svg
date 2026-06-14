@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 500" role="img" aria-label="Calm monitoring dashboard with a single meaningful alert">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#15110b"/>
+      <stop offset="1" stop-color="#0b0b0d"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="2%" r="75%">
+      <stop offset="0" stop-color="#ff7a18" stop-opacity=".20"/>
+      <stop offset="55%" stop-color="#ff7a18" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="alert" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#241a0c"/>
+      <stop offset="1" stop-color="#140f0a"/>
+    </linearGradient>
+    <filter id="soft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="7"/>
+    </filter>
+    <style>
+      .pulse{animation:pulse 3.2s ease-in-out infinite}
+      .pulse2{animation:pulse 3.2s ease-in-out infinite;animation-delay:1.1s}
+      @keyframes pulse{0%,100%{opacity:.45}50%{opacity:1}}
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1200" height="500" fill="url(#bg)"/>
+  <!-- faint brand columns -->
+  <g fill="#ffffff" opacity="0.018">
+    <rect x="70"  y="-20" width="120" height="540" rx="60"/>
+    <rect x="320" y="-20" width="150" height="540" rx="75"/>
+    <rect x="600" y="-20" width="120" height="540" rx="60"/>
+    <rect x="860" y="-20" width="150" height="540" rx="75"/>
+    <rect x="1110" y="-20" width="120" height="540" rx="60"/>
+  </g>
+  <rect width="1200" height="500" fill="url(#glow)"/>
+
+  <!-- dashboard frame -->
+  <g>
+    <rect x="190" y="110" width="820" height="290" rx="20" fill="#16161a" stroke="#ffffff" stroke-opacity=".14"/>
+    <path d="M190 150 h820" stroke="#ffffff" stroke-opacity=".12" stroke-width="1.5"/>
+    <circle cx="216" cy="130" r="4" fill="#ffffff" opacity=".25"/>
+    <circle cx="232" cy="130" r="4" fill="#ffffff" opacity=".25"/>
+    <circle cx="248" cy="130" r="4" fill="#ffffff" opacity=".25"/>
+
+    <!-- three calm green-ish (white, low-key) tiles -->
+    <g>
+      <rect x="220" y="180" width="180" height="90" rx="12" fill="#1c1c20" stroke="#ffffff" stroke-opacity=".10"/>
+      <circle cx="248" cy="208" r="8" fill="#ffffff" opacity=".22"/>
+      <rect x="244" y="234" width="120" height="10" rx="5" fill="#ffffff" opacity=".10"/>
+      <rect x="244" y="250" width="80" height="10" rx="5" fill="#ffffff" opacity=".07"/>
+    </g>
+    <g>
+      <rect x="220" y="284" width="180" height="90" rx="12" fill="#1c1c20" stroke="#ffffff" stroke-opacity=".10"/>
+      <circle cx="248" cy="312" r="8" fill="#ffffff" opacity=".22"/>
+      <rect x="244" y="338" width="120" height="10" rx="5" fill="#ffffff" opacity=".10"/>
+      <rect x="244" y="354" width="80" height="10" rx="5" fill="#ffffff" opacity=".07"/>
+    </g>
+
+    <!-- calm trend line tile -->
+    <g>
+      <rect x="420" y="180" width="270" height="194" rx="12" fill="#1c1c20" stroke="#ffffff" stroke-opacity=".10"/>
+      <path d="M440 330 L490 310 L540 320 L590 286 L640 300 L670 270" fill="none" stroke="#ffffff" stroke-opacity=".22" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <g stroke="#ffffff" stroke-opacity=".06" stroke-width="1">
+        <path d="M440 350 H670"/><path d="M440 300 H670"/><path d="M440 250 H670"/>
+      </g>
+    </g>
+
+    <!-- the ONE meaningful alert -->
+    <g>
+      <rect x="710" y="180" width="280" height="194" rx="14" fill="url(#alert)" stroke="#ff7a18" stroke-opacity=".7" stroke-width="2.5"/>
+      <rect x="710" y="180" width="280" height="194" rx="14" fill="none" stroke="#ff7a18" stroke-opacity=".25" stroke-width="10" filter="url(#soft)"/>
+      <!-- bell / alert icon -->
+      <g transform="translate(850,250)" stroke="#ff9a3c" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M-22 14 C -22 -8 -14 -22 0 -22 C 14 -22 22 -8 22 14 L 28 22 H -28 Z"/>
+        <path d="M-7 30 a7 7 0 0 0 14 0"/>
+        <circle cx="0" cy="-26" r="4" fill="#ff9a3c" stroke="none" class="pulse"/>
+      </g>
+      <rect class="pulse" x="760" y="318" width="180" height="12" rx="6" fill="#ff9a3c" opacity=".55"/>
+      <text x="850" y="358" text-anchor="middle" font-family="Inter,Segoe UI,sans-serif" font-size="16" fill="#ff9a3c" opacity=".85">1 echter Alarm</text>
+    </g>
+  </g>
+</svg>

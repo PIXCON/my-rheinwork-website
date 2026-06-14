@@ -8,6 +8,7 @@ related:
   - "bad-data-model"
   - "technical-debt-explained"
   - "apis-and-integrations"
+  - "replace-legacy-software"
 faq:
   - q: "Lösen Sie auch ein bestehendes oder gewachsenes System ab?"
     a: "Ja. Wir übernehmen gewachsene Systeme, verschaffen uns einen klaren Überblick und ersetzen schrittweise die Teile, die unwartbar geworden sind, ohne den laufenden Betrieb zu unterbrechen. So vermeiden Sie einen riskanten Komplettstillstand und verteilen das Risiko über planbare Etappen."

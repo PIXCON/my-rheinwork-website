@@ -8,6 +8,7 @@ related:
   - "keeping-software-running"
   - "boring-technology"
   - "hugo-website-performance"
+  - "effective-monitoring"
 faq:
   - q: "Übernehmen Sie Hosting und Betrieb dauerhaft?"
     a: "Ja, nach Absprache, inklusive Updates, Monitoring und Betrieb auf EU-Servern in Deutschland. Sie haben einen festen Ansprechpartner statt verteilter Zuständigkeiten."

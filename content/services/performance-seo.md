@@ -8,6 +8,7 @@ related:
   - "hugo-website-performance"
   - "why-is-my-website-slow"
   - "improve-core-web-vitals"
+  - "image-optimization-web"
 faq:
   - q: "Do you do content SEO and backlinks too?"
     a: "No. We deliberately focus on the technical side: performance, rendering, crawlability and structured data. Editorial work and link building are not part of our offering. That keeps us in what we genuinely do well, and we tell you clearly where a different discipline is needed."
