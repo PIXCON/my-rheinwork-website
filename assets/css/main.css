@@ -27,7 +27,7 @@
 /* ----------  Reset  ---------- */
 *, *::before, *::after { box-sizing: border-box; }
 * { margin: 0; padding: 0; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; background: var(--bg); color-scheme: dark; }
 body {
   font-family: var(--font);
   background: var(--bg);
@@ -811,6 +811,17 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 @media (max-width: 400px) {
   /* Geo-Zusatz ("Aus Deutschland" / "Built in Germany") ausblenden */
   .hero-badge > span:last-child { display: none; }
+}
+
+/* Hero-CTA: auf dem Handy nebeneinander halten, gleich breit, einzeilig */
+@media (max-width: 560px) {
+  .hero-cta { flex-wrap: nowrap; gap: 10px; }
+  .hero-cta .btn { flex: 1 1 0; min-width: 0; justify-content: center; padding: 13px 14px; font-size: 14px; }
+  .hero-cta .btn svg { display: none; }   /* Pfeil ausblenden spart Platz */
+}
+@media (max-width: 400px) {
+  .hero-cta { gap: 8px; }
+  .hero-cta .btn { padding: 12px 10px; font-size: 13px; }
 }
 
 /* Nav: auf kleinen Phones CTA ausblenden (Kontakt bleibt über das Menü erreichbar) */
