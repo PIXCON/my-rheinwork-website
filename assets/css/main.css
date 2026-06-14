@@ -469,7 +469,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .post-title { font-size: clamp(32px, 4.6vw, 52px); line-height: 1.08; letter-spacing: -.025em; }
 .post-meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; color: var(--text-dim); font-size: 14.5px; margin-top: 18px; }
 .post-meta .dot { opacity: .6; }
-.post-cover { margin-top: 28px; aspect-ratio: 16 / 8; border-radius: var(--radius); border: 1px solid var(--border); display: grid; place-items: center; background: radial-gradient(120% 120% at 50% 0%, rgba(255,122,24,.18), transparent 60%), linear-gradient(160deg, var(--surface-3), #0e0e10); }
+.post-cover { margin-top: 28px; aspect-ratio: 16 / 8; border-radius: var(--radius); border: 1px solid var(--border); overflow: hidden; display: grid; place-items: center; background: radial-gradient(120% 120% at 50% 0%, rgba(255,122,24,.18), transparent 60%), linear-gradient(160deg, var(--surface-3), #0e0e10); }
 .post-prose { font-size: 17px; }
 .post-prose h2 { font-size: 25px; margin-top: 38px; }
 .post-footer { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--border); }
