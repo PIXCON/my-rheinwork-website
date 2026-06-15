@@ -96,6 +96,9 @@
     </div>
   </div>
 </section>
+{{/* FAQPage structured data (matches visible service FAQ above) */}}
+{{ $sfaq := slice }}{{ range . }}{{ $sfaq = $sfaq | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $sfaq) | jsonify | safeJS }}</script>
 {{ end }}
 
 <!-- How we work -->

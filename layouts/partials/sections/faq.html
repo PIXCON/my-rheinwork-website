@@ -20,3 +20,7 @@
     </div>
   </div>
 </section>
+{{/* FAQPage structured data (matches visible FAQ above) */}}
+{{ $faqLd := slice }}
+{{ range index site.Data.faq site.Language.Lang }}{{ $faqLd = $faqLd | append (dict "@type" "Question" "name" .q "acceptedAnswer" (dict "@type" "Answer" "text" .a)) }}{{ end }}
+{{ with $faqLd }}<script type="application/ld+json">{{ (dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" .) | jsonify | safeJS }}</script>{{ end }}

@@ -19,10 +19,9 @@
       <div class="footer-col">
         <h3>{{ i18n "footerServices" }}</h3>
         <ul>
-          <li><a href="{{ "services/web-engineering/" | relLangURL }}">{{ i18n "fsWeb" }}</a></li>
-          <li><a href="{{ "services/software-engineering/" | relLangURL }}">{{ i18n "fsSoftware" }}</a></li>
-          <li><a href="{{ "services/saas-engineering/" | relLangURL }}">{{ i18n "fsSaas" }}</a></li>
-          <li><a href="{{ "services/infrastructure/" | relLangURL }}">{{ i18n "fsInfra" }}</a></li>
+          {{ range (where site.RegularPages "Section" "services").ByWeight }}
+          <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+          {{ end }}
         </ul>
       </div>
       <div class="footer-col">

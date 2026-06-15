@@ -107,6 +107,8 @@ svcListSubtitle = "Von der hochperformanten Website über Software und SaaS bis 
 # Weiterführende Artikel (Service-Seiten)
 relatedEyebrow = "Wissen"
 relatedTitle = "Weiterführende Artikel"
+relatedServiceEyebrow = "Passende Leistung"
+relatedServiceText = "Sie möchten das konkret umgesetzt haben? Hier die passende Leistung:"
 
 # Blog list page
 blogListTitle = "Engineering-Notizen & Einblicke"

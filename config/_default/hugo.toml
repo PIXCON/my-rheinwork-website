@@ -7,6 +7,8 @@ defaultContentLanguageInSubdir = true
 
 disableKinds = ["taxonomy", "term", "RSS"]
 enableRobotsTXT = true
+# lastmod = Datum des letzten Git-Commits pro Datei (Sitemap + dateModified aktualisieren sich automatisch)
+enableGitInfo = true
 
 [markup.goldmark.renderer]
   unsafe = true
@@ -36,7 +38,7 @@ enableRobotsTXT = true
   [languages.en]
     weight = 1
     languageName = "English"
-    languageCode = "en-US"
+    languageCode = "en"
     title = "Rheinwork"
     [languages.en.params]
       tagline = "Software Engineering Studio"
@@ -61,7 +63,7 @@ enableRobotsTXT = true
   [languages.de]
     weight = 2
     languageName = "Deutsch"
-    languageCode = "de-DE"
+    languageCode = "de"
     title = "Rheinwork"
     [languages.de.params]
       tagline = "Software Engineering Studio"
