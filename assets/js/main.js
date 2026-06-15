@@ -219,5 +219,8 @@ if (contactForm) {
     }
   });
   const sendAgain = contactForm.querySelector('.form-success-again');
-  if (sendAgain) sendAgain.addEventListener('click', () => contactForm.classList.remove('is-sent'));
+  if (sendAgain) sendAgain.addEventListener('click', () => {
+    contactForm.classList.remove('is-sent');
+    if (window.turnstile) { try { window.turnstile.reset(); } catch (e) {} }
+  });
 }

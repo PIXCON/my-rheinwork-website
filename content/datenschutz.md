@@ -52,7 +52,8 @@ request).
 For the technical transmission and delivery we use the following processors:
 
 - **Cloudflare** (Cloudflare, Inc., USA): receives the form submission via a serverless
-  function and processes, among other data, your IP address.
+  function and processes, among other data, your IP address. To protect against automated
+  submissions (spam) we additionally use Cloudflare Turnstile.
 - **Postmark** (ActiveCampaign, LLC, USA): sends your enquiry to us and a confirmation
   email to you.
 

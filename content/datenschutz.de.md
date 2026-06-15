@@ -56,7 +56,8 @@ Für die technische Übermittlung und Zustellung setzen wir folgende Dienstleist
 Auftragsverarbeiter ein:
 
 - **Cloudflare** (Cloudflare, Inc., USA): nimmt die Formularübermittlung über eine
-  Serverless-Funktion entgegen und verarbeitet dabei unter anderem Ihre IP-Adresse.
+  Serverless-Funktion entgegen und verarbeitet dabei unter anderem Ihre IP-Adresse. Zum Schutz vor
+  automatisierten Einsendungen (Spam) setzen wir zusätzlich Cloudflare Turnstile ein.
 - **Postmark** (ActiveCampaign, LLC, USA): versendet Ihre Anfrage an uns sowie eine
   Empfangsbestätigung an Sie.
 

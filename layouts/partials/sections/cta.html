@@ -67,6 +67,7 @@
           </label>
           <span class="field-error">{{ i18n "formConsentError" }}</span>
         </div>
+        {{ with site.Params.turnstileSiteKey }}<div class="cf-turnstile" data-sitekey="{{ . }}" data-theme="dark" style="margin-bottom:6px;"></div>{{ end }}
         <button type="submit" class="btn btn--primary btn--block">{{ i18n "formSubmit" }}</button>
         <p class="form-submit-error" role="alert">{{ i18n "formError" }}</p>
         <div class="form-success" aria-hidden="true">
@@ -83,3 +84,4 @@
     </div>
   </div>
 </section>
+{{ with site.Params.turnstileSiteKey }}<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>{{ end }}
