@@ -22,7 +22,7 @@ enableGitInfo = true
   # Kontaktformular: same-origin Pages Function (functions/api/contact.js). Leer = nur Frontend-Demo.
   contactEndpoint = "/api/contact"
   # Cloudflare Turnstile Site-Key (oeffentlich). Leer = kein Captcha (nur Honeypot).
-  turnstileSiteKey = ""
+  turnstileSiteKey = "0x4AAAAAADlbnnHIdDe0BTQ2"
   # Social-Sharing-Vorschaubild (1200x630), liegt unter static/
   ogImage = "img/og-image.png"
   # Social-Profile (fuer JSON-LD sameAs / Entitaets-Verknuepfung)
