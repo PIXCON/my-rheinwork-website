@@ -1,0 +1,12 @@
+{
+  // Cloudflare Worker + static assets (Hugo output in ./public).
+  // Build runs Hugo first, then `npx wrangler deploy` uploads this Worker + the public/ assets.
+  "name": "my-rheinwork-website",
+  "main": "worker.js",
+  "compatibility_date": "2025-06-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page"
+  }
+}
