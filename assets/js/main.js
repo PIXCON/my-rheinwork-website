@@ -199,7 +199,7 @@ if (contactForm) {
     if (errEl) errEl.style.display = 'none';
     const endpoint = contactForm.dataset.endpoint;
     const data = Object.fromEntries(new FormData(contactForm).entries());
-    if (data.website) { showSuccess(); return; }   // honeypot filled -> bot, drop silently
+    if (data.contact_ref) { showSuccess(); return; }   // honeypot filled -> bot, drop silently
     if (!endpoint) { showSuccess(); return; }       // no backend configured yet (local/preview)
     const btn = contactForm.querySelector('button[type="submit"]');
     const label = btn ? btn.textContent : '';

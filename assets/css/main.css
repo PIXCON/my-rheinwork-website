@@ -546,7 +546,7 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 .form-success-text p { margin-top: 8px; color: var(--text-dim); font-size: 15px; max-width: 320px; }
 .form-success-again { margin-top: 4px; background: none; border: none; cursor: pointer; color: var(--text-dim); font: inherit; font-size: 14px; text-decoration: underline; text-underline-offset: 4px; transition: color .15s ease; }
 .form-success-again:hover { color: var(--accent); }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.hp { display: none; }
 .field-consent .checkbox { display: flex; align-items: flex-start; gap: 10px; cursor: pointer; }
 .field-consent .checkbox input { width: 18px; height: 18px; margin-top: 1px; accent-color: var(--accent); flex: none; cursor: pointer; }
 .field-consent .checkbox span { font-size: 13px; color: var(--text-dim); line-height: 1.5; }

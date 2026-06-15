@@ -61,7 +61,7 @@ async function handleContact(request, env) {
   try { d = await request.json(); } catch { return json({ ok: false, error: "bad_json" }, 400); }
 
   // Honeypot
-  if (d.website) return json({ ok: true }, 200);
+  if (d.contact_ref) return json({ ok: true }, 200);
 
   const email = (d.email || "").trim();
   const validEmail = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);

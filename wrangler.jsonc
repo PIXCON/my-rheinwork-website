@@ -4,6 +4,11 @@
   "name": "my-rheinwork-website",
   "main": "worker.js",
   "compatibility_date": "2025-06-01",
+  "vars": {
+    // Non-secret config (persists across Git deploys). POSTMARK_TOKEN stays a dashboard Secret.
+    "FROM_EMAIL": "info@rheinwork.com",
+    "TO_EMAIL": "info@rheinwork.com"
+  },
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
