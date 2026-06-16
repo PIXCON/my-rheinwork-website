@@ -45,7 +45,8 @@ if (typed) {
   let words = [];
   try { words = JSON.parse(typed.dataset.words || '[]'); } catch (e) {}
   if (words.length) {
-    let wi = 0, ci = 0, deleting = false, visible = true, running = false;
+    let wi = 0, ci = words[0].length, deleting = true, visible = true, running = false;
+    typed.textContent = words[0];
     const tick = () => {
       const word = words[wi];
       ci += deleting ? -1 : 1;
@@ -64,7 +65,7 @@ if (typed) {
       }).observe(hero);
     }
     running = true;
-    tick();
+    setTimeout(tick, 1500);   // 1.5s: erst fertig rendern, dann animieren
   }
 }
 
@@ -112,6 +113,7 @@ if (heroCode) {
   if (reduce) {
     render(stream.length);
   } else {
+    render(stream.length);   // sofort vollständig rendern (stabiler Erst-Paint)
     let k = 0;
     const tick = () => {
       k++;
@@ -122,7 +124,7 @@ if (heroCode) {
       if (k >= stream.length) { setTimeout(() => { k = 0; render(0); setTimeout(tick, 500); }, 2400); return; }
       setTimeout(tick, delay);
     };
-    tick();
+    setTimeout(() => { render(0); tick(); }, 1500);   // 1.5s halten, dann Tipp-Animation starten
   }
 
   // subtle mouse tilt on the code window
