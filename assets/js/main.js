@@ -171,6 +171,21 @@ if (blogMore) {
 // Contact form: custom required-field validation (red field + inline hint)
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
+  // Lazy-load Turnstile only when the user engages the form -> keeps the script off the
+  // initial critical path (better LCP/FCP); api.js auto-renders the .cf-turnstile widget on load.
+  const tsWidget = contactForm.querySelector('.cf-turnstile');
+  if (tsWidget) {
+    const loadTurnstile = () => {
+      if (window.__tsLoading) return;
+      window.__tsLoading = true;
+      const s = document.createElement('script');
+      s.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js';
+      s.async = true; s.defer = true;
+      document.head.appendChild(s);
+    };
+    contactForm.addEventListener('focusin', loadTurnstile, { once: true });
+    contactForm.addEventListener('pointerdown', loadTurnstile, { once: true });
+  }
   contactForm.querySelectorAll('input, textarea, select').forEach(el => {
     el.addEventListener('invalid', (e) => {
       e.preventDefault();
