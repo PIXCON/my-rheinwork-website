@@ -12,12 +12,25 @@ Haus-Endt-Straße 90
 40593 Düsseldorf, Germany
 Represented by: Dustin Schneider
 Email: info@rheinwork.com
+Phone: +49 (0) 157 5159 6276
 
 ## General
 
 We take the protection of your personal data seriously and treat your personal data
 confidentially and in accordance with the statutory data protection regulations
 (GDPR, BDSG) and this privacy policy.
+
+## Cookies
+
+This website uses **no cookies** and no consent-requiring tracking scripts. A cookie banner is
+therefore not required.
+
+## SSL/TLS encryption
+
+For security reasons and to protect the transmission of confidential content, this website uses
+SSL/TLS encryption (HTTPS). Requests via "http" are automatically redirected to the encrypted
+"https" connection. You can recognise an encrypted connection by the "https://" in your browser's
+address bar.
 
 ## Hosting
 
@@ -71,6 +84,11 @@ the request has been fully handled, unless statutory retention obligations apply
 You have the right to information, correction, deletion, restriction of processing,
 data portability and objection, as well as the right to lodge a complaint with a
 supervisory authority.
+
+## Data protection officer
+
+We are not legally required to appoint a data protection officer. For data protection questions,
+please contact the controller named above.
 
 ## Privacy contact
 

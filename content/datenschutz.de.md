@@ -12,12 +12,25 @@ Haus-Endt-Straße 90
 40593 Düsseldorf
 Vertreten durch: Dustin Schneider
 E-Mail: info@rheinwork.com
+Telefon: +49 (0) 157 5159 6276
 
 ## Allgemeines
 
 Wir nehmen den Schutz Ihrer persönlichen Daten ernst und behandeln Ihre
 personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
 Datenschutzvorschriften (DSGVO, BDSG) sowie dieser Datenschutzerklärung.
+
+## Cookies
+
+Diese Website verwendet **keine Cookies** und keine einwilligungspflichtigen Tracking-Skripte.
+Ein Cookie-Banner ist daher nicht erforderlich.
+
+## SSL-/TLS-Verschlüsselung
+
+Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
+Inhalte eine SSL-/TLS-Verschlüsselung (HTTPS). Aufrufe über „http" werden automatisch auf die
+verschlüsselte „https"-Verbindung umgeleitet. Eine verschlüsselte Verbindung erkennen Sie am
+„https://" in der Adresszeile Ihres Browsers.
 
 ## Hosting
 
@@ -76,6 +89,11 @@ Bearbeitung, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.
 Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der
 Verarbeitung, Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei einer
 Aufsichtsbehörde.
+
+## Datenschutzbeauftragter
+
+Wir sind gesetzlich nicht verpflichtet, einen Datenschutzbeauftragten zu bestellen. Bei Fragen
+zum Datenschutz wenden Sie sich bitte an die oben genannte verantwortliche Stelle.
 
 ## Kontakt zum Datenschutz
 
