@@ -110,22 +110,9 @@ if (heroCode) {
     flush();
     heroCode.innerHTML = html;
   };
-  if (reduce) {
-    render(stream.length);
-  } else {
-    render(stream.length);   // sofort vollständig rendern (stabiler Erst-Paint)
-    let k = 0;
-    const tick = () => {
-      k++;
-      render(k);
-      let delay = 26;
-      const u = stream[k - 1];
-      if (u && u.ch === '\n') delay = 180;
-      if (k >= stream.length) { setTimeout(() => { k = 0; render(0); setTimeout(tick, 500); }, 2400); return; }
-      setTimeout(tick, delay);
-    };
-    setTimeout(() => { render(0); tick(); }, 1500);   // 1.5s halten, dann Tipp-Animation starten
-  }
+  // Code-Fenster sofort vollständig rendern — keine Endlos-Tipp-Schleife (bester Speed Index).
+  // Der blinkende Cursor (.code-caret) + der Maus-Tilt sorgen weiterhin für „Leben".
+  render(stream.length);
 
   // subtle mouse tilt on the code window
   const win = document.getElementById('codeWindow');
