@@ -11,7 +11,8 @@
 
   {{/* Canonical + Social-Sharing-Meta */}}
   <link rel="canonical" href="{{ .Permalink }}">
-  {{ $ogTitle := cond .IsHome .Site.Title .Title }}
+  {{ $ogTitle := .Title }}
+  {{ if .IsHome }}{{ $ogTitle = .Site.Title }}{{ with .Site.Params.tagline }}{{ $ogTitle = printf "%s | %s" $.Site.Title . }}{{ end }}{{ end }}
   {{ $ogType := cond (and .IsPage (eq .Section "blog")) "article" "website" }}
   {{ $ogImage := (.Site.Params.ogImage | default "img/og-image.png") | absURL }}
   <meta property="og:type" content="{{ $ogType }}">

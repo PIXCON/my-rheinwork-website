@@ -1,6 +1,6 @@
 # Local/dev baseURL. Production overrides this in config/production/hugo.toml.
 baseURL = "/"
-title = "Rheinwork"
+title = "Rheinwork GmbH"
 
 defaultContentLanguage = "en"
 defaultContentLanguageInSubdir = true
@@ -41,10 +41,10 @@ enableGitInfo = true
     weight = 1
     languageName = "English"
     languageCode = "en"
-    title = "Rheinwork"
+    title = "Rheinwork GmbH"
     [languages.en.params]
-      tagline = "Software Engineering Studio"
-      description = "We build the solutions that move your business forward, faster than you thought possible."
+      tagline = "Software Engineering"
+      description = "We build software, apps and websites that move your business forward."
     [[languages.en.menu.main]]
       name = "Services"
       pageRef = "/services"
@@ -66,10 +66,10 @@ enableGitInfo = true
     weight = 2
     languageName = "Deutsch"
     languageCode = "de"
-    title = "Rheinwork"
+    title = "Rheinwork GmbH"
     [languages.de.params]
-      tagline = "Software Engineering Studio"
-      description = "Wir bauen die Lösungen, die Ihr Unternehmen voranbringen, schneller als gedacht."
+      tagline = "Software Engineering"
+      description = "Wir entwickeln Software, Apps und Websites, die Ihr Unternehmen voranbringen."
     [[languages.de.menu.main]]
       name = "Leistungen"
       pageRef = "/services"

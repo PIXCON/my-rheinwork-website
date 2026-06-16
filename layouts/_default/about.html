@@ -34,17 +34,12 @@
 {{ with .Params.founder }}
 <section class="section founder-sec">
   <div class="container">
-    <div class="founder-grid reveal">
+    <div class="founder-grid reveal{{ if not .image }} founder-grid--solo{{ end }}">
+      {{ if .image }}
       <div class="founder-photo">
-        {{ if .image }}
-          <img src="{{ strings.TrimPrefix "/" .image | relURL }}" alt="{{ .name }}">
-        {{ else }}
-          <div class="founder-photo-ph">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0" stroke-linecap="round"/></svg>
-            <span>{{ i18n "founderPhotoPh" }}</span>
-          </div>
-        {{ end }}
+        <img src="{{ strings.TrimPrefix "/" .image | relURL }}" alt="{{ .name }}">
       </div>
+      {{ end }}
       <div class="founder-text">
         <span class="eyebrow">{{ i18n "founderEyebrow" }}</span>
         <h2>{{ i18n "founderTitle" }}</h2>
