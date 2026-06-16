@@ -24,7 +24,21 @@
   <div class="container">
     <div class="hero-visual reveal">
       <div class="code-deco" aria-hidden="true">
-        <pre class="code-body"><code id="heroCode"></code><span class="code-caret"></span></pre>
+        <pre class="code-body"><code id="heroCode"><span class="t-key">import </span><span class="t-punc">{ createStudio, deploy } </span><span class="t-key">from </span><span class="t-str">"@rheinwork/core"</span>
+
+<span class="t-key">const </span>rheinwork <span class="t-punc">= </span><span class="t-fn">createStudio</span><span class="t-punc">({</span>
+  builds: <span class="t-punc">[</span><span class="t-str">"software"</span><span class="t-punc">, </span><span class="t-str">"apps"</span><span class="t-punc">, </span><span class="t-str">"websites"</span><span class="t-punc">],</span>
+  stack: <span class="t-punc">[</span><span class="t-str">"TypeScript"</span><span class="t-punc">, </span><span class="t-str">"Go"</span><span class="t-punc">, </span><span class="t-str">"React"</span><span class="t-punc">],</span>
+  cloud: <span class="t-str">"edge"</span><span class="t-punc">,</span>
+<span class="t-punc">})</span>
+
+<span class="t-key">export async function </span><span class="t-fn">ship</span><span class="t-punc">(project) {</span>
+<span class="t-key">  const </span>build <span class="t-punc">= </span><span class="t-key">await </span>rheinwork<span class="t-fn">.compile</span><span class="t-punc">(project)</span>
+<span class="t-key">  await </span><span class="t-fn">deploy</span><span class="t-punc">(build, </span>{ fast: <span class="t-key">true</span><span class="t-punc">, scale: </span><span class="t-str">"auto"</span><span class="t-punc"> })</span>
+<span class="t-key">  return </span>build<span class="t-fn">.url</span>
+<span class="t-punc">}</span>
+
+<span class="t-com">// shipped, faster than you thought possible</span></code><span class="code-caret"></span></pre>
       </div>
     </div>
   </div>

@@ -69,64 +69,8 @@ if (typed) {
   }
 }
 
-// Hero code window: typewriter with syntax colors + mouse tilt
-const heroCode = document.getElementById('heroCode');
-if (heroCode) {
-  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // each line is a list of {t: text, c: token class suffix} ('' = default)
-  const LINES = [
-    [['import ', 'key'], ['{ createStudio, deploy } ', 'punc'], ['from ', 'key'], ['"@rheinwork/core"', 'str']],
-    [['', '']],
-    [['const ', 'key'], ['rheinwork ', ''], ['= ', 'punc'], ['createStudio', 'fn'], ['({', 'punc']],
-    [['  builds: ', ''], ['[', 'punc'], ['"software"', 'str'], [', ', 'punc'], ['"apps"', 'str'], [', ', 'punc'], ['"websites"', 'str'], ['],', 'punc']],
-    [['  stack: ', ''], ['[', 'punc'], ['"TypeScript"', 'str'], [', ', 'punc'], ['"Go"', 'str'], [', ', 'punc'], ['"React"', 'str'], ['],', 'punc']],
-    [['  cloud: ', ''], ['"edge"', 'str'], [',', 'punc']],
-    [['})', 'punc']],
-    [['', '']],
-    [['export async function ', 'key'], ['ship', 'fn'], ['(project) ', 'punc'], ['{', 'punc']],
-    [['  const ', 'key'], ['build ', ''], ['= ', 'punc'], ['await ', 'key'], ['rheinwork', ''], ['.compile', 'fn'], ['(project)', 'punc']],
-    [['  await ', 'key'], ['deploy', 'fn'], ['(build, ', 'punc'], ['{ fast: ', ''], ['true', 'key'], [', scale: ', 'punc'], ['"auto"', 'str'], [' })', 'punc']],
-    [['  return ', 'key'], ['build', ''], ['.url', 'fn']],
-    [['}', 'punc']],
-    [['', '']],
-    [['// shipped, faster than you thought possible', 'com']],
-  ];
-  // flatten into a stream of { ch, cls } including newlines (cls null)
-  const stream = [];
-  LINES.forEach((line, li) => {
-    line.forEach(([text, cls]) => { for (const ch of text) stream.push({ ch, cls }); });
-    if (li < LINES.length - 1) stream.push({ ch: '\n', cls: null });
-  });
-  const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-  const render = (k) => {
-    let html = '', buf = '', cur = '';
-    const flush = () => { if (buf) { html += cur ? `<span class="t-${cur}">${esc(buf)}</span>` : esc(buf); buf = ''; } };
-    for (let i = 0; i < k; i++) {
-      const u = stream[i];
-      if (u.ch === '\n') { flush(); html += '\n'; continue; }
-      if (u.cls !== cur) { flush(); cur = u.cls; }
-      buf += u.ch;
-    }
-    flush();
-    heroCode.innerHTML = html;
-  };
-  // Code-Fenster sofort vollständig rendern — keine Endlos-Tipp-Schleife (bester Speed Index).
-  // Der blinkende Cursor (.code-caret) + der Maus-Tilt sorgen weiterhin für „Leben".
-  render(stream.length);
-
-  // subtle mouse tilt on the code window
-  const win = document.getElementById('codeWindow');
-  const hero = document.querySelector('.hero');
-  if (win && hero && !reduce) {
-    hero.addEventListener('mousemove', (e) => {
-      const r = hero.getBoundingClientRect();
-      const px = (e.clientX - r.left) / r.width - 0.5;
-      const py = (e.clientY - r.top) / r.height - 0.5;
-      win.style.transform = `rotateY(${px * 7}deg) rotateX(${-py * 7}deg)`;
-    });
-    hero.addEventListener('mouseleave', () => { win.style.transform = 'rotateY(0deg) rotateX(0deg)'; });
-  }
-}
+// Hero code window is server-rendered as static HTML (instant paint = best LCP).
+// The blinking cursor (.code-caret) stays purely in CSS — no JS needed here.
 
 // Remember the language a visitor picks via the switcher
 document.querySelectorAll('.lang-switch .lang-opt').forEach(opt => {
