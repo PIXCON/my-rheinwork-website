@@ -12,7 +12,7 @@ Haus-Endt-Straße 90
 40593 Düsseldorf, Germany
 Represented by: Dustin Schneider
 Email: info@rheinwork.com
-Phone: +49 (0) 157 5159 6276
+Phone: +49 211 54254956
 
 ## General
 

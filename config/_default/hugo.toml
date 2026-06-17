@@ -16,8 +16,8 @@ enableGitInfo = true
 # Shared params (inherited by all languages; tagline/description overridden per language)
 [params]
   email = "info@rheinwork.com"
-  phone = "+49 (0) 157 5159 6276"
-  phoneHref = "+4915751596276"
+  phone = "+49 211 54254956"
+  phoneHref = "+4921154254956"
   address = "Haus-Endt-Straße 90, 40593 Düsseldorf"
   # Kontaktformular: same-origin Pages Function (functions/api/contact.js). Leer = nur Frontend-Demo.
   contactEndpoint = "/api/contact"

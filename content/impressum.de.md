@@ -20,7 +20,7 @@ Dustin Schneider
 
 ## Kontakt
 
-Telefon: +49 (0) 157 5159 6276<br>
+Telefon: +49 211 54254956<br>
 E-Mail: info@rheinwork.com
 
 ## Umsatzsteuer-ID
