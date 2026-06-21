@@ -1,4 +1,8 @@
 ---
+work:
+  - "axiom"
+  - "meridian"
+  - "signal"
 title: "Web App Engineering"
 icon: "app"
 summary: "Secure, scalable web applications: customer portals, dashboards and web apps built with modern web technologies. From the first release to a product that grows with you."

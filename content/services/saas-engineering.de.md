@@ -1,4 +1,8 @@
 ---
+work:
+  - "axiom"
+  - "meridian"
+  - "signal"
 title: "SaaS Engineering"
 icon: "layers"
 summary: "SaaS-Entwicklung vom MVP zum skalierbaren Produkt: Multi-Tenant, Billing und User-Management, schnell startklar und wachstumsfähig, ohne späteren Neubau."

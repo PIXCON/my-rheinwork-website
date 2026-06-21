@@ -1,0 +1,14 @@
+{{/* Portfolio project card. Context: a portfolio Page. */}}
+<a href="{{ .RelPermalink }}" class="case-card pf-card reveal">
+  <div class="pf-media">
+    {{ with .Params.category }}<span class="case-tag pf-cat">{{ . }}</span>{{ end }}
+    {{ with .Params.cover }}<img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }}" loading="lazy">{{ else }}<span class="placeholder-label">{{ $.Title }}</span>{{ end }}
+  </div>
+  <div class="case-body pf-body">
+    <h3>{{ .Title }}</h3>
+    {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+    <span class="blog-readmore">{{ i18n "pfView" }}
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </span>
+  </div>
+</a>

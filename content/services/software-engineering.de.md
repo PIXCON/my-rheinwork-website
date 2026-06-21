@@ -1,4 +1,8 @@
 ---
+work:
+  - "axiom"
+  - "signal"
+  - "pulse"
 title: "Software Engineering"
 icon: "code"
 summary: "Individuelle Softwareentwicklung, die Ihre Prozesse trägt: robuste Backends, APIs und Integrationen, gebaut für niedrige Folgekosten und stabiles Wachstum."

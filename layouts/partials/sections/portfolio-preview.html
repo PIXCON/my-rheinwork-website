@@ -1,0 +1,23 @@
+{{/* Portfolio preview section for service pages. Reads .Params.work (list of portfolio slugs). */}}
+{{ with .Params.work }}
+<section class="section pf-preview">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">{{ i18n "pfPreviewEyebrow" }}</span>
+      <h2>{{ i18n "pfPreviewTitle" }}</h2>
+    </div>
+    <div class="pf-preview-grid">
+      {{ range . }}
+        {{ with site.GetPage (printf "/portfolio/%s" .) }}
+          {{ partial "portfolio-card.html" . }}
+        {{ end }}
+      {{ end }}
+    </div>
+    <div class="pf-more reveal">
+      <a href="{{ "portfolio/" | relLangURL }}" class="btn btn--ghost">{{ i18n "pfPreviewAll" }}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

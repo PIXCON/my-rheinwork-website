@@ -1,4 +1,8 @@
 ---
+work:
+  - "pulse"
+  - "immobilien-vonberg"
+  - "lichtwerk-film"
 title: "Web Engineering"
 icon: "layout"
 summary: "Hochperformante Websites, die schnell laden, sauber ranken und aus Besuchern Kunden machen. Engineering statt Baukasten, auf messbare Ergebnisse gebaut."

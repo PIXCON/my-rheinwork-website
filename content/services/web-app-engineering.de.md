@@ -1,4 +1,8 @@
 ---
+work:
+  - "axiom"
+  - "meridian"
+  - "signal"
 title: "Web App Engineering"
 icon: "app"
 summary: "Sichere, skalierbare Webanwendungen: Kundenportale, Dashboards und Web-Apps mit modernen Web-Technologien. Vom ersten Release bis zum Produkt, das mitwächst."

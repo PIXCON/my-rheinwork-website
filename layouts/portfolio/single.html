@@ -1,0 +1,126 @@
+{{ define "main" }}
+
+<!-- Breadcrumb + hero -->
+<section class="section pf-detail-hero">
+  <div class="container">
+    {{ partial "breadcrumb.html" (dict "items" (slice (dict "label" (i18n "pfNav") "url" ("portfolio/" | relLangURL)) (dict "label" .Title))) }}
+    <div class="pf-hero-head reveal">
+      {{ with .Params.category }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.summary }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- Cover -->
+{{ with .Params.cover }}
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="pf-cover reveal"><img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }}"></div>
+  </div>
+</section>
+{{ end }}
+
+<!-- Concept + spec sidebar -->
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="svc-layout">
+      <div class="svc-main">
+        <div class="reveal">
+          <h2 class="svc-h">{{ i18n "pfConcept" }}</h2>
+          <div class="prose svc-prose">{{ .Content }}</div>
+        </div>
+      </div>
+
+      <aside class="svc-aside">
+        <div class="svc-aside-card reveal">
+          <h3>{{ i18n "pfAtAGlance" }}</h3>
+          <ul class="pf-spec">
+            {{ with .Params.category }}<li><span>{{ i18n "pfIndustry" }}</span><strong>{{ . }}</strong></li>{{ end }}
+            {{ with .Params.style }}<li><span>{{ i18n "pfStyle" }}</span><strong>{{ . }}</strong></li>{{ end }}
+            {{ with .Params.fonts }}<li><span>{{ i18n "pfFonts" }}</span><strong>{{ . }}</strong></li>{{ end }}
+            {{ with .Params.langtag }}<li><span>{{ i18n "pfLang" }}</span><strong>{{ . }}</strong></li>{{ end }}
+            {{ with .Params.palette }}<li><span>{{ i18n "pfColors" }}</span><span class="pf-swatches">{{ range . }}<i style="background:{{ . }}"></i>{{ end }}</span></li>{{ end }}
+          </ul>
+          <a href="{{ "contact/" | relLangURL }}" class="btn btn--primary btn--block">
+            {{ i18n "pfCtaBtn" }}
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<!-- In focus: left text + right framed cut-out with hover zoom -->
+{{ with .Params.cutouts }}
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left;align-items:flex-start;">
+      <span class="eyebrow">{{ i18n "pfInFocusEyebrow" }}</span>
+      <h2>{{ i18n "pfInFocus" }}</h2>
+    </div>
+    {{ range $i, $c := . }}
+    <div class="pf-row reveal">
+      <div class="pf-row-text">
+        <span class="pf-row-num">{{ printf "%02d" (add $i 1) }}</span>
+        <h3>{{ $c.title }}</h3>
+        <p>{{ $c.text }}</p>
+        {{ with $c.bullets }}
+        <ul class="pf-row-bullets">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>
+        {{ end }}
+      </div>
+      <figure class="pf-shot">
+        <div class="pf-shot-bar"><span></span><span></span><span></span></div>
+        <div class="pf-shot-img"><img src="{{ strings.TrimPrefix "/" $c.img | relURL }}" alt="{{ $c.title }}" loading="lazy"></div>
+      </figure>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- Full desktop screenshot in a browser frame -->
+{{ with .Params.shotDesktop }}
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="section-head reveal" style="text-align:left;align-items:flex-start;">
+      <span class="eyebrow">{{ i18n "pfFullPage" }}</span>
+      <h2>{{ i18n "pfDesktopView" }}</h2>
+    </div>
+    <div class="pf-browser reveal">
+      <div class="pf-browser-bar">
+        <span class="d"></span><span class="d"></span><span class="d"></span>
+        <div class="pf-url">{{ with $.Params.demoUrl }}{{ . }}{{ else }}rheinwork.com{{ end }}</div>
+      </div>
+      <div class="pf-browser-scroll"><img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }} — Desktop"></div>
+    </div>
+    <p class="pf-scrollhint">{{ i18n "pfScrollHint" }}</p>
+  </div>
+</section>
+{{ end }}
+
+<!-- Mobile -->
+{{ with .Params.shotMobile }}
+<section class="section" style="padding-top: 0;">
+  <div class="container">
+    <div class="pf-mobile-row">
+      <div class="pf-mobile-text reveal">
+        <span class="eyebrow">{{ i18n "pfResponsive" }}</span>
+        <h2>{{ i18n "pfMobileView" }}</h2>
+        <p class="text-dim">{{ i18n "pfMobileText" }}</p>
+      </div>
+      <div class="pf-phone reveal">
+        <div class="pf-phone-scroll"><img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }} — Mobile"></div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<section class="section" style="padding-top: 0;">
+  <div class="container"><p class="pf-disclaimer">{{ i18n "pfDisclaimer" }}</p></div>
+</section>
+
+{{ partial "sections/cta.html" . }}
+{{ end }}

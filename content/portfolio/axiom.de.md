@@ -1,0 +1,57 @@
+---
+title: "Axiom"
+category: "B2B SaaS · Dateninfrastruktur"
+summary: "Eine warehouse-native Datenplattform — eine dunkle, technische, produktgetriebene Landingpage, die Entwickler überzeugt."
+description: "Webdesign-Konzept für Axiom, eine Dateninfrastruktur-SaaS: dunkle Produkt-UI, ein Live-Query-Mock und konversionsstarkes Marketing für ein technisches Publikum."
+weight: 1
+year: 2026
+langtag: "Englisch"
+style: "Dunkel · technisch · produktgetrieben"
+fonts: "Manrope · IBM Plex Mono"
+demoUrl: "axiom.dev"
+cover: "/img/portfolio/axiom/cover.jpg"
+shotDesktop: "/img/portfolio/axiom/screenshot-desktop.jpg"
+shotMobile: "/img/portfolio/axiom/screenshot-mobile.jpg"
+palette:
+  - "#08090e"
+  - "#7c6cff"
+  - "#34d3ee"
+  - "#eef0f6"
+cutouts:
+  - img: "/img/portfolio/axiom/cut-1.jpg"
+    title: "Tabbed Capability Explorer"
+    text: "Vier Produkt-Funktionen hinter einem Satz Tabs, mit Live-Code als Beweis — eine komplexe Plattform als eine einzige, scanbare Geschichte."
+    bullets:
+      - "Ingest, Transform, Query & Govern in einem Panel"
+      - "Live-Code statt Marketing-Floskeln"
+      - "Wirkt interaktiv, schafft technisches Vertrauen"
+  - img: "/img/portfolio/axiom/cut-2.jpg"
+    title: "Architektur, verständlich gemacht"
+    text: "Ein verbundenes Node-Diagramm macht aus einer abstrakten Datenpipeline etwas, das ein technischer Käufer in Sekunden erfasst."
+    bullets:
+      - "Sources → Model → Serve → Govern auf einen Blick"
+      - "Beantwortet 'passt es in meinen Stack?' sofort"
+      - "Visuelle Klarheit statt Textwüste"
+  - img: "/img/portfolio/axiom/cut-3.jpg"
+    title: "Ein klarer Vergleich"
+    text: "Axiom gegen ein Legacy-Warehouse, Zeile für Zeile — der scanbare Beweis, der die Entscheidung schon vor dem Demo-Call vorbereitet."
+    bullets:
+      - "Direkter Vergleich auf den entscheidenden Kriterien"
+      - "Nimmt Einwänden den Wind aus den Segeln"
+      - "Scanbarer Beweis statt Verkaufstext"
+highlights:
+  - title: "Live-Query-Mock"
+    text: "Der Hero zeigt das Produkt in Aktion — SQL rein, Ergebnis-Tabelle raus — statt eines generischen Stockfotos. Entwickler vertrauen dem, was sie laufen sehen."
+  - title: "Tabbed Capability Explorer"
+    text: "Ingest, Transform, Query und Govern als interaktiv wirkende Produkt-Tour — so liest sich eine komplexe Plattform als eine zusammenhängende Geschichte."
+  - title: "Architektur-Flow"
+    text: "Ein verbundenes Node-Diagramm macht eine komplizierte Datenpipeline sofort verständlich — genau die Klarheit, die ein technischer Käufer vor der Demo braucht."
+  - title: "Vergleichstabelle"
+    text: "Axiom gegen ein Legacy-Warehouse: ein klares, scanbares Argument, das die Entscheidung für den Wechsel vorbereitet."
+---
+
+**Die Aufgabe.** Eine moderne Dateninfrastruktur-Plattform braucht eine Landingpage, die das Vertrauen eines skeptischen, technischen Publikums gewinnt — ganz ohne Preisangabe und ohne generischen SaaS-Template-Look. Ziel: Geschwindigkeit, Skalierung und Glaubwürdigkeit schon im ersten Scroll vermitteln.
+
+**Der Ansatz.** Wir starten mit einem *funktionierenden Produkt*, nicht mit einem Versprechen. Eine fast schwarze Fläche mit Violett-zu-Cyan-Akzent wirkt unverkennbar engineering-nah, während ein Live-SQL-Query-Mock im Hero den Kernnutzen sofort beweist. Von dort baut die Seite ein sorgfältiges Argument auf — Funktionen, Architektur, ein direkter Vergleich und Social Proof — und führt vom Interesse zum „Demo buchen".
+
+**Warum es funktioniert.** Jede Sektion beantwortet eine echte Käuferfrage: *Ist es schnell? Binde ich mich? Passt es in meinen Stack? Wer vertraut sonst darauf?* Moderne Typografie (Manrope mit IBM Plex Mono) und ruhiges, großzügiges Spacing lassen eine dichte, technische Geschichte mühelos lesbar wirken.
