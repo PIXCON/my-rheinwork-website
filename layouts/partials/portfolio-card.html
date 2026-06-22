@@ -2,7 +2,7 @@
 <a href="{{ .RelPermalink }}" class="case-card pf-card reveal">
   <div class="pf-media">
     {{ with .Params.category }}<span class="case-tag pf-cat">{{ . }}</span>{{ end }}
-    {{ with .Params.cover }}{{ partial "pf-img.html" (dict "src" . "spec" "1100x webp q78" "alt" $.Title) }}{{ else }}<span class="placeholder-label">{{ $.Title }}</span>{{ end }}
+    {{ with .Params.cover }}<img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }}" loading="lazy">{{ else }}<span class="placeholder-label">{{ $.Title }}</span>{{ end }}
   </div>
   <div class="case-body pf-body">
     <h3>{{ .Title }}</h3>

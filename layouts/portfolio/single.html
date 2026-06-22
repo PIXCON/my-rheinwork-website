@@ -16,7 +16,7 @@
 {{ with .Params.cover }}
 <section class="section" style="padding-top: 0;">
   <div class="container">
-    <div class="pf-cover reveal">{{ partial "pf-img.html" (dict "src" . "spec" "1400x webp q82" "alt" $.Title "eager" true) }}</div>
+    <div class="pf-cover reveal"><img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }}"></div>
   </div>
 </section>
 {{ end }}
@@ -72,7 +72,7 @@
       </div>
       <figure class="pf-shot">
         <div class="pf-shot-bar"><span></span><span></span><span></span></div>
-        <div class="pf-shot-img">{{ partial "pf-img.html" (dict "src" $c.img "spec" "1100x webp q80" "alt" $c.title) }}</div>
+        <div class="pf-shot-img"><img src="{{ strings.TrimPrefix "/" $c.img | relURL }}" alt="{{ $c.title }}" loading="lazy"></div>
       </figure>
     </div>
     {{ end }}
@@ -93,7 +93,7 @@
         <span class="d"></span><span class="d"></span><span class="d"></span>
         <div class="pf-url">{{ with $.Params.demoUrl }}{{ . }}{{ else }}rheinwork.com{{ end }}</div>
       </div>
-      <div class="pf-browser-scroll">{{ partial "pf-img.html" (dict "src" . "spec" "1200x q76" "alt" (printf "%s — Desktop" $.Title)) }}</div>
+      <div class="pf-browser-scroll"><img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }} — Desktop" loading="lazy"></div>
     </div>
     <p class="pf-scrollhint">{{ i18n "pfScrollHint" }}</p>
   </div>
@@ -111,7 +111,7 @@
         <p class="text-dim">{{ i18n "pfMobileText" }}</p>
       </div>
       <div class="pf-phone reveal">
-        <div class="pf-phone-scroll">{{ partial "pf-img.html" (dict "src" . "spec" "640x q74" "alt" (printf "%s — Mobile" $.Title)) }}</div>
+        <div class="pf-phone-scroll"><img src="{{ strings.TrimPrefix "/" . | relURL }}" alt="{{ $.Title }} — Mobile" loading="lazy"></div>
       </div>
     </div>
   </div>

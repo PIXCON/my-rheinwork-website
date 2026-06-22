@@ -1,7 +1,0 @@
-{{/* Processed portfolio image.
-     dict: src (front-matter path, e.g. /img/portfolio/x/cover.jpg), spec (Hugo Resize spec),
-           alt, class (optional), eager (optional bool) */}}
-{{ with resources.Get (strings.TrimPrefix "/" .src) }}
-  {{ $p := .Resize $.spec }}
-  <img src="{{ $p.RelPermalink }}" width="{{ $p.Width }}" height="{{ $p.Height }}" alt="{{ $.alt }}"{{ with $.class }} class="{{ . }}"{{ end }}{{ if $.eager }} fetchpriority="high"{{ else }} loading="lazy" decoding="async"{{ end }}>
-{{ end }}
