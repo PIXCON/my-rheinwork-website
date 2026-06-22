@@ -855,8 +855,9 @@ h1, h2, h3, h4 { font-weight: 700; letter-spacing: -0.02em; line-height: 1.1; }
 @media (max-width: 600px) {
   .hero-badge { gap: 10px; font-size: 12px; padding: 5px 14px; }
 }
-@media (max-width: 400px) {
-  /* Geo-Zusatz ("Aus Deutschland" / "Built in Germany") ausblenden */
+@media (max-width: 560px) {
+  /* Geo-Zusatz ("Aus Deutschland" / "Built in Germany") auf Mobile ausblenden,
+     damit die Pill schlank bleibt und nicht umbricht */
   .hero-badge > span:last-child { display: none; }
 }
 

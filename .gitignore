@@ -13,3 +13,4 @@ page.html
 Thumbs.db
 .vscode/
 .idea/
+*.tmp.*
