@@ -1,0 +1,75 @@
+{{- /*
+  Cookie-Banner (Klaro 0.7.21, selbst gehostet unter /vendor/klaro/, BSD-3-Lizenz) und AdPure-Tracking.
+  Das AdPure-Skript ist als „text/plain“ eingebunden: Klaro lädt es erst, wenn der Besucher „Statistik“ zustimmt.
+  In AdPure muss dafür die Einwilligung auf „Cookie-Banner lädt das Skript – Kategorie Statistik“ stehen.
+*/ -}}
+{{- $privacy := "datenschutz/" | relLangURL -}}
+<script>
+  window.klaroConfig = {
+    version: 1,
+    elementID: 'klaro',
+    styling: { theme: ['dark', 'bottom', 'wide'] },
+    storageMethod: 'cookie',
+    cookieName: 'rw_consent',
+    cookieExpiresAfterDays: 180,
+    default: false,
+    mustConsent: false,
+    acceptAll: true,
+    hideDeclineAll: false,
+    groupByPurpose: true,
+    htmlTexts: true,
+    lang: '{{ .Language.Lang }}',
+    translations: {
+      de: {
+        privacyPolicyUrl: '{{ $privacy }}',
+        consentNotice: {
+          description: 'Wir nutzen AdPure, um zu verstehen, über welche Wege Besucher zu uns finden. Das passiert nur mit deiner Zustimmung – du kannst sie jederzeit unter „Cookie-Einstellungen“ im Footer ändern.',
+          learnMore: 'Einstellungen'
+        },
+        consentModal: {
+          title: 'Cookie-Einstellungen',
+          description: 'Hier entscheidest du, welche Dienste wir nutzen dürfen. Mehr dazu in unserer {privacyPolicy}.'
+        },
+        purposes: { statistics: { title: 'Statistik', description: 'Hilft uns zu verstehen, wie Besucher unsere Website finden und nutzen.' } },
+        adpure: { description: 'Misst Einstiege (z. B. über Anzeigen oder Suche) und Kontaktanfragen. Keine Formularinhalte. Anbieter: AdPure (Rheinwork GmbH), Server in Deutschland.' }
+      },
+      en: {
+        privacyPolicyUrl: '{{ $privacy }}',
+        consentNotice: {
+          description: 'We use AdPure to understand how visitors find us. This only happens with your consent – you can change it anytime via “Cookie settings” in the footer.',
+          learnMore: 'Settings'
+        },
+        consentModal: {
+          title: 'Cookie settings',
+          description: 'Choose which services we may use. More in our {privacyPolicy}.'
+        },
+        purposes: { statistics: { title: 'Statistics', description: 'Helps us understand how visitors find and use our website.' } },
+        adpure: { description: 'Measures entries (e.g. from ads or search) and contact requests. No form contents. Provider: AdPure (Rheinwork GmbH), servers in Germany.' }
+      }
+    },
+    services: [
+      {
+        name: 'adpure',
+        title: 'AdPure',
+        purposes: ['statistics'],
+        cookies: ['nx_vid', ['nx_vid', '/', '.rheinwork.com']],
+        required: false,
+        optOut: false,
+        onlyOnce: true
+      }
+    ]
+  };
+  // „Cookie-Einstellungen“ im Footer öffnet den Dialog erneut
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('[data-cookie-settings]');
+    if (link && window.klaro) { e.preventDefault(); window.klaro.show(); }
+  });
+</script>
+<style>
+  /* Klaro an die Rheinwork-Farben anpassen */
+  .klaro { --green1: var(--accent); --green2: var(--accent); --green3: var(--accent-soft); --dark1: var(--surface); --dark2: var(--border-light); --dark3: var(--text-dimmer); --light1: var(--text); --font-family: var(--font); --border-radius: var(--radius-sm); }
+</style>
+<script defer src="{{ "vendor/klaro/klaro-0.7.21.js" | relURL }}"></script>
+{{- if hugo.IsProduction }}
+<script type="text/plain" data-type="text/javascript" data-name="adpure" data-src="https://track.rheinwork.com/n/sk_o0xku7p5o4w2ibbrkrg6x710.js" async></script>
+{{- end }}
