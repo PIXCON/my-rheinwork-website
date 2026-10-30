@@ -39,5 +39,7 @@
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/inter-800.woff2" | relURL }}" crossorigin>
   <link rel="preload" as="font" type="font/woff2" href="{{ "fonts/inter-400.woff2" | relURL }}" crossorigin>
   {{ $css := resources.Get "css/main.css" | resources.ExecuteAsTemplate "css/main.css" . | minify }}
+  {{- /* AdPure-Tracking (eigene Domain track.rheinwork.com): sendet erst nach Zustimmung, nur im Live-Build */ -}}
+  {{ if hugo.IsProduction }}<script async src="https://track.rheinwork.com/n/sk_o0xku7p5o4w2ibbrkrg6x710.js"></script>{{ end }}
   <style>{{ $css.Content | safeCSS }}</style>
 </head>
