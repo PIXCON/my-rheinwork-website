@@ -20,10 +20,22 @@ We take the protection of your personal data seriously and treat your personal d
 confidentially and in accordance with the statutory data protection regulations
 (GDPR, BDSG) and this privacy policy.
 
-## Cookies
+## Cookies and consent
 
-This website uses **no cookies** and no consent-requiring tracking scripts. A cookie banner is
-therefore not required.
+This website only uses cookies and tracking with your consent. You can change or withdraw your choice at
+any time via “Cookie settings” in the footer.
+
+**Consent management (Cookiebot).** To manage your consent we use Cookiebot by Usercentrics A/S,
+Havnegade 39, 1058 Copenhagen, Denmark. Cookiebot stores your choice in the cookie “CookieConsent”
+(up to 12 months) and logs the consent (time, choice, truncated IP address, browser details) so that we can
+demonstrate it. The legal basis is Art. 6(1)(c) GDPR (accountability) in conjunction with § 25(2) TDDDG.
+
+**Performance measurement (AdPure, category Marketing).** With your consent we use AdPure by Rheinwork GmbH
+to measure through which channels and ads visits and enquiries reach us. For this, the cookie “nx_vid”
+(first-party cookie on rheinwork.com, up to 90 days) is set; we record entries (e.g. origin, campaign
+parameters), contact clicks and form submissions – no form contents. Processing takes place on servers in
+Germany. The legal basis is your consent (Art. 6(1)(a) GDPR, § 25(1) TDDDG); without consent no measurement
+takes place.
 
 ## SSL/TLS encryption
 

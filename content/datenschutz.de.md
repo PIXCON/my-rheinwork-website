@@ -20,10 +20,23 @@ Wir nehmen den Schutz Ihrer persönlichen Daten ernst und behandeln Ihre
 personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
 Datenschutzvorschriften (DSGVO, BDSG) sowie dieser Datenschutzerklärung.
 
-## Cookies
+## Cookies und Einwilligung
 
-Diese Website verwendet **keine Cookies** und keine einwilligungspflichtigen Tracking-Skripte.
-Ein Cookie-Banner ist daher nicht erforderlich.
+Diese Website setzt Cookies und Tracking nur mit Ihrer Einwilligung ein. Ihre Auswahl können Sie jederzeit
+über „Cookie-Einstellungen“ im Footer ändern oder widerrufen.
+
+**Einwilligungsverwaltung (Cookiebot).** Zur Verwaltung Ihrer Einwilligung nutzen wir Cookiebot der
+Usercentrics A/S, Havnegade 39, 1058 Kopenhagen, Dänemark. Cookiebot speichert Ihre Auswahl im Cookie
+„CookieConsent“ (bis zu 12 Monate) und protokolliert die Einwilligung (Zeitpunkt, Auswahl, gekürzte
+IP-Adresse, Browserangaben), damit wir sie nachweisen können. Rechtsgrundlage ist Art. 6 Abs. 1 lit. c DSGVO
+(Nachweispflicht) in Verbindung mit § 25 Abs. 2 TDDDG.
+
+**Erfolgsmessung (AdPure, Kategorie Marketing).** Mit Ihrer Einwilligung nutzen wir AdPure der Rheinwork GmbH,
+um zu messen, über welche Wege und Werbeanzeigen Besuche und Anfragen zu uns kommen. Dafür wird das Cookie
+„nx_vid“ (Erstanbieter-Cookie unter rheinwork.com, bis zu 90 Tage) gesetzt; erfasst werden Einstiege
+(z. B. Herkunft, Kampagnen-Parameter), Kontakt-Klicks und das Absenden von Formularen – keine
+Formularinhalte. Die Verarbeitung erfolgt auf Servern in Deutschland. Rechtsgrundlage ist Ihre Einwilligung
+(Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG); ohne Einwilligung findet keine Messung statt.
 
 ## SSL-/TLS-Verschlüsselung
 
