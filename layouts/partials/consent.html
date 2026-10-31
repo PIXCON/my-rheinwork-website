@@ -1,14 +1,15 @@
 {{- /*
   Cookie-Banner: Cookiebot (Usercentrics), automatisches Blockieren. Steht als erstes Skript im <head>.
   AdPure-Tracking lädt immer und wartet selbst auf die Zustimmung zu „Marketing“ im Cookiebot-Banner.
-  Es lädt über den Website-Pfad /nx (Cloudflare-Worker „adpure-…“, von AdPure angelegt) – so setzt rheinwork.com
+  Das Skript kommt von track.rheinwork.com (Änderungen greifen nach höchstens 5 Minuten) und schickt selbst über den
+  Website-Pfad /nx (Cloudflare-Worker „adpure-…“, von AdPure angelegt) – so setzt rheinwork.com
   das Cookie selbst und Safari behält Besucher länger als 7 Tage
   (data-cookieconsent="ignore": Cookiebot blockiert es sonst automatisch). Nur im Live-Build – lokal würde der
   Collector die Herkunft localhost ohnehin ablehnen.
   „Cookie-Einstellungen“ im Footer öffnet den Cookiebot-Dialog erneut.
 */ -}}
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="6b6e82b3-654e-4898-8569-0d891e249f75" data-blockingmode="auto" type="text/javascript"></script>
-{{ if hugo.IsProduction }}<script async data-cookieconsent="ignore" src="/nx/n/sk_o0xku7p5o4w2ibbrkrg6x710.js"></script>{{ end }}
+{{ if hugo.IsProduction }}<script async data-cookieconsent="ignore" src="https://track.rheinwork.com/n/sk_o0xku7p5o4w2ibbrkrg6x710.js"></script>{{ end }}
 <script data-cookieconsent="ignore">
   document.addEventListener('click', function (e) {
     var link = e.target.closest && e.target.closest('[data-cookie-settings]');
