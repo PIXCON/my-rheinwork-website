@@ -2,6 +2,7 @@
 // Static assets are served first; this Worker only runs for non-asset paths.
 // Env (Worker → Settings → Variables & Secrets; mark tokens as "Secret"):
 //   POSTMARK_TOKEN (secret) · FROM_EMAIL · TO_EMAIL · TURNSTILE_SECRET (secret, optional)
+//   ADPURE_INTAKE_URL · ADPURE_INTAKE_KEY (secret) – optional: each enquiry also goes to the AdPure CRM
 
 const CONFIRM = {
   de: {
@@ -56,7 +57,46 @@ async function verifyTurnstile(secret, token, ip) {
   return data && data.success === true;
 }
 
-async function handleContact(request, env) {
+// Forwards an accepted enquiry to the AdPure CRM (format nexus.event.v1). nexus_vid is the visitor ID the AdPure
+// script puts into the form as a hidden field – it links the enquiry to the visit that led to it.
+// Runs after the e-mails; a failure here never affects the visitor's "sent".
+async function sendToAdPure(env, d, email, request) {
+  if (!env.ADPURE_INTAKE_URL || !env.ADPURE_INTAKE_KEY) return;
+  const fields = [
+    ["company", d.company],
+    ["topic", d.topic],
+    ["message", d.message],
+    ["lang", d.lang],
+    ["nexus_vid", d.nexus_vid]
+  ]
+    .filter(([, v]) => typeof v === "string" && v.trim())
+    .map(([name, v]) => ({ name, values: [v.trim().slice(0, 1000)] }));
+  const page = request.headers.get("Referer");
+  const event = {
+    schema: "nexus.event.v1",
+    event: "lead",
+    eventId: crypto.randomUUID(),
+    eventTime: new Date().toISOString(),
+    source: "website",
+    // Consent for ad feedback comes from the cookie banner (linked via nexus_vid), not from this form
+    consent: { adFeedback: false },
+    identifiers: { email },
+    lead: { firstName: String(d.firstname).trim(), lastName: String(d.lastname).trim(), fields, ...(page ? { landingPage: page } : {}) }
+  };
+  try {
+    const res = await fetch(env.ADPURE_INTAKE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "X-Nexus-Key": env.ADPURE_INTAKE_KEY },
+      body: JSON.stringify(event),
+      signal: AbortSignal.timeout(8000)
+    });
+    if (!res.ok) console.log("AdPure " + res.status + ": " + (await res.text()).slice(0, 300));
+  } catch (err) {
+    console.log("AdPure not reachable: " + err.message);
+  }
+}
+
+async function handleContact(request, env, ctx) {
   let d;
   try { d = await request.json(); } catch { return json({ ok: false, error: "bad_json" }, 400); }
 
@@ -102,6 +142,8 @@ ${d.message || "(keine)"}`
     const c = CONFIRM[d.lang === "en" ? "en" : "de"];
     await sendPostmark(env.POSTMARK_TOKEN, { From: env.FROM_EMAIL, To: email, Subject: c.subject, TextBody: c.body(d) });
 
+    // In the background: the visitor gets "sent" right away
+    ctx.waitUntil(sendToAdPure(env, d, email, request));
     return json({ ok: true }, 200);
   } catch (err) {
     return json({ ok: false, error: "send_failed" }, 502);
@@ -109,11 +151,11 @@ ${d.message || "(keine)"}`
 }
 
 export default {
-  async fetch(request, env) {
+  async fetch(request, env, ctx) {
     const url = new URL(request.url);
     if (url.pathname === "/api/contact") {
       if (request.method !== "POST") return json({ ok: false, error: "method" }, 405);
-      return handleContact(request, env);
+      return handleContact(request, env, ctx);
     }
     // Everything else: serve the static Hugo site.
     return env.ASSETS.fetch(request);
