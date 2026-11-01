@@ -38,6 +38,31 @@ um zu messen, über welche Wege und Werbeanzeigen Besuche und Anfragen zu uns ko
 Formularinhalte. Die Verarbeitung erfolgt auf Servern in Deutschland. Rechtsgrundlage ist Ihre Einwilligung
 (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG); ohne Einwilligung findet keine Messung statt.
 
+**Meta-Pixel und Conversions API (Kategorie Marketing).** Mit Ihrer Einwilligung binden wir über AdPure den
+Meta-Pixel der Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Irland („Meta“) ein. So können wir
+messen, wie gut unsere Werbeanzeigen auf Facebook und Instagram wirken, und Anzeigen Personen zeigen, die unsere
+Website besucht haben. Dabei werden die Cookies „_fbp“ und – wenn Sie über eine Meta-Anzeige kommen – „_fbc“
+(jeweils bis zu 90 Tage) gesetzt.
+
+Damit Meldungen auch dann ankommen, wenn der Pixel im Browser blockiert wird, übermittelt AdPure dieselben
+Ereignisse zusätzlich direkt von unserem Server an Meta (Conversions API). Meta führt beide Meldungen über eine
+gemeinsame Ereignis-ID zusammen und zählt sie einmal. Übermittelt werden: das Ereignis (z. B. Seitenaufruf,
+Klick auf Telefon oder E-Mail, Anfrage), die aufgerufene Seite ohne Parameter, Zeitpunkt, IP-Adresse,
+Browserkennung (User-Agent), die Kennungen aus „_fbp“/„_fbc“ und das Land. Senden Sie uns eine Anfrage,
+melden wir diese sowie spätere Schritte (z. B. qualifizierte Anfrage, Termin, Auftrag) an Meta; dabei werden
+E-Mail-Adresse, Telefonnummer, Name und Land nur verschlüsselt als Hash-Wert (SHA-256) übertragen. IP-Adresse
+und Browserkennung speichern wir dafür höchstens 7 Tage.
+
+Für die Erhebung und Übermittlung dieser Daten an Meta sind wir und Meta gemeinsam verantwortlich
+(Art. 26 DSGVO); die Vereinbarung dazu finden Sie unter
+[facebook.com/legal/controller_addendum](https://www.facebook.com/legal/controller_addendum). Für die weitere
+Verarbeitung ist Meta allein verantwortlich; Informationen dazu unter
+[facebook.com/privacy/policy](https://www.facebook.com/privacy/policy). Meta kann Daten an die Meta Platforms,
+Inc. in den USA übermitteln; Grundlage ist das EU-US Data Privacy Framework bzw. die Standardvertragsklauseln
+der EU-Kommission. Rechtsgrundlage ist Ihre Einwilligung (Art. 6 Abs. 1 lit. a DSGVO, § 25 Abs. 1 TDDDG); ohne
+Einwilligung in „Marketing“ wird weder der Pixel geladen noch etwas an Meta übermittelt. Ein Widerruf wirkt
+für die Zukunft.
+
 ## SSL-/TLS-Verschlüsselung
 
 Diese Website nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher
@@ -69,10 +94,12 @@ Interesse an einer datensparsamen Reichweitenmessung).
 ## Kontaktformular
 
 Wenn Sie uns über das Kontaktformular kontaktieren, verarbeiten wir die von Ihnen
-angegebenen Daten ausschließlich zur Bearbeitung Ihrer Anfrage und für mögliche
+angegebenen Daten zur Bearbeitung Ihrer Anfrage und für mögliche
 Anschlussfragen. Erhoben werden: Vorname, Nachname, Firma (optional), E-Mail-Adresse,
-das gewählte Thema sowie Ihre Nachricht. Die mit einem Sternchen (*) markierten Felder
-sind erforderlich, um Ihre Anfrage bearbeiten zu können.
+Telefonnummer (optional), das gewählte Thema sowie Ihre Nachricht. Die mit einem Sternchen (*) markierten Felder
+sind erforderlich, um Ihre Anfrage bearbeiten zu können. Ihre Anfrage wird in unserem eigenen
+Kundenverwaltungssystem (AdPure der Rheinwork GmbH) gespeichert. Nur wenn Sie in „Marketing“ eingewilligt haben,
+melden wir die Anfrage wie unter „Meta-Pixel und Conversions API“ beschrieben an Meta.
 
 Rechtsgrundlage ist Art. 6 Abs. 1 lit. b DSGVO (Anbahnung bzw. Durchführung eines
 Vertrags) sowie, bei allgemeinen Anfragen, Art. 6 Abs. 1 lit. f DSGVO (berechtigtes

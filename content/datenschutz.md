@@ -37,6 +37,27 @@ parameters), contact clicks and form submissions – no form contents. Processin
 Germany. The legal basis is your consent (Art. 6(1)(a) GDPR, § 25(1) TDDDG); without consent no measurement
 takes place.
 
+**Meta Pixel and Conversions API (category Marketing).** With your consent we use AdPure to integrate the
+Meta Pixel of Meta Platforms Ireland Limited, Merrion Road, Dublin 4, Ireland ("Meta"). This lets us measure
+how well our ads on Facebook and Instagram perform and show ads to people who have visited our website. The
+cookies "_fbp" and – if you arrive via a Meta ad – "_fbc" are set (up to 90 days each).
+
+So that events still arrive when the pixel is blocked in the browser, AdPure additionally sends the same
+events directly from our server to Meta (Conversions API). Meta merges both via a shared event ID and counts
+them once. We transmit: the event (e.g. page view, click on phone or email, enquiry), the page visited without
+parameters, time, IP address, browser identifier (user agent), the identifiers from "_fbp"/"_fbc" and the
+country. If you send us an enquiry, we report it and later steps (e.g. qualified enquiry, appointment, order)
+to Meta; email address, phone number, name and country are only transmitted as a hash value (SHA-256). We keep
+the IP address and browser identifier for this purpose for no more than 7 days.
+
+We and Meta are joint controllers for collecting and transmitting this data to Meta (Art. 26 GDPR); the
+agreement is available at [facebook.com/legal/controller_addendum](https://www.facebook.com/legal/controller_addendum).
+Meta alone is responsible for any further processing; see
+[facebook.com/privacy/policy](https://www.facebook.com/privacy/policy). Meta may transfer data to Meta
+Platforms, Inc. in the USA, based on the EU-US Data Privacy Framework or the EU Commission's standard
+contractual clauses. The legal basis is your consent (Art. 6(1)(a) GDPR, § 25(1) TDDDG); without consent to
+"Marketing" the pixel is not loaded and nothing is sent to Meta. Withdrawal takes effect for the future.
+
 ## SSL/TLS encryption
 
 For security reasons and to protect the transmission of confidential content, this website uses
@@ -65,10 +86,12 @@ Art. 6(1)(f) GDPR (legitimate interest in privacy-friendly analytics).
 
 ## Contact form
 
-If you contact us via the contact form, we process the data you provide solely to
+If you contact us via the contact form, we process the data you provide to
 handle your request and any follow-up questions. We collect: first name, last name,
-company (optional), email address, the selected topic and your message. The fields
-marked with an asterisk (*) are required in order to process your request.
+company (optional), email address, phone number (optional), the selected topic and your message. The fields
+marked with an asterisk (*) are required in order to process your request. Your enquiry is stored in our own
+customer management system (AdPure by Rheinwork GmbH). Only if you have consented to "Marketing" do we report
+the enquiry to Meta as described under "Meta Pixel and Conversions API".
 
 The legal basis is Art. 6(1)(b) GDPR (steps prior to or performance of a contract) and,
 for general enquiries, Art. 6(1)(f) GDPR (legitimate interest in answering your
