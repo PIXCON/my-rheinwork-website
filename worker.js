@@ -63,6 +63,7 @@ async function verifyTurnstile(secret, token, ip) {
 // Runs after the e-mails; a failure here never affects the visitor's "sent".
 async function sendToAdPure(env, d, email, request) {
   if (!env.ADPURE_INTAKE_URL || !env.ADPURE_INTAKE_KEY) return;
+  const phone = typeof d.phone === "string" ? d.phone.trim().slice(0, 40) : "";
   const fields = [
     ["company", d.company],
     ["topic", d.topic],
@@ -82,7 +83,7 @@ async function sendToAdPure(env, d, email, request) {
     source: "website",
     // Consent for ad feedback comes from the cookie banner (linked via nexus_vid), not from this form
     consent: { adFeedback: false },
-    identifiers: { email },
+    identifiers: { email, ...(phone ? { phone } : {}) },
     lead: { firstName: String(d.firstname).trim(), lastName: String(d.lastname).trim(), fields, ...(page ? { landingPage: page } : {}) }
   };
   try {
@@ -134,6 +135,7 @@ async function handleContact(request, env, ctx) {
 Name:    ${fullName}
 Firma:   ${d.company || "-"}
 E-Mail:  ${email}
+Telefon: ${(d.phone || "").trim() || "-"}
 Thema:   ${topic}
 Sprache: ${d.lang || "-"}
 
