@@ -48,10 +48,13 @@ Damit Meldungen auch dann ankommen, wenn der Pixel im Browser blockiert wird, ü
 Ereignisse zusätzlich direkt von unserem Server an Meta (Conversions API). Meta führt beide Meldungen über eine
 gemeinsame Ereignis-ID zusammen und zählt sie einmal. Übermittelt werden: das Ereignis (z. B. Seitenaufruf,
 Klick auf Telefon oder E-Mail, Anfrage), die aufgerufene Seite ohne Parameter, Zeitpunkt, IP-Adresse,
-Browserkennung (User-Agent), die Kennungen aus „_fbp“/„_fbc“ und das Land. Senden Sie uns eine Anfrage,
-melden wir diese sowie spätere Schritte (z. B. qualifizierte Anfrage, Termin, Auftrag) an Meta; dabei werden
-E-Mail-Adresse, Telefonnummer, Name und Land nur verschlüsselt als Hash-Wert (SHA-256) übertragen. IP-Adresse
-und Browserkennung speichern wir dafür höchstens 7 Tage.
+Browserkennung (User-Agent), die Kennungen aus „_fbp“/„_fbc“, eine als Hash-Wert verschlüsselte Kennung Ihres
+Geräts (aus dem Cookie „nx_vid“) und das Land. Senden Sie uns eine Anfrage, melden wir diese sowie spätere
+Schritte (z. B. qualifizierte Anfrage, Termin, Auftrag) an Meta; dabei werden E-Mail-Adresse, Telefonnummer,
+Name, Land und – falls angegeben – Postleitzahl und Ort nur verschlüsselt als Hash-Wert (SHA-256) übertragen.
+Haben Sie uns bereits eine Anfrage gesendet, übermitteln wir bei späteren Besuchen zusätzlich dieselben
+Hash-Werte, damit Meta die Ereignisse Ihnen zuordnen kann. IP-Adresse und Browserkennung speichern wir dafür
+höchstens 7 Tage.
 
 Für die Erhebung und Übermittlung dieser Daten an Meta sind wir und Meta gemeinsam verantwortlich
 (Art. 26 DSGVO); die Vereinbarung dazu finden Sie unter

@@ -45,10 +45,12 @@ cookies "_fbp" and – if you arrive via a Meta ad – "_fbc" are set (up to 90 
 So that events still arrive when the pixel is blocked in the browser, AdPure additionally sends the same
 events directly from our server to Meta (Conversions API). Meta merges both via a shared event ID and counts
 them once. We transmit: the event (e.g. page view, click on phone or email, enquiry), the page visited without
-parameters, time, IP address, browser identifier (user agent), the identifiers from "_fbp"/"_fbc" and the
-country. If you send us an enquiry, we report it and later steps (e.g. qualified enquiry, appointment, order)
-to Meta; email address, phone number, name and country are only transmitted as a hash value (SHA-256). We keep
-the IP address and browser identifier for this purpose for no more than 7 days.
+parameters, time, IP address, browser identifier (user agent), the identifiers from "_fbp"/"_fbc", a hashed
+identifier of your device (from the cookie "nx_vid") and the country. If you send us an enquiry, we report it
+and later steps (e.g. qualified enquiry, appointment, order) to Meta; email address, phone number, name, country
+and – if provided – postcode and city are only transmitted as a hash value (SHA-256). If you have already sent us
+an enquiry, we also transmit the same hash values on later visits so that Meta can attribute the events to you.
+We keep the IP address and browser identifier for this purpose for no more than 7 days.
 
 We and Meta are joint controllers for collecting and transmitting this data to Meta (Art. 26 GDPR); the
 agreement is available at [facebook.com/legal/controller_addendum](https://www.facebook.com/legal/controller_addendum).
