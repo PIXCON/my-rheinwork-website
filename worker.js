@@ -57,8 +57,9 @@ async function verifyTurnstile(secret, token, ip) {
   return data && data.success === true;
 }
 
-// Forwards an accepted enquiry to the AdPure CRM (format nexus.event.v1). nexus_vid is the visitor ID the AdPure
-// script puts into the form as a hidden field – it links the enquiry to the visit that led to it.
+// Forwards an accepted enquiry to the AdPure CRM (format nexus.event.v1). nexus_vid (visitor) and nexus_eid (this
+// submission) are hidden fields the AdPure script puts into the form – they link the enquiry to exactly this
+// submission, so AdPure's server report to Meta carries the same event ID as the browser pixel.
 // Runs after the e-mails; a failure here never affects the visitor's "sent".
 async function sendToAdPure(env, d, email, request) {
   if (!env.ADPURE_INTAKE_URL || !env.ADPURE_INTAKE_KEY) return;
@@ -67,7 +68,8 @@ async function sendToAdPure(env, d, email, request) {
     ["topic", d.topic],
     ["message", d.message],
     ["lang", d.lang],
-    ["nexus_vid", d.nexus_vid]
+    ["nexus_vid", d.nexus_vid],
+    ["nexus_eid", d.nexus_eid]
   ]
     .filter(([, v]) => typeof v === "string" && v.trim())
     .map(([name, v]) => ({ name, values: [v.trim().slice(0, 1000)] }));
