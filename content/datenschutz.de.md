@@ -56,6 +56,13 @@ Haben Sie uns bereits eine Anfrage gesendet, übermitteln wir bei späteren Besu
 Hash-Werte, damit Meta die Ereignisse Ihnen zuordnen kann. IP-Adresse und Browserkennung speichern wir dafür
 höchstens 7 Tage.
 
+Haben Sie uns eine Anfrage gesendet und in „Marketing“ eingewilligt, übermitteln wir Ihre Kontaktdaten außerdem als
+Hash-Werte (E-Mail-Adresse, Telefonnummer, Name, Ort, Postleitzahl, Land) an Meta, um Sie je nach Stand Ihrer Anfrage in
+eine Zielgruppe („Custom Audience“) aufzunehmen – etwa um Sie an einen Termin zu erinnern oder Ihnen als Kunde keine
+Werbung für unser Angebot mehr zu zeigen. Meta gleicht die Hash-Werte nur mit seinen Nutzerkonten ab und löscht nicht
+zugeordnete Werte. Ändert sich der Stand Ihrer Anfrage, aktualisieren wir die Zuordnung stündlich; ein Widerruf oder
+die Löschung Ihrer Daten entfernt Sie sofort aus allen Zielgruppen.
+
 Für die Erhebung und Übermittlung dieser Daten an Meta sind wir und Meta gemeinsam verantwortlich
 (Art. 26 DSGVO); die Vereinbarung dazu finden Sie unter
 [facebook.com/legal/controller_addendum](https://www.facebook.com/legal/controller_addendum). Für die weitere

@@ -52,6 +52,13 @@ and – if provided – postcode and city are only transmitted as a hash value (
 an enquiry, we also transmit the same hash values on later visits so that Meta can attribute the events to you.
 We keep the IP address and browser identifier for this purpose for no more than 7 days.
 
+If you have sent us an enquiry and consented to "Marketing", we also transmit your contact details as hash values (email
+address, phone number, name, city, postcode, country) to Meta in order to add you to an audience ("Custom Audience")
+depending on the status of your enquiry – for example to remind you of an appointment or to stop showing you ads for our
+services once you are a customer. Meta only matches the hash values against its user accounts and deletes values that
+cannot be matched. If the status of your enquiry changes, we update the assignment hourly; withdrawing your consent or
+having your data deleted removes you from all audiences immediately.
+
 We and Meta are joint controllers for collecting and transmitting this data to Meta (Art. 26 GDPR); the
 agreement is available at [facebook.com/legal/controller_addendum](https://www.facebook.com/legal/controller_addendum).
 Meta alone is responsible for any further processing; see
